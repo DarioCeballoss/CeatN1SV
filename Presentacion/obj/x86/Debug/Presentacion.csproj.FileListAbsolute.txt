@@ -1,0 +1,8 @@
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.LogIn.resources
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.Principal.resources
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.Properties.Resources.resources
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\CeatN1SV\Presentacion\bin\Debug\Presentacion.exe
+C:\CeatN1SV\Presentacion\bin\Debug\Presentacion.pdb
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.exe
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.pdb
