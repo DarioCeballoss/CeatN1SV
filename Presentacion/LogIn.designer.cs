@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -40,19 +39,10 @@
             this.linkContra = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblErrorLogin = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 250);
-            this.panel1.TabIndex = 0;
             // 
             // shapeContainer1
             // 
@@ -62,7 +52,7 @@
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape2,
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(600, 250);
+            this.shapeContainer1.Size = new System.Drawing.Size(581, 224);
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
             // 
@@ -88,13 +78,13 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.BackColor = System.Drawing.Color.White;
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsuario.Location = new System.Drawing.Point(265, 77);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(255, 13);
+            this.txtUsuario.Size = new System.Drawing.Size(255, 20);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -102,13 +92,13 @@
             // 
             // txtContra
             // 
-            this.txtContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.txtContra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContra.BackColor = System.Drawing.Color.White;
+            this.txtContra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContra.ForeColor = System.Drawing.Color.DimGray;
             this.txtContra.Location = new System.Drawing.Point(265, 115);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(255, 13);
+            this.txtContra.Size = new System.Drawing.Size(255, 20);
             this.txtContra.TabIndex = 2;
             this.txtContra.Text = "Contraseña";
             this.txtContra.Enter += new System.EventHandler(this.txtContra_Enter);
@@ -118,7 +108,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(346, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 24);
@@ -133,7 +123,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(265, 181);
+            this.btnLogin.Location = new System.Drawing.Point(265, 163);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(255, 23);
             this.btnLogin.TabIndex = 3;
@@ -144,7 +134,7 @@
             // linkContra
             // 
             this.linkContra.AutoSize = true;
-            this.linkContra.Location = new System.Drawing.Point(320, 207);
+            this.linkContra.Location = new System.Drawing.Point(320, 189);
             this.linkContra.Name = "linkContra";
             this.linkContra.Size = new System.Drawing.Size(149, 13);
             this.linkContra.TabIndex = 0;
@@ -155,7 +145,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(568, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(548, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -166,20 +156,31 @@
             // lblErrorLogin
             // 
             this.lblErrorLogin.AutoSize = true;
+            this.lblErrorLogin.BackColor = System.Drawing.Color.PaleTurquoise;
             this.lblErrorLogin.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblErrorLogin.Location = new System.Drawing.Point(265, 162);
+            this.lblErrorLogin.Location = new System.Drawing.Point(262, 147);
             this.lblErrorLogin.Name = "lblErrorLogin";
-            this.lblErrorLogin.Size = new System.Drawing.Size(35, 13);
+            this.lblErrorLogin.Size = new System.Drawing.Size(0, 13);
             this.lblErrorLogin.TabIndex = 8;
-            this.lblErrorLogin.Text = "label3";
             this.lblErrorLogin.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(209, 224);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(600, 250);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(581, 224);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblErrorLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkContra);
@@ -187,14 +188,15 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.shapeContainer1);
+            this.ForeColor = System.Drawing.Color.DimGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LogIn";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.LogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +204,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.TextBox txtUsuario;
@@ -213,5 +214,6 @@
         private System.Windows.Forms.LinkLabel linkContra;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblErrorLogin;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -23,7 +23,7 @@ namespace Presentacion
             if (txtUsuario.Text == "Usuario")
             {
                 txtUsuario.Text = "";
-                txtUsuario.ForeColor = Color.White;
+                txtUsuario.ForeColor = Color.Black;
             }
         }
         
@@ -41,7 +41,7 @@ namespace Presentacion
             if (txtContra.Text == "Contraseña")
             {
                 txtContra.Text = "";
-                txtContra.ForeColor = Color.White;
+                txtContra.ForeColor = Color.Black;
                 txtContra.UseSystemPasswordChar = true;
             }
         }
@@ -75,6 +75,11 @@ namespace Presentacion
         private void msjError(string msj) {
             lblErrorLogin.Text = "    " + msj;
             lblErrorLogin.Visible = true;
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

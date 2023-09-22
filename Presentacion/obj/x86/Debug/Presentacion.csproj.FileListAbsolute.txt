@@ -6,3 +6,4 @@ C:\CeatN1SV\Presentacion\bin\Debug\Presentacion.exe
 C:\CeatN1SV\Presentacion\bin\Debug\Presentacion.pdb
 C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.exe
 C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.pdb
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.csprojResolveAssemblyReference.cache
