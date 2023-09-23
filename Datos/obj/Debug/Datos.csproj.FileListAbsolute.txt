@@ -1,0 +1,4 @@
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Datos\bin\Debug\Datos.dll
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Datos\bin\Debug\Datos.pdb
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Datos\obj\Debug\Datos.dll
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Datos\obj\Debug\Datos.pdb

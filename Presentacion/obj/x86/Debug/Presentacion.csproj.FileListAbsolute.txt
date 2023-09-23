@@ -1,9 +1,20 @@
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Presentacion\bin\Debug\Presentacion.exe
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Presentacion\bin\Debug\Presentacion.pdb
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Presentacion\bin\Debug\Logica.dll
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Presentacion\bin\Debug\Logica.pdb
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.csprojResolveAssemblyReference.cache
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.Properties.Resources.resources
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.csproj.GenerateResource.Cache
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.exe
+c:\users\pc\documents\visual studio 2010\Projects\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.pdb
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.exe
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.pdb
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.csprojResolveAssemblyReference.cache
 C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.LogIn.resources
-C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.Principal.resources
 C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.Properties.Resources.resources
 C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.csproj.GenerateResource.Cache
 C:\CeatN1SV\Presentacion\bin\Debug\Presentacion.exe
 C:\CeatN1SV\Presentacion\bin\Debug\Presentacion.pdb
-C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.exe
-C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.pdb
-C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\CeatN1SV\Presentacion\bin\Debug\Logica.dll
+C:\CeatN1SV\Presentacion\bin\Debug\Logica.pdb
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.Form1.resources
