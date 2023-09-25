@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-//using Logica;
+using Logica;
+
 
 namespace Presentacion
 {
@@ -59,12 +60,23 @@ namespace Presentacion
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
         }
 
+        Usuario usu = new Usuario();
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text != "Usuario" || txtContra.Text != "Contraseña") 
             {
+                if (usu.TraeDatos(txtUsuario.Text, txtContra.Text))
+                {
+
+                    MessageBox.Show("abierto");
+                }
+                else
+                {
+                    msjError("Verifique los datos ingresados");
+                }
 
             } else {
                 msjError("Por favor ingrese los datos");

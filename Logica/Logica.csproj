@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4772A6E2-8CA0-4ED0-97A7-8BAA5C25BB1D}</ProjectGuid>
+    <ProjectGuid>{7BEB36D5-A296-4C39-94C4-B9BBE753537A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Logica</RootNamespace>
@@ -40,12 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UsuarioLG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">
-      <Project>{D37F360E-51E8-4AC3-8BFC-50BA82810A2F}</Project>
+      <Project>{ED1A8111-6FFB-4F50-BBBD-4421523E64C8}</Project>
       <Name>Datos</Name>
     </ProjectReference>
   </ItemGroup>
