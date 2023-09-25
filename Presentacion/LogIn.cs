@@ -70,16 +70,22 @@ namespace Presentacion
             {
                 if (usu.TraeDatos(txtUsuario.Text, txtContra.Text))
                 {
+                    MenuPrincipal menu = new MenuPrincipal();
+                    menu.Show();
+                    menu.FormClosed += Logout; // Carga el metodo logot en el form menu
+                    this.Hide();
 
-                    MessageBox.Show("abierto");
+                    //MessageBox.Show("abierto");
                 }
                 else
                 {
                     msjError("Verifique los datos ingresados");
+                    txtUsuario.Focus();
                 }
 
             } else {
                 msjError("Por favor ingrese los datos");
+                txtUsuario.Focus();
             }
 
         }
@@ -93,5 +99,19 @@ namespace Presentacion
         {
             
         }
+
+        private void Logout(object sender, FormClosedEventArgs e) {
+            txtContra.Text = "Contraseña";
+            txtContra.UseSystemPasswordChar = false;
+            txtContra.ForeColor = Color.DimGray;
+            txtUsuario.Text = "Usuario";
+            txtUsuario.ForeColor = Color.DimGray;
+            
+            lblErrorLogin.Text = "";
+            this.Show();
+        }
+
+
+
     }
 }

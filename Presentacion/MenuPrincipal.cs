@@ -25,5 +25,15 @@ namespace Presentacion
         {
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Desea Cerrar sesion ?","Warning",MessageBoxButtons.YesNo, MessageBoxIcon.Warning)==DialogResult.Yes){
+                this.Close();
+            }
+
+        }
+
+
     }
 }
