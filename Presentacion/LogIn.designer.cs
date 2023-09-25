@@ -156,7 +156,7 @@
             // lblErrorLogin
             // 
             this.lblErrorLogin.AutoSize = true;
-            this.lblErrorLogin.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.lblErrorLogin.BackColor = System.Drawing.Color.White;
             this.lblErrorLogin.ForeColor = System.Drawing.Color.Firebrick;
             this.lblErrorLogin.Location = new System.Drawing.Point(262, 147);
             this.lblErrorLogin.Name = "lblErrorLogin";

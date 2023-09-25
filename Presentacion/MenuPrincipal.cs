@@ -15,5 +15,15 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
