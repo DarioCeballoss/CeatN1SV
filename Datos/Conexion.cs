@@ -10,10 +10,7 @@ namespace Datos
     public class Conexion
     {
 
-            public int suma(int a, int b)
-            {
-                return a + b;
-            }
+            //public int suma(int a, int b){return a + b;}
 
             //para conectar
             static private OleDbConnection Conecta;

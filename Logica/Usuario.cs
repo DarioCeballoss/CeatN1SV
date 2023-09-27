@@ -11,30 +11,38 @@ namespace Logica
     public class Usuario
     {
         Conexion conecta = new Conexion();
-        //DataTable Tabla = new DataTable();
+        public int IdUsuario;
+        public string Nombre;
+        public string Apellido;
+        public string Permisos;
 
-        public bool funciona()
-        {
-            if (conecta.suma(2, 3) == 5)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-
-
-        public bool TraeDatos(string usu,string pass)
+        public bool TraeDatos(string usu, string pass)
         {
             OleDbDataReader reader = conecta.Leer("SELECT * FROM Usuario where Usuario_Alias = '" + usu + "' and Usuario_Password = '" + pass + "'");
-            if (reader.HasRows) { return true; } else { return false; }
-        }
+            if (reader.HasRows)
+            {
+                if (reader.HasRows)
+                {
+                    //while (reader.Read())
+                    //{
+                    //    IdUsuario = reader.GetInt32(0);
+                    //    Nombre = reader.GetString(1);
+                    //    Apellido = reader.GetString(2);
+                    //    Permisos = reader.GetString(3);
 
-        
+                    //}
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            //public bool funciona(){if (conecta.suma(2, 3) == 5){ return true; } else{return false;}}
+
+        }
 
 
     }
 }
+

@@ -33,30 +33,32 @@
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPermisos = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUsuario = new System.Windows.Forms.Button();
+            this.btnBajaMatricula = new System.Windows.Forms.Button();
+            this.btnEdtiarMatriculas = new System.Windows.Forms.Button();
+            this.btnVerMatriculas = new System.Windows.Forms.Button();
+            this.btnNuevaMatricula = new System.Windows.Forms.Button();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.shapeContainer3 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,32 +110,6 @@
             this.picCerrar.TabStop = false;
             this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(577, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 24);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "San Vicente";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(535, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(210, 46);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "CEAT N°1";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -143,25 +119,25 @@
             this.panel2.Size = new System.Drawing.Size(21, 614);
             this.panel2.TabIndex = 8;
             // 
-            // panel3
+            // pnlMenu
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.btnSalir);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.shapeContainer2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(21, 27);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(258, 614);
-            this.panel3.TabIndex = 9;
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pnlMenu.Controls.Add(this.pictureBox1);
+            this.pnlMenu.Controls.Add(this.lblPermisos);
+            this.pnlMenu.Controls.Add(this.lblApellido);
+            this.pnlMenu.Controls.Add(this.lblNombre);
+            this.pnlMenu.Controls.Add(this.btnSalir);
+            this.pnlMenu.Controls.Add(this.btnUsuario);
+            this.pnlMenu.Controls.Add(this.btnBajaMatricula);
+            this.pnlMenu.Controls.Add(this.btnEdtiarMatriculas);
+            this.pnlMenu.Controls.Add(this.btnVerMatriculas);
+            this.pnlMenu.Controls.Add(this.btnNuevaMatricula);
+            this.pnlMenu.Controls.Add(this.shapeContainer2);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenu.Location = new System.Drawing.Point(21, 27);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(258, 614);
+            this.pnlMenu.TabIndex = 9;
             // 
             // pictureBox1
             // 
@@ -173,44 +149,48 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // label5
+            // lblPermisos
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(23, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Administrador";
+            this.lblPermisos.AutoSize = true;
+            this.lblPermisos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPermisos.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblPermisos.Location = new System.Drawing.Point(23, 69);
+            this.lblPermisos.Name = "lblPermisos";
+            this.lblPermisos.Size = new System.Drawing.Size(73, 16);
+            this.lblPermisos.TabIndex = 9;
+            this.lblPermisos.Text = "Permisos";
             // 
-            // label4
+            // lblApellido
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(23, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Ceballos Flores";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblApellido.Location = new System.Drawing.Point(23, 29);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(74, 16);
+            this.lblApellido.TabIndex = 8;
+            this.lblApellido.Text = "Apellidos";
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(23, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 16);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Dario Felipe";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblNombre.Location = new System.Drawing.Point(23, 16);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(71, 16);
+            this.lblNombre.TabIndex = 7;
+            this.lblNombre.Text = "Nombres";
             // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnSalir.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(145, 580);
@@ -221,87 +201,112 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // button5
+            // btnUsuario
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(23, 476);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(214, 50);
-            this.button5.TabIndex = 5;
-            this.button5.Text = " Administrar Usuario";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuario.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnUsuario.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
+            this.btnUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
+            this.btnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
+            this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuario.Location = new System.Drawing.Point(23, 476);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(214, 50);
+            this.btnUsuario.TabIndex = 5;
+            this.btnUsuario.Text = " Administrar Usuario";
+            this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuario.UseVisualStyleBackColor = false;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
-            // button4
+            // btnBajaMatricula
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(23, 332);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(214, 50);
-            this.button4.TabIndex = 4;
-            this.button4.Text = " Baja de Matricula";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnBajaMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnBajaMatricula.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBajaMatricula.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnBajaMatricula.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
+            this.btnBajaMatricula.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
+            this.btnBajaMatricula.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnBajaMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBajaMatricula.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBajaMatricula.Image = ((System.Drawing.Image)(resources.GetObject("btnBajaMatricula.Image")));
+            this.btnBajaMatricula.Location = new System.Drawing.Point(23, 332);
+            this.btnBajaMatricula.Name = "btnBajaMatricula";
+            this.btnBajaMatricula.Size = new System.Drawing.Size(214, 50);
+            this.btnBajaMatricula.TabIndex = 4;
+            this.btnBajaMatricula.Text = " Baja de Matricula";
+            this.btnBajaMatricula.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBajaMatricula.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBajaMatricula.UseVisualStyleBackColor = false;
+            this.btnBajaMatricula.Click += new System.EventHandler(this.btnBajaMatricula_Click);
             // 
-            // button3
+            // btnEdtiarMatriculas
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(23, 266);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 50);
-            this.button3.TabIndex = 3;
-            this.button3.Text = " Editar Matricula";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnEdtiarMatriculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnEdtiarMatriculas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdtiarMatriculas.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnEdtiarMatriculas.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
+            this.btnEdtiarMatriculas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
+            this.btnEdtiarMatriculas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnEdtiarMatriculas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdtiarMatriculas.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdtiarMatriculas.Image = ((System.Drawing.Image)(resources.GetObject("btnEdtiarMatriculas.Image")));
+            this.btnEdtiarMatriculas.Location = new System.Drawing.Point(23, 266);
+            this.btnEdtiarMatriculas.Name = "btnEdtiarMatriculas";
+            this.btnEdtiarMatriculas.Size = new System.Drawing.Size(214, 50);
+            this.btnEdtiarMatriculas.TabIndex = 3;
+            this.btnEdtiarMatriculas.Text = " Editar Matricula";
+            this.btnEdtiarMatriculas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdtiarMatriculas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEdtiarMatriculas.UseVisualStyleBackColor = false;
+            this.btnEdtiarMatriculas.Click += new System.EventHandler(this.btnEdtiarMatriculas_Click);
             // 
-            // button2
+            // btnVerMatriculas
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(23, 200);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 50);
-            this.button2.TabIndex = 2;
-            this.button2.Text = " Ver Matriculas";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnVerMatriculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnVerMatriculas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerMatriculas.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnVerMatriculas.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
+            this.btnVerMatriculas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
+            this.btnVerMatriculas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnVerMatriculas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerMatriculas.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerMatriculas.Image = ((System.Drawing.Image)(resources.GetObject("btnVerMatriculas.Image")));
+            this.btnVerMatriculas.Location = new System.Drawing.Point(23, 200);
+            this.btnVerMatriculas.Name = "btnVerMatriculas";
+            this.btnVerMatriculas.Size = new System.Drawing.Size(214, 50);
+            this.btnVerMatriculas.TabIndex = 2;
+            this.btnVerMatriculas.Text = " Ver Matriculas";
+            this.btnVerMatriculas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerMatriculas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVerMatriculas.UseVisualStyleBackColor = false;
+            this.btnVerMatriculas.Click += new System.EventHandler(this.btnVerMatriculas_Click);
             // 
-            // button1
+            // btnNuevaMatricula
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(23, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = " Nueva matricula";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnNuevaMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnNuevaMatricula.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevaMatricula.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnNuevaMatricula.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
+            this.btnNuevaMatricula.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
+            this.btnNuevaMatricula.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnNuevaMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaMatricula.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaMatricula.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevaMatricula.Image")));
+            this.btnNuevaMatricula.Location = new System.Drawing.Point(23, 133);
+            this.btnNuevaMatricula.Name = "btnNuevaMatricula";
+            this.btnNuevaMatricula.Size = new System.Drawing.Size(214, 50);
+            this.btnNuevaMatricula.TabIndex = 1;
+            this.btnNuevaMatricula.Text = " Nueva matricula";
+            this.btnNuevaMatricula.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaMatricula.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNuevaMatricula.UseVisualStyleBackColor = false;
+            this.btnNuevaMatricula.Click += new System.EventHandler(this.btnNuevaMatricula_Click);
             // 
             // shapeContainer2
             // 
@@ -324,16 +329,16 @@
             this.lineShape2.Y1 = 98;
             this.lineShape2.Y2 = 98;
             // 
-            // shapeContainer1
+            // shapeContainer3
             // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.shapeContainer3.Location = new System.Drawing.Point(68, 0);
+            this.shapeContainer3.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer3.Name = "shapeContainer3";
+            this.shapeContainer3.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(992, 641);
-            this.shapeContainer1.TabIndex = 10;
-            this.shapeContainer1.TabStop = false;
+            this.shapeContainer3.Size = new System.Drawing.Size(622, 614);
+            this.shapeContainer3.TabIndex = 8;
+            this.shapeContainer3.TabStop = false;
             // 
             // lineShape1
             // 
@@ -342,10 +347,49 @@
             this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 358;
-            this.lineShape1.X2 = 927;
-            this.lineShape1.Y1 = 124;
-            this.lineShape1.Y2 = 124;
+            this.lineShape1.X1 = 18;
+            this.lineShape1.X2 = 520;
+            this.lineShape1.Y1 = 96;
+            this.lineShape1.Y2 = 96;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label3.Location = new System.Drawing.Point(309, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 24);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "San Vicente";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(267, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(210, 46);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "CEAT N°1";
+            // 
+            // pnlContenedor
+            // 
+            this.pnlContenedor.BackColor = System.Drawing.Color.Transparent;
+            this.pnlContenedor.Controls.Add(this.label2);
+            this.pnlContenedor.Controls.Add(this.label3);
+            this.pnlContenedor.Controls.Add(this.shapeContainer3);
+            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedor.Location = new System.Drawing.Point(279, 27);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Padding = new System.Windows.Forms.Padding(68, 0, 23, 0);
+            this.pnlContenedor.Size = new System.Drawing.Size(713, 614);
+            this.pnlContenedor.TabIndex = 11;
             // 
             // MenuPrincipal
             // 
@@ -355,12 +399,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(992, 641);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlContenedor);
+            this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.shapeContainer1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -375,11 +417,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlMenu.ResumeLayout(false);
+            this.pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlContenedor.ResumeLayout(false);
+            this.pnlContenedor.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -389,23 +432,24 @@
         private System.Windows.Forms.PictureBox picMinimizar;
         private System.Windows.Forms.PictureBox picMaximizar;
         private System.Windows.Forms.PictureBox picCerrar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.Panel pnlMenu;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUsuario;
+        private System.Windows.Forms.Button btnBajaMatricula;
+        private System.Windows.Forms.Button btnEdtiarMatriculas;
+        private System.Windows.Forms.Button btnVerMatriculas;
+        private System.Windows.Forms.Button btnNuevaMatricula;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPermisos;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblNombre;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer3;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlContenedor;
     }
 }
