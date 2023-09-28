@@ -133,6 +133,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{ED1A8111-6FFB-4F50-BBBD-4421523E64C8}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Logica\Logica.csproj">
       <Project>{7BEB36D5-A296-4C39-94C4-B9BBE753537A}</Project>
       <Name>Logica</Name>

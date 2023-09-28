@@ -34,17 +34,18 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lblElegir = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMatriculas = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnGuardarBaja = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblDNI = new System.Windows.Forms.Label();
+            this.lblGrado = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatriculas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,15 +77,15 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = 88;
-            this.lineShape1.X2 = 639;
-            this.lineShape1.Y1 = 86;
-            this.lineShape1.Y2 = 86;
+            this.lineShape1.X2 = 922;
+            this.lineShape1.Y1 = 87;
+            this.lineShape1.Y2 = 87;
             // 
             // shapeContainer1
             // 
@@ -101,7 +102,7 @@
             // 
             this.lblElegir.AllowDrop = true;
             this.lblElegir.AutoSize = true;
-            this.lblElegir.Location = new System.Drawing.Point(81, 154);
+            this.lblElegir.Location = new System.Drawing.Point(81, 152);
             this.lblElegir.Name = "lblElegir";
             this.lblElegir.Size = new System.Drawing.Size(78, 13);
             this.lblElegir.TabIndex = 11;
@@ -111,26 +112,27 @@
             // 
             this.textBox1.AllowDrop = true;
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBox1.Location = new System.Drawing.Point(166, 154);
+            this.textBox1.Location = new System.Drawing.Point(166, 152);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(219, 20);
             this.textBox1.TabIndex = 12;
             // 
-            // dataGridView1
+            // dgvMatriculas
             // 
-            this.dataGridView1.AllowDrop = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(84, 221);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(436, 184);
-            this.dataGridView1.TabIndex = 13;
+            this.dgvMatriculas.AllowDrop = true;
+            this.dgvMatriculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMatriculas.Location = new System.Drawing.Point(84, 218);
+            this.dgvMatriculas.Name = "dgvMatriculas";
+            this.dgvMatriculas.Size = new System.Drawing.Size(436, 302);
+            this.dgvMatriculas.TabIndex = 13;
+            this.dgvMatriculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatriculas_CellContentClick);
             // 
             // btnBuscar
             // 
             this.btnBuscar.AllowDrop = true;
             this.btnBuscar.BackColor = System.Drawing.Color.Silver;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(426, 154);
+            this.btnBuscar.Location = new System.Drawing.Point(425, 152);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(94, 20);
             this.btnBuscar.TabIndex = 14;
@@ -139,14 +141,14 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(623, 221);
+            this.dateTimePicker1.Location = new System.Drawing.Point(625, 337);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 15;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(623, 256);
+            this.textBox2.Location = new System.Drawing.Point(625, 372);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(297, 99);
@@ -156,61 +158,75 @@
             // 
             this.btnGuardarBaja.BackColor = System.Drawing.Color.OrangeRed;
             this.btnGuardarBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarBaja.Location = new System.Drawing.Point(711, 373);
+            this.btnGuardarBaja.Location = new System.Drawing.Point(713, 489);
             this.btnGuardarBaja.Name = "btnGuardarBaja";
             this.btnGuardarBaja.Size = new System.Drawing.Size(112, 31);
             this.btnGuardarBaja.TabIndex = 17;
             this.btnGuardarBaja.Text = "Dar de Baja";
             this.btnGuardarBaja.UseVisualStyleBackColor = false;
+            this.btnGuardarBaja.Click += new System.EventHandler(this.btnGuardarBaja_Click);
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Nombre :";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(6, 23);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(50, 13);
+            this.lblNombre.TabIndex = 18;
+            this.lblNombre.Text = "Nombre :";
             // 
-            // label4
+            // lblApellido
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Apellido :";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(6, 48);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(50, 13);
+            this.lblApellido.TabIndex = 19;
+            this.lblApellido.Text = "Apellido :";
             // 
-            // label5
+            // lblDNI
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(153, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "DNI :";
+            this.lblDNI.AutoSize = true;
+            this.lblDNI.Location = new System.Drawing.Point(153, 23);
+            this.lblDNI.Name = "lblDNI";
+            this.lblDNI.Size = new System.Drawing.Size(32, 13);
+            this.lblDNI.TabIndex = 20;
+            this.lblDNI.Text = "DNI :";
             // 
-            // label6
+            // lblGrado
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(153, 48);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 13);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Grado :";
+            this.lblGrado.AutoSize = true;
+            this.lblGrado.Location = new System.Drawing.Point(153, 48);
+            this.lblGrado.Name = "lblGrado";
+            this.lblGrado.Size = new System.Drawing.Size(42, 13);
+            this.lblGrado.TabIndex = 21;
+            this.lblGrado.Text = "Grado :";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(638, 102);
+            this.groupBox1.Controls.Add(this.lblDNI);
+            this.groupBox1.Controls.Add(this.lblGrado);
+            this.groupBox1.Controls.Add(this.lblNombre);
+            this.groupBox1.Controls.Add(this.lblApellido);
+            this.groupBox1.Location = new System.Drawing.Point(625, 218);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 82);
+            this.groupBox1.Size = new System.Drawing.Size(297, 82);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Alumno a dar de baja";
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.AllowDrop = true;
+            this.btnSeleccionar.BackColor = System.Drawing.Color.Turquoise;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Location = new System.Drawing.Point(524, 255);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(95, 24);
+            this.btnSeleccionar.TabIndex = 23;
+            this.btnSeleccionar.Text = "Seleccionar =>>";
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // FrmBajaMat
             // 
@@ -218,12 +234,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(955, 575);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnGuardarBaja);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMatriculas);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblElegir);
             this.Controls.Add(this.label2);
@@ -233,7 +250,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBajaMat";
             this.Text = "FrmUsuario";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmBajaMat_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatriculas)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -249,15 +267,16 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private System.Windows.Forms.Label lblElegir;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMatriculas;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnGuardarBaja;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblDNI;
+        private System.Windows.Forms.Label lblGrado;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }
