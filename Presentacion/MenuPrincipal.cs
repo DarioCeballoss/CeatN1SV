@@ -67,7 +67,7 @@ namespace Presentacion
             ColorBtn();
             btnBajaMatricula.BackColor = Color.FromArgb(123, 227, 227);
             btnBajaMatricula.ForeColor = Color.FromArgb(254, 255, 255);
-            FormHijo(new FrmNuevaMat());
+            FormHijo(new FrmBajaMat());
             //grupRetiro
             //FrmNuevaMat.grupRetiro.Enabled = true; 
         }
