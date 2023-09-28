@@ -58,6 +58,7 @@ namespace Presentacion
             btnEdtiarMatriculas.BackColor = Color.FromArgb(123, 227, 227);
             btnEdtiarMatriculas.ForeColor = Color.FromArgb(254, 255, 255);
             FormHijo(new FrmEditarMat());
+            
 
         }
 
@@ -66,7 +67,9 @@ namespace Presentacion
             ColorBtn();
             btnBajaMatricula.BackColor = Color.FromArgb(123, 227, 227);
             btnBajaMatricula.ForeColor = Color.FromArgb(254, 255, 255);
-            FormHijo(new FrmBajaMat());
+            FormHijo(new FrmNuevaMat());
+            //grupRetiro
+            //FrmNuevaMat.grupRetiro.Enabled = true; 
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)

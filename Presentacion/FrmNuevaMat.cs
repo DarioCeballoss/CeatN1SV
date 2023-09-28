@@ -22,5 +22,16 @@ namespace Presentacion
         }
 
 
+
+
+        private void chkProcedencia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkProcedencia.Checked){ grupOtraEscuela.Enabled = false; }
+            else { grupOtraEscuela.Enabled = true;
+            }
+
+        }
+
+
     }
 }

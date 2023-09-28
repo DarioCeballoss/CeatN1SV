@@ -39,9 +39,9 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.chkVerTodos = new System.Windows.Forms.CheckBox();
-            this.chkVerEliminados = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,8 +73,8 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
@@ -176,42 +176,39 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // chkVerTodos
+            // radioButton3
             // 
-            this.chkVerTodos.AllowDrop = true;
-            this.chkVerTodos.AutoSize = true;
-            this.chkVerTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.chkVerTodos.Location = new System.Drawing.Point(219, 493);
-            this.chkVerTodos.Name = "chkVerTodos";
-            this.chkVerTodos.Size = new System.Drawing.Size(142, 17);
-            this.chkVerTodos.TabIndex = 18;
-            this.chkVerTodos.Text = "Ver Todas las Matriculas";
-            this.chkVerTodos.UseVisualStyleBackColor = false;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(548, 183);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(122, 17);
+            this.radioButton3.TabIndex = 23;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Todas las Matriculas";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // chkVerEliminados
+            // radioButton2
             // 
-            this.chkVerEliminados.AllowDrop = true;
-            this.chkVerEliminados.AutoSize = true;
-            this.chkVerEliminados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.chkVerEliminados.Location = new System.Drawing.Point(591, 493);
-            this.chkVerEliminados.Name = "chkVerEliminados";
-            this.chkVerEliminados.Size = new System.Drawing.Size(146, 17);
-            this.chkVerEliminados.TabIndex = 19;
-            this.chkVerEliminados.Text = "Ver MAtriculas eliminados";
-            this.chkVerEliminados.UseVisualStyleBackColor = false;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(400, 183);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(120, 17);
+            this.radioButton2.TabIndex = 22;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Matriculas con retiro";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // radioButton1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(547, 249);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 46);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "EDITAR MAT";
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(259, 183);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(110, 17);
+            this.radioButton1.TabIndex = 21;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Matriculas activas";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // FrmEditarMat
             // 
@@ -219,9 +216,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(955, 575);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.chkVerEliminados);
-            this.Controls.Add(this.chkVerTodos);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
@@ -255,8 +252,8 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.CheckBox chkVerTodos;
-        private System.Windows.Forms.CheckBox chkVerEliminados;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
