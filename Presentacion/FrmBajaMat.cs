@@ -50,13 +50,14 @@ namespace Presentacion
 
         private void btnGuardarBaja_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Se dará de baja a : \n" + lblNombre.Text + "  " + lblApellido.Text + "\n" + lblDNI.Text, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Se dará de baja a : \n" + lblNombre.Text + "\n" + lblApellido.Text + "\n" + lblDNI.Text, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                // aca  llama al metodo que graba en la base de datos
                 lblNombre.Text = "Nombre :";
                 lblApellido.Text = "Apellido : ";
                 lblDNI.Text = "DNI : " ;
                 lblGrado.Text = "Grado :";
+                txtBajaCausa.Text = "";
             }
         }
 

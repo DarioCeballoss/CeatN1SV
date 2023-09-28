@@ -34,6 +34,7 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvMatriculas = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -46,16 +47,21 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.turnos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nivel_inicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.varon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mujer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatriculas)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -123,6 +129,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.dgvMatriculas);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -134,13 +141,24 @@
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.btnBuscar);
-            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(820, 491);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "MATRICULAS";
+            // 
+            // dgvMatriculas
+            // 
+            this.dgvMatriculas.AllowDrop = true;
+            this.dgvMatriculas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMatriculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMatriculas.Location = new System.Drawing.Point(103, 122);
+            this.dgvMatriculas.Name = "dgvMatriculas";
+            this.dgvMatriculas.RowHeadersVisible = false;
+            this.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMatriculas.Size = new System.Drawing.Size(491, 302);
+            this.dgvMatriculas.TabIndex = 40;
             // 
             // label8
             // 
@@ -162,7 +180,7 @@
             // 
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(644, 203);
+            this.groupBox1.Location = new System.Drawing.Point(629, 201);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(148, 91);
             this.groupBox1.TabIndex = 37;
@@ -173,7 +191,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Swis721 BlkCn BT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(36, 30);
+            this.label7.Location = new System.Drawing.Point(36, 33);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 45);
             this.label7.TabIndex = 0;
@@ -258,21 +276,12 @@
             this.btnBuscar.AllowDrop = true;
             this.btnBuscar.BackColor = System.Drawing.SystemColors.Menu;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(644, 354);
+            this.btnBuscar.Location = new System.Drawing.Point(629, 352);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(148, 38);
             this.btnBuscar.TabIndex = 24;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowDrop = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(102, 142);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(505, 313);
-            this.dataGridView1.TabIndex = 23;
             // 
             // tabPage2
             // 
@@ -291,38 +300,90 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(547, 44);
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("DFPOP1-W9", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label10.Location = new System.Drawing.Point(525, 44);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(156, 13);
+            this.label10.Size = new System.Drawing.Size(240, 16);
             this.label10.TabIndex = 3;
             this.label10.Text = "Alumno segun regimen de turno";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(115, 44);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("DFPOP1-W9", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label9.Location = new System.Drawing.Point(123, 44);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 13);
+            this.label9.Size = new System.Drawing.Size(168, 16);
             this.label9.TabIndex = 2;
             this.label9.Text = "Alumnos matriculados";
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(445, 77);
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.turnos,
+            this.nivel_inicial});
+            this.dataGridView3.Location = new System.Drawing.Point(562, 77);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(343, 345);
+            this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.Size = new System.Drawing.Size(154, 345);
             this.dataGridView3.TabIndex = 1;
+            // 
+            // turnos
+            // 
+            this.turnos.HeaderText = "Turnos";
+            this.turnos.Name = "turnos";
+            this.turnos.Width = 65;
+            // 
+            // nivel_inicial
+            // 
+            this.nivel_inicial.HeaderText = "Nivel inicial";
+            this.nivel_inicial.Name = "nivel_inicial";
+            this.nivel_inicial.Width = 85;
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.categoria,
+            this.varon,
+            this.mujer,
+            this.total});
             this.dataGridView2.Location = new System.Drawing.Point(35, 77);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(343, 345);
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.Size = new System.Drawing.Size(325, 345);
             this.dataGridView2.TabIndex = 0;
+            // 
+            // categoria
+            // 
+            this.categoria.HeaderText = "Discapacidad/Trastorno";
+            this.categoria.Name = "categoria";
+            this.categoria.Width = 147;
+            // 
+            // varon
+            // 
+            this.varon.HeaderText = "Varon";
+            this.varon.Name = "varon";
+            this.varon.Width = 60;
+            // 
+            // mujer
+            // 
+            this.mujer.HeaderText = "Mujer";
+            this.mujer.Name = "mujer";
+            this.mujer.Width = 58;
+            // 
+            // total
+            // 
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.Width = 56;
             // 
             // FrmVerMat
             // 
@@ -338,12 +399,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmVerMat";
             this.Text = "FrmUsuario";
+            this.Load += new System.EventHandler(this.FrmVerMat_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatriculas)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -365,7 +427,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -379,5 +440,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dgvMatriculas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn varon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mujer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn turnos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nivel_inicial;
     }
 }

@@ -37,7 +37,7 @@
             this.dgvMatriculas = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBajaCausa = new System.Windows.Forms.TextBox();
             this.btnGuardarBaja = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
@@ -45,6 +45,7 @@
             this.lblGrado = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatriculas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -77,8 +78,8 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
@@ -120,9 +121,12 @@
             // dgvMatriculas
             // 
             this.dgvMatriculas.AllowDrop = true;
+            this.dgvMatriculas.BackgroundColor = System.Drawing.Color.White;
             this.dgvMatriculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMatriculas.Location = new System.Drawing.Point(84, 218);
             this.dgvMatriculas.Name = "dgvMatriculas";
+            this.dgvMatriculas.RowHeadersVisible = false;
+            this.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMatriculas.Size = new System.Drawing.Size(436, 302);
             this.dgvMatriculas.TabIndex = 13;
             this.dgvMatriculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatriculas_CellContentClick);
@@ -141,23 +145,24 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(625, 337);
+            this.dateTimePicker1.Location = new System.Drawing.Point(625, 317);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 15;
             // 
-            // textBox2
+            // txtBajaCausa
             // 
-            this.textBox2.Location = new System.Drawing.Point(625, 372);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(297, 99);
-            this.textBox2.TabIndex = 16;
+            this.txtBajaCausa.Location = new System.Drawing.Point(625, 372);
+            this.txtBajaCausa.Multiline = true;
+            this.txtBajaCausa.Name = "txtBajaCausa";
+            this.txtBajaCausa.Size = new System.Drawing.Size(297, 99);
+            this.txtBajaCausa.TabIndex = 16;
             // 
             // btnGuardarBaja
             // 
-            this.btnGuardarBaja.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnGuardarBaja.BackColor = System.Drawing.Color.Crimson;
             this.btnGuardarBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarBaja.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardarBaja.Location = new System.Drawing.Point(713, 489);
             this.btnGuardarBaja.Name = "btnGuardarBaja";
             this.btnGuardarBaja.Size = new System.Drawing.Size(112, 31);
@@ -218,8 +223,9 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.AllowDrop = true;
-            this.btnSeleccionar.BackColor = System.Drawing.Color.Turquoise;
+            this.btnSeleccionar.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSeleccionar.Location = new System.Drawing.Point(524, 255);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(95, 24);
@@ -228,16 +234,27 @@
             this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
+            // label1
+            // 
+            this.label1.AllowDrop = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(622, 356);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Causa de la Baja :";
+            // 
             // FrmBajaMat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(955, 575);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnGuardarBaja);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtBajaCausa);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvMatriculas);
@@ -270,7 +287,7 @@
         private System.Windows.Forms.DataGridView dgvMatriculas;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBajaCausa;
         private System.Windows.Forms.Button btnGuardarBaja;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
@@ -278,5 +295,6 @@
         private System.Windows.Forms.Label lblGrado;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.Label label1;
     }
 }

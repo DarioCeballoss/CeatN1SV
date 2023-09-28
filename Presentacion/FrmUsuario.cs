@@ -6,14 +6,29 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Datos;
 
 namespace Presentacion
 {
     public partial class FrmUsuario : Form
     {
+        Conexion claseConexion = new Conexion();
+        DataTable Tabla = new DataTable();
         public FrmUsuario()
         {
             InitializeComponent();
+        }
+
+        private void dgvMatriculas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FrmUsuario_Load(object sender, EventArgs e)
+        {
+            Tabla.Clear();
+            Tabla.Load(claseConexion.Leer("SELECT * FROM Alumno"));
+            dgvMatriculas.DataSource = Tabla;
         }
     }
 }
