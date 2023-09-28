@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class FrmUsuario
+    partial class FrmEditarMat
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.chkVerTodos = new System.Windows.Forms.CheckBox();
             this.chkVerEliminados = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +79,7 @@
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = 88;
-            this.lineShape1.X2 = 897;
+            this.lineShape1.X2 = 639;
             this.lineShape1.Y1 = 86;
             this.lineShape1.Y2 = 86;
             // 
@@ -97,17 +98,17 @@
             // 
             this.lblElegir.AllowDrop = true;
             this.lblElegir.AutoSize = true;
-            this.lblElegir.Location = new System.Drawing.Point(212, 158);
+            this.lblElegir.Location = new System.Drawing.Point(216, 139);
             this.lblElegir.Name = "lblElegir";
-            this.lblElegir.Size = new System.Drawing.Size(78, 13);
+            this.lblElegir.Size = new System.Drawing.Size(85, 13);
             this.lblElegir.TabIndex = 11;
-            this.lblElegir.Text = "Elegir Usuario :";
+            this.lblElegir.Text = "Elegir Matricula :";
             // 
             // textBox1
             // 
             this.textBox1.AllowDrop = true;
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBox1.Location = new System.Drawing.Point(297, 158);
+            this.textBox1.Location = new System.Drawing.Point(301, 139);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(323, 20);
             this.textBox1.TabIndex = 12;
@@ -116,7 +117,7 @@
             // 
             this.dataGridView1.AllowDrop = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(215, 225);
+            this.dataGridView1.Location = new System.Drawing.Point(219, 206);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(505, 260);
             this.dataGridView1.TabIndex = 13;
@@ -126,7 +127,7 @@
             this.btnBuscar.AllowDrop = true;
             this.btnBuscar.BackColor = System.Drawing.Color.Silver;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(626, 158);
+            this.btnBuscar.Location = new System.Drawing.Point(630, 139);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(94, 20);
             this.btnBuscar.TabIndex = 14;
@@ -140,7 +141,7 @@
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnAgregar.Location = new System.Drawing.Point(787, 296);
+            this.btnAgregar.Location = new System.Drawing.Point(751, 290);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(94, 33);
             this.btnAgregar.TabIndex = 15;
@@ -154,7 +155,7 @@
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnEditar.Location = new System.Drawing.Point(787, 347);
+            this.btnEditar.Location = new System.Drawing.Point(751, 328);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(94, 33);
             this.btnEditar.TabIndex = 16;
@@ -168,7 +169,7 @@
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnEliminar.Location = new System.Drawing.Point(787, 398);
+            this.btnEliminar.Location = new System.Drawing.Point(751, 366);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(94, 33);
             this.btnEliminar.TabIndex = 17;
@@ -180,11 +181,11 @@
             this.chkVerTodos.AllowDrop = true;
             this.chkVerTodos.AutoSize = true;
             this.chkVerTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.chkVerTodos.Location = new System.Drawing.Point(215, 512);
+            this.chkVerTodos.Location = new System.Drawing.Point(219, 493);
             this.chkVerTodos.Name = "chkVerTodos";
-            this.chkVerTodos.Size = new System.Drawing.Size(133, 17);
+            this.chkVerTodos.Size = new System.Drawing.Size(142, 17);
             this.chkVerTodos.TabIndex = 18;
-            this.chkVerTodos.Text = "Ver Todos los usuarios";
+            this.chkVerTodos.Text = "Ver Todas las Matriculas";
             this.chkVerTodos.UseVisualStyleBackColor = false;
             // 
             // chkVerEliminados
@@ -192,19 +193,33 @@
             this.chkVerEliminados.AllowDrop = true;
             this.chkVerEliminados.AutoSize = true;
             this.chkVerEliminados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.chkVerEliminados.Location = new System.Drawing.Point(587, 512);
+            this.chkVerEliminados.Location = new System.Drawing.Point(591, 493);
             this.chkVerEliminados.Name = "chkVerEliminados";
-            this.chkVerEliminados.Size = new System.Drawing.Size(136, 17);
+            this.chkVerEliminados.Size = new System.Drawing.Size(146, 17);
             this.chkVerEliminados.TabIndex = 19;
-            this.chkVerEliminados.Text = "Ver usuarios eliminados";
+            this.chkVerEliminados.Text = "Ver MAtriculas eliminados";
             this.chkVerEliminados.UseVisualStyleBackColor = false;
             // 
-            // FrmUsuario
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(547, 249);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(264, 46);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "EDITAR MAT";
+            // 
+            // FrmEditarMat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(955, 575);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.chkVerEliminados);
             this.Controls.Add(this.chkVerTodos);
             this.Controls.Add(this.btnEliminar);
@@ -219,7 +234,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmUsuario";
+            this.Name = "FrmEditarMat";
             this.Text = "FrmUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -242,5 +257,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.CheckBox chkVerTodos;
         private System.Windows.Forms.CheckBox chkVerEliminados;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -48,6 +48,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmEditarMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarMat.designer.cs">
+      <DependentUpon>FrmEditarMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBajaMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBajaMat.designer.cs">
+      <DependentUpon>FrmBajaMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVerMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVerMat.designer.cs">
+      <DependentUpon>FrmVerMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevaMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevaMat.designer.cs">
+      <DependentUpon>FrmNuevaMat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +92,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmEditarMat.resx">
+      <DependentUpon>FrmEditarMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBajaMat.resx">
+      <DependentUpon>FrmBajaMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVerMat.resx">
+      <DependentUpon>FrmVerMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevaMat.resx">
+      <DependentUpon>FrmNuevaMat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>

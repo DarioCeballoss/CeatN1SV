@@ -188,10 +188,10 @@
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnSalir.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
-            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
-            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(145, 580);
             this.btnSalir.Name = "btnSalir";
@@ -207,10 +207,10 @@
             this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuario.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnUsuario.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
-            this.btnUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
-            this.btnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuario.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,10 +229,10 @@
             this.btnBajaMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnBajaMatricula.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBajaMatricula.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnBajaMatricula.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
-            this.btnBajaMatricula.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
-            this.btnBajaMatricula.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnBajaMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBajaMatricula.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnBajaMatricula.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBajaMatricula.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBajaMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBajaMatricula.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBajaMatricula.Image = ((System.Drawing.Image)(resources.GetObject("btnBajaMatricula.Image")));
             this.btnBajaMatricula.Location = new System.Drawing.Point(23, 332);
@@ -250,10 +250,10 @@
             this.btnEdtiarMatriculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnEdtiarMatriculas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdtiarMatriculas.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnEdtiarMatriculas.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
-            this.btnEdtiarMatriculas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
-            this.btnEdtiarMatriculas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnEdtiarMatriculas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdtiarMatriculas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnEdtiarMatriculas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEdtiarMatriculas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEdtiarMatriculas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdtiarMatriculas.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdtiarMatriculas.Image = ((System.Drawing.Image)(resources.GetObject("btnEdtiarMatriculas.Image")));
             this.btnEdtiarMatriculas.Location = new System.Drawing.Point(23, 266);
@@ -271,10 +271,10 @@
             this.btnVerMatriculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnVerMatriculas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVerMatriculas.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnVerMatriculas.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
-            this.btnVerMatriculas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
-            this.btnVerMatriculas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnVerMatriculas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerMatriculas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnVerMatriculas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVerMatriculas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVerMatriculas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVerMatriculas.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerMatriculas.Image = ((System.Drawing.Image)(resources.GetObject("btnVerMatriculas.Image")));
             this.btnVerMatriculas.Location = new System.Drawing.Point(23, 200);
@@ -292,10 +292,10 @@
             this.btnNuevaMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnNuevaMatricula.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevaMatricula.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnNuevaMatricula.FlatAppearance.CheckedBackColor = System.Drawing.Color.GhostWhite;
-            this.btnNuevaMatricula.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
-            this.btnNuevaMatricula.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnNuevaMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaMatricula.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnNuevaMatricula.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnNuevaMatricula.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnNuevaMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNuevaMatricula.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaMatricula.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevaMatricula.Image")));
             this.btnNuevaMatricula.Location = new System.Drawing.Point(23, 133);
@@ -342,8 +342,8 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";

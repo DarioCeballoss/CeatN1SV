@@ -17,7 +17,7 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        Usuario usu = new Usuario();
+        
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
 
@@ -41,6 +41,7 @@ namespace Presentacion
             ColorBtn();
             btnNuevaMatricula.BackColor = Color.FromArgb(123, 227, 227);
             btnNuevaMatricula.ForeColor = Color.FromArgb(254, 255, 255);
+            FormHijo(new FrmNuevaMat());
         }
 
         private void btnVerMatriculas_Click(object sender, EventArgs e)
@@ -48,6 +49,7 @@ namespace Presentacion
             ColorBtn();
             btnVerMatriculas.BackColor = Color.FromArgb(123, 227, 227);
             btnVerMatriculas.ForeColor = Color.FromArgb(254, 255, 255);
+            FormHijo(new FrmVerMat());
         }
 
         private void btnEdtiarMatriculas_Click(object sender, EventArgs e)
@@ -55,6 +57,8 @@ namespace Presentacion
             ColorBtn();
             btnEdtiarMatriculas.BackColor = Color.FromArgb(123, 227, 227);
             btnEdtiarMatriculas.ForeColor = Color.FromArgb(254, 255, 255);
+            FormHijo(new FrmEditarMat());
+
         }
 
         private void btnBajaMatricula_Click(object sender, EventArgs e)
@@ -62,6 +66,7 @@ namespace Presentacion
             ColorBtn();
             btnBajaMatricula.BackColor = Color.FromArgb(123, 227, 227);
             btnBajaMatricula.ForeColor = Color.FromArgb(254, 255, 255);
+            FormHijo(new FrmBajaMat());
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)
@@ -84,8 +89,11 @@ namespace Presentacion
         {
             foreach (var btn in pnlMenu.Controls)
             {
-                if (btn is Button) ((Button)btn).BackColor = Color.FromArgb(254, 255, 255);
-
+                if (btn is Button)
+                {
+                    ((Button)btn).BackColor = Color.FromArgb(254, 255, 255);
+                    ((Button)btn).ForeColor = Color.Black;
+                }
             }
         }
 

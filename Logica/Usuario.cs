@@ -18,6 +18,7 @@ namespace Logica
 
         public bool TraeDatos(string usu, string pass)
         {
+            bool trae = false;
             OleDbDataReader reader = conecta.Leer("SELECT * FROM Usuario where Usuario_Alias = '" + usu + "' and Usuario_Password = '" + pass + "'");
             if (reader.HasRows)
             {
@@ -31,15 +32,15 @@ namespace Logica
                     //    Permisos = reader.GetString(3);
 
                     //}
-                    return true;
+                    trae = true;
                 }
                 else
                 {
-                    return false;
+                    trae = false;
                 }
             }
             //public bool funciona(){if (conecta.suma(2, 3) == 5){ return true; } else{return false;}}
-
+            return trae;
         }
 
 
