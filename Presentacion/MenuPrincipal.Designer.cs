@@ -223,6 +223,8 @@
             this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUsuario.UseVisualStyleBackColor = false;
             this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+            this.btnUsuario.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.btnUsuario.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // btnBajaMatricula
             // 
@@ -244,6 +246,8 @@
             this.btnBajaMatricula.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBajaMatricula.UseVisualStyleBackColor = false;
             this.btnBajaMatricula.Click += new System.EventHandler(this.btnBajaMatricula_Click);
+            this.btnBajaMatricula.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.btnBajaMatricula.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // btnEdtiarMatriculas
             // 
@@ -265,6 +269,8 @@
             this.btnEdtiarMatriculas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEdtiarMatriculas.UseVisualStyleBackColor = false;
             this.btnEdtiarMatriculas.Click += new System.EventHandler(this.btnEdtiarMatriculas_Click);
+            this.btnEdtiarMatriculas.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.btnEdtiarMatriculas.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // btnVerMatriculas
             // 
@@ -286,6 +292,8 @@
             this.btnVerMatriculas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVerMatriculas.UseVisualStyleBackColor = false;
             this.btnVerMatriculas.Click += new System.EventHandler(this.btnVerMatriculas_Click);
+            this.btnVerMatriculas.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.btnVerMatriculas.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // btnNuevaMatricula
             // 
@@ -293,8 +301,8 @@
             this.btnNuevaMatricula.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevaMatricula.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnNuevaMatricula.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnNuevaMatricula.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnNuevaMatricula.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnNuevaMatricula.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnNuevaMatricula.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnNuevaMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNuevaMatricula.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaMatricula.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevaMatricula.Image")));
@@ -307,6 +315,8 @@
             this.btnNuevaMatricula.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevaMatricula.UseVisualStyleBackColor = false;
             this.btnNuevaMatricula.Click += new System.EventHandler(this.btnNuevaMatricula_Click);
+            this.btnNuevaMatricula.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.btnNuevaMatricula.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // shapeContainer2
             // 
@@ -342,8 +352,8 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
