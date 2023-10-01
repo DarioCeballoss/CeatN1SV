@@ -35,9 +35,7 @@ namespace Presentacion
 
         private void btnNuevaMatricula_Click(object sender, EventArgs e)
         {
-            //ColorBtn();jon
-            //btnNuevaMatricula.BackColor = Color.FromArgb(123, 227, 227);jon
-            //btnNuevaMatricula.ForeColor = Color.FromArgb(254, 255, 255);jon
+            
             vaciarTAG();
             Button boton = (Button)sender;
             boton.Tag = "activo";
@@ -164,19 +162,7 @@ namespace Presentacion
                 }
             }
         }
-        //private void ColorBtn()
-        //{
-
-        //    foreach (var btn in pnlMenu.Controls)
-        //    {
-        //        if (btn is Button)
-        //        {
-        //            ((Button)btn).BackColor = Color.FromArgb(254, 255, 255);
-        //            ((Button)btn).ForeColor = Color.Black;
-        //        }
-        //    }
-        //}
-
+        
         //cambiade form
         private Form formActivo = null;
         private void FormHijo(Form formHijo)
