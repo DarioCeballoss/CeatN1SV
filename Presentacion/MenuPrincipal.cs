@@ -16,12 +16,9 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-
+       
         string path = "C:\\CeatN1SV\\img\\";
-        private void MenuPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void picCerrar_Click(object sender, EventArgs e)
         {
@@ -38,25 +35,34 @@ namespace Presentacion
 
         private void btnNuevaMatricula_Click(object sender, EventArgs e)
         {
-            ColorBtn();
-            btnNuevaMatricula.BackColor = Color.FromArgb(123, 227, 227);
-            btnNuevaMatricula.ForeColor = Color.FromArgb(254, 255, 255);
+            //ColorBtn();jon
+            //btnNuevaMatricula.BackColor = Color.FromArgb(123, 227, 227);jon
+            //btnNuevaMatricula.ForeColor = Color.FromArgb(254, 255, 255);jon
+            vaciarTAG();
+            Button boton = (Button)sender;
+            boton.Tag = "activo";
+            btnDefault();
             FormHijo(new FrmNuevaMat());
         }
 
         private void btnVerMatriculas_Click(object sender, EventArgs e)
         {
-            ColorBtn();
-            btnVerMatriculas.BackColor = Color.FromArgb(123, 227, 227);
-            btnVerMatriculas.ForeColor = Color.FromArgb(254, 255, 255);
+            
+            vaciarTAG();
+
+            Button boton = (Button)sender;
+            boton.Tag = "activo";
+            btnDefault();
             FormHijo(new FrmVerMat());
         }
 
         private void btnEdtiarMatriculas_Click(object sender, EventArgs e)
         {
-            ColorBtn();
-            btnEdtiarMatriculas.BackColor = Color.FromArgb(123, 227, 227);
-            btnEdtiarMatriculas.ForeColor = Color.FromArgb(254, 255, 255);
+            
+            vaciarTAG();
+            Button boton = (Button)sender;
+            boton.Tag = "activo";
+            btnDefault();
             FormHijo(new FrmEditarMat());
             
 
@@ -64,19 +70,24 @@ namespace Presentacion
 
         private void btnBajaMatricula_Click(object sender, EventArgs e)
         {
-            ColorBtn();
-            btnBajaMatricula.BackColor = Color.FromArgb(123, 227, 227);
-            btnBajaMatricula.ForeColor = Color.FromArgb(254, 255, 255);
+        
+            vaciarTAG();
+            Button boton = (Button)sender;
+            boton.Tag = "activo";
+            btnDefault();
             FormHijo(new FrmBajaMat());
-            //grupRetiro
-            //FrmNuevaMat.grupRetiro.Enabled = true; 
+            
         }
 
+
+       
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            ColorBtn();
-            btnUsuario.BackColor = Color.FromArgb(123, 227, 227);
-            btnUsuario.ForeColor = Color.FromArgb(254, 255, 255);
+         
+            vaciarTAG();
+            Button boton = (Button)sender;
+            boton.Tag = "activo";
+            btnDefault();
             FormHijo(new FrmUsuario());
         }
 
@@ -92,35 +103,79 @@ namespace Presentacion
 
         private void btn_MouseLeave(object sender, EventArgs e)
         {
+            
             Button boton = (Button)sender;
+
+            if(boton.Tag!= "activo"){
             boton.ForeColor = Color.Black;
             boton.BackColor = Color.White;
-            boton.Image = Image.FromFile(path + boton.Name + "A.png");
+            if (boton.Name!= "btnSalir")boton.Image = Image.FromFile(path + boton.Name + "A.png");
             boton.ImageAlign = ContentAlignment.MiddleLeft;
+            }
+
         }
 
         private void btn_MouseEnter(object sender, EventArgs e)
         {
-
+            
             Button boton = (Button)sender;
            
-           
-            boton.Image = Image.FromFile(path + boton.Name + "B.png");
             boton.ImageAlign = ContentAlignment.MiddleCenter;
-            boton.BackColor = Color.LightSeaGreen;
-            boton.ForeColor = Color.White;
-        }
-        private void ColorBtn()
-        {
-            foreach (var btn in pnlMenu.Controls)
+            if (boton.Name != "btnSalir")
             {
-                if (btn is Button)
+                boton.Image = Image.FromFile(path + boton.Name + "B.png");
+                boton.BackColor = Color.FromArgb(123, 227, 227);
+            }
+            else { boton.BackColor = Color.MediumPurple; }
+            
+            boton.ForeColor = Color.FromArgb(254, 255, 255);
+            
+        }
+
+        public void vaciarTAG()
+        {
+            foreach (Control control in pnlMenu.Controls)
+            {
+                if (control is Button)
                 {
-                    ((Button)btn).BackColor = Color.FromArgb(254, 255, 255);
-                    ((Button)btn).ForeColor = Color.Black;
+                    if (((Button)control).Name != "btnSalir")
+                    {
+                        ((Button)control).Tag = " ";
+                    }
                 }
             }
         }
+
+
+        public void btnDefault()
+        {
+            foreach (Control control in pnlMenu.Controls)
+            {
+                if (control is Button)
+                {
+                    if (((Button)control).Name != "btnSalir" && ((Button)control).Tag != "activo")//da problemas pero funciona-no borrar-jon
+                    {
+                        ((Button)control).ForeColor = Color.Black;
+                        ((Button)control).BackColor = Color.FromArgb(254, 255, 255);
+                        ((Button)control).Image = Image.FromFile(path + ((Button)control).Name + "A.png");
+                        ((Button)control).ImageAlign = ContentAlignment.MiddleLeft;
+                    }
+
+                }
+            }
+        }
+        //private void ColorBtn()
+        //{
+
+        //    foreach (var btn in pnlMenu.Controls)
+        //    {
+        //        if (btn is Button)
+        //        {
+        //            ((Button)btn).BackColor = Color.FromArgb(254, 255, 255);
+        //            ((Button)btn).ForeColor = Color.Black;
+        //        }
+        //    }
+        //}
 
         //cambiade form
         private Form formActivo = null;
@@ -136,6 +191,8 @@ namespace Presentacion
             formHijo.BringToFront();
             formHijo.Show();
         }
+
+       
 
         /************************
          *  FUNCIONES OBJETOS

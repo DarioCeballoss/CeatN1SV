@@ -189,8 +189,8 @@
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnSalir.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(145, 580);
@@ -200,6 +200,8 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.btnSalir.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // btnUsuario
             // 
@@ -422,7 +424,6 @@
             this.Text = "MenuPrincipal";
             this.TransparencyKey = System.Drawing.Color.MintCream;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
