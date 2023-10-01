@@ -17,7 +17,7 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        
+        string path = "C:\\CeatN1SV\\img\\";
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
 
@@ -88,6 +88,28 @@ namespace Presentacion
         /******************************
          * FUNCIONES diseño
          * ****************************/
+
+
+        private void btn_MouseLeave(object sender, EventArgs e)
+        {
+            Button boton = (Button)sender;
+            boton.ForeColor = Color.Black;
+            boton.BackColor = Color.White;
+            boton.Image = Image.FromFile(path + boton.Name + "A.png");
+            boton.ImageAlign = ContentAlignment.MiddleLeft;
+        }
+
+        private void btn_MouseEnter(object sender, EventArgs e)
+        {
+
+            Button boton = (Button)sender;
+           
+           
+            boton.Image = Image.FromFile(path + boton.Name + "B.png");
+            boton.ImageAlign = ContentAlignment.MiddleCenter;
+            boton.BackColor = Color.LightSeaGreen;
+            boton.ForeColor = Color.White;
+        }
         private void ColorBtn()
         {
             foreach (var btn in pnlMenu.Controls)
