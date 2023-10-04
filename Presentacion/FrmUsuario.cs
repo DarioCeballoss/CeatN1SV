@@ -30,5 +30,13 @@ namespace Presentacion
             Tabla.Load(claseConexion.Leer("SELECT * FROM Alumno"));
             dgvMatriculas.DataSource = Tabla;
         }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string busqueda = txtBuscar.Text;
+            Tabla.Clear();
+            Tabla.Load(claseConexion.Leer("SELECT * FROM Alumno WHERE Alumno_Nombres LIKE '%" + busqueda + "%' OR Alumno_Apellidos LIKE '%" + busqueda + "%' OR Alumno_Dni LIKE '%" + busqueda + "%' ORDER BY Alumno_Apellidos;"));
+            dgvMatriculas.DataSource = Tabla;
+        }
     }
 }
