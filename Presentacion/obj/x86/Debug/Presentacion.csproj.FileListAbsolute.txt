@@ -16,3 +16,4 @@ C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.FrmEditarMat.resources
 C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.FrmBajaMat.resources
 C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.FrmVerMat.resources
 C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.FrmNuevaMat.resources
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.FrmUsuarioPerfil.resources

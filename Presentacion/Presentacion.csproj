@@ -60,6 +60,12 @@
     <Compile Include="FrmBajaMat.designer.cs">
       <DependentUpon>FrmBajaMat.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUsuarioPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarioPerfil.Designer.cs">
+      <DependentUpon>FrmUsuarioPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVerMat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBajaMat.resx">
       <DependentUpon>FrmBajaMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarioPerfil.resx">
+      <DependentUpon>FrmUsuarioPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVerMat.resx">
       <DependentUpon>FrmVerMat.cs</DependentUpon>

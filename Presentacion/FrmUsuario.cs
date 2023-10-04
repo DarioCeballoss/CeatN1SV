@@ -38,5 +38,11 @@ namespace Presentacion
             Tabla.Load(claseConexion.Leer("SELECT * FROM Alumno WHERE Alumno_Nombres LIKE '%" + busqueda + "%' OR Alumno_Apellidos LIKE '%" + busqueda + "%' OR Alumno_Dni LIKE '%" + busqueda + "%' ORDER BY Alumno_Apellidos;"));
             dgvMatriculas.DataSource = Tabla;
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FrmUsuarioPerfil perfil = new FrmUsuarioPerfil();
+            perfil.Show();
+        }
     }
 }
