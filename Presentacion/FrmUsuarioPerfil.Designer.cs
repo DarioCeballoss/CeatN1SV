@@ -76,42 +76,43 @@
             this.txtNombre.Location = new System.Drawing.Point(176, 102);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(192, 20);
-            this.txtNombre.TabIndex = 2;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(176, 137);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(192, 20);
-            this.txtApellido.TabIndex = 3;
+            this.txtApellido.TabIndex = 2;
             // 
             // txtAlias
             // 
             this.txtAlias.Location = new System.Drawing.Point(176, 280);
             this.txtAlias.Name = "txtAlias";
             this.txtAlias.Size = new System.Drawing.Size(192, 20);
-            this.txtAlias.TabIndex = 4;
+            this.txtAlias.TabIndex = 6;
             // 
             // txtMail
             // 
             this.txtMail.Location = new System.Drawing.Point(176, 207);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(192, 20);
-            this.txtMail.TabIndex = 5;
+            this.txtMail.TabIndex = 4;
             // 
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(176, 316);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(192, 20);
-            this.txtContraseña.TabIndex = 8;
+            this.txtContraseña.TabIndex = 7;
+            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(176, 172);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(192, 20);
-            this.txtDNI.TabIndex = 7;
+            this.txtDNI.TabIndex = 3;
             // 
             // cmbPermisos
             // 
@@ -119,7 +120,7 @@
             this.cmbPermisos.Location = new System.Drawing.Point(176, 242);
             this.cmbPermisos.Name = "cmbPermisos";
             this.cmbPermisos.Size = new System.Drawing.Size(192, 21);
-            this.cmbPermisos.TabIndex = 9;
+            this.cmbPermisos.TabIndex = 5;
             this.cmbPermisos.Tag = "Permisos";
             // 
             // label3
@@ -298,13 +299,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtAlias;
-        private System.Windows.Forms.TextBox txtMail;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.TextBox txtDNI;
-        private System.Windows.Forms.ComboBox cmbPermisos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -318,5 +312,12 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnAgregar;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtApellido;
+        public System.Windows.Forms.TextBox txtAlias;
+        public System.Windows.Forms.TextBox txtMail;
+        public System.Windows.Forms.TextBox txtContraseña;
+        public System.Windows.Forms.TextBox txtDNI;
+        public System.Windows.Forms.ComboBox cmbPermisos;
     }
 }

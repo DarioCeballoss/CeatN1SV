@@ -31,9 +31,28 @@ namespace Presentacion
         
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(cmbPermisos.Text);
+           // MessageBox.Show(Convert.ToString());
+            GuardarUsu();
+ 
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                GuardarUsu();
+            }
+        }
+
+
+        /*******************
+         * METODOS 
+         * ****************/
+
+        private void GuardarUsu()
+        {
             bool cone = claseConexion.ABM("INSERT INTO Usuario (Usuario_Nombre, Usuario_Apellido, Usuario_Mail, Usuario_Alias, Usuario_Permisos, Usuario_Password, Usuario_DNI) " +
-                                                "VALUES ('" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtMail.Text + "', '" + txtAlias.Text + "', 1, '" + txtContraseña.Text + "', " + Convert.ToInt32(txtDNI.Text) + ")");
+                    "VALUES ('" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtMail.Text + "', '" + txtAlias.Text + "', " + cmbPermisos.SelectedValue + ", '" + txtContraseña.Text + "', " + Convert.ToInt32(txtDNI.Text) + ")");
             if (cone)
             {
                 MessageBox.Show("sep");
@@ -42,9 +61,7 @@ namespace Presentacion
             {
                 MessageBox.Show("none");
             }
- 
         }
-
 
     }
 }
