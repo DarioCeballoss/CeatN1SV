@@ -27,22 +27,25 @@ namespace Presentacion
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
             Tabla.Clear();
-            Tabla.Load(claseConexion.Leer("SELECT * FROM Alumno"));
+            Tabla.Load(claseConexion.Leer("SELECT * FROM Usuario"));
             dgvMatriculas.DataSource = Tabla;
         }
 
-        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string busqueda = txtBuscar.Text;
-            Tabla.Clear();
-            Tabla.Load(claseConexion.Leer("SELECT * FROM Alumno WHERE Alumno_Nombres LIKE '%" + busqueda + "%' OR Alumno_Apellidos LIKE '%" + busqueda + "%' OR Alumno_Dni LIKE '%" + busqueda + "%' ORDER BY Alumno_Apellidos;"));
-            dgvMatriculas.DataSource = Tabla;
-        }
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FrmUsuarioPerfil perfil = new FrmUsuarioPerfil();
             perfil.Show();
+            
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string busqueda = txtBuscar.Text;
+            Tabla.Clear();
+            Tabla.Load(claseConexion.Leer("SELECT * FROM Usuario WHERE Usuario_Nombre LIKE '%" + busqueda + "%' OR Usuario_Apellido LIKE '%" + busqueda + "%' OR Usuario_DNI LIKE '%" + busqueda + "%' ORDER BY Usuario_Apellido;"));
+            dgvMatriculas.DataSource = Tabla;
         }
     }
 }

@@ -354,8 +354,8 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
@@ -396,7 +396,7 @@
             this.pnlContenedor.Controls.Add(this.label2);
             this.pnlContenedor.Controls.Add(this.label3);
             this.pnlContenedor.Controls.Add(this.shapeContainer3);
-            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(279, 27);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Padding = new System.Windows.Forms.Padding(68, 0, 23, 0);
