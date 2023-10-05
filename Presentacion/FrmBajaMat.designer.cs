@@ -126,6 +126,7 @@
             this.dgvMatriculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMatriculas.Location = new System.Drawing.Point(84, 218);
             this.dgvMatriculas.Name = "dgvMatriculas";
+            this.dgvMatriculas.ReadOnly = true;
             this.dgvMatriculas.RowHeadersVisible = false;
             this.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMatriculas.Size = new System.Drawing.Size(436, 302);

@@ -119,6 +119,7 @@
             this.cmbPermisos.FormattingEnabled = true;
             this.cmbPermisos.Location = new System.Drawing.Point(176, 242);
             this.cmbPermisos.Name = "cmbPermisos";
+            this.cmbPermisos.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbPermisos.Size = new System.Drawing.Size(192, 21);
             this.cmbPermisos.TabIndex = 5;
             this.cmbPermisos.Tag = "Permisos";
