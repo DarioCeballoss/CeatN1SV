@@ -42,6 +42,12 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.dgvMatriculas = new System.Windows.Forms.DataGridView();
+            this.UsuId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsuApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsuNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsuDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsuAlias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsuPermisos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatriculas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,7 +118,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(323, 20);
             this.txtBuscar.TabIndex = 12;
-            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnBuscar
             // 
@@ -154,6 +160,7 @@
             this.btnEditar.TabIndex = 16;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -206,15 +213,68 @@
             // dgvMatriculas
             // 
             this.dgvMatriculas.AllowDrop = true;
+            this.dgvMatriculas.AllowUserToAddRows = false;
+            this.dgvMatriculas.AllowUserToDeleteRows = false;
             this.dgvMatriculas.BackgroundColor = System.Drawing.Color.White;
             this.dgvMatriculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMatriculas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UsuId,
+            this.UsuApellido,
+            this.UsuNombre,
+            this.UsuDni,
+            this.UsuAlias,
+            this.UsuPermisos});
             this.dgvMatriculas.Location = new System.Drawing.Point(215, 225);
             this.dgvMatriculas.Name = "dgvMatriculas";
+            this.dgvMatriculas.ReadOnly = true;
             this.dgvMatriculas.RowHeadersVisible = false;
             this.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMatriculas.Size = new System.Drawing.Size(505, 302);
             this.dgvMatriculas.TabIndex = 21;
             this.dgvMatriculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatriculas_CellContentClick);
+            // 
+            // UsuId
+            // 
+            this.UsuId.DataPropertyName = "Id";
+            this.UsuId.HeaderText = "ID";
+            this.UsuId.Name = "UsuId";
+            this.UsuId.ReadOnly = true;
+            this.UsuId.Visible = false;
+            // 
+            // UsuApellido
+            // 
+            this.UsuApellido.DataPropertyName = "Usuario_Apellido";
+            this.UsuApellido.HeaderText = "Apellidos";
+            this.UsuApellido.Name = "UsuApellido";
+            this.UsuApellido.ReadOnly = true;
+            // 
+            // UsuNombre
+            // 
+            this.UsuNombre.DataPropertyName = "Usuario_Nombre";
+            this.UsuNombre.HeaderText = "Nombres";
+            this.UsuNombre.Name = "UsuNombre";
+            this.UsuNombre.ReadOnly = true;
+            // 
+            // UsuDni
+            // 
+            this.UsuDni.DataPropertyName = "Usuario_DNI";
+            this.UsuDni.HeaderText = "DNI";
+            this.UsuDni.Name = "UsuDni";
+            this.UsuDni.ReadOnly = true;
+            // 
+            // UsuAlias
+            // 
+            this.UsuAlias.DataPropertyName = "Usuario_Alias";
+            this.UsuAlias.HeaderText = "Alias";
+            this.UsuAlias.Name = "UsuAlias";
+            this.UsuAlias.ReadOnly = true;
+            // 
+            // UsuPermisos
+            // 
+            this.UsuPermisos.DataPropertyName = "Permiso_Categoria";
+            this.UsuPermisos.HeaderText = "Permiso";
+            this.UsuPermisos.Name = "UsuPermisos";
+            this.UsuPermisos.ReadOnly = true;
             // 
             // FrmUsuario
             // 
@@ -262,5 +322,11 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.DataGridView dgvMatriculas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsuId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsuApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsuNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsuDni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsuAlias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UsuPermisos;
     }
 }
