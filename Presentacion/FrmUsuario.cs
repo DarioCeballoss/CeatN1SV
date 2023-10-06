@@ -71,12 +71,12 @@ namespace Presentacion
                     frmPerfil.txtApellido.Text = reader.GetString(2);
                     frmPerfil.txtMail.Text = reader.GetString(3);
                     frmPerfil.txtAlias.Text = reader.GetString(4);
-                    frmPerfil.cmbPermisos.SelectedIndex = reader.GetInt32(5);
+                    frmPerfil.cmbPermisos.SelectedValue = 0;
                     frmPerfil.txtContraseña.Text = reader.GetString(6);
                     frmPerfil.txtDNI.Text = Convert.ToString(reader.GetInt32(7));
                     frmPerfil.Show();
                 }
-                MessageBox.Show("SEP");
+                
 
             }
             else { MessageBox.Show("NOP"); }
