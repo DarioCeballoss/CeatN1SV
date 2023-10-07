@@ -14,7 +14,7 @@ namespace Presentacion
 {
     public partial class FrmUsuario : Form
     {
-        FrmUsuarioPerfil frmPerfil = new FrmUsuarioPerfil();
+        
 
         Conexion claseConexion = new Conexion();
         DataTable Tabla = new DataTable();
@@ -24,17 +24,13 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        private void dgvMatriculas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
             Tabla.Clear();
             Tabla.Load(claseConexion.Leer("SELECT Usuario.Id, Usuario.Usuario_Nombre, Usuario.Usuario_Apellido, Usuario.Usuario_DNI, Usuario.Usuario_Alias, Permisos.Permiso_Categoria " +
-                "FROM Usuario INNER JOIN Permisos ON Usuario.Usuario_Permisos = Permisos.Id;"));
+                "FROM Usuario INNER JOIN Permisos ON Usuario.Usuario_Permisos = Permisos.Id  where Usuario.Usuario_Baja = false;"));
             dgvMatriculas.DataSource = Tabla;
 
         }
@@ -43,7 +39,7 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
+            FrmUsuarioPerfil frmPerfil = new FrmUsuarioPerfil();
             frmPerfil.Show();
             
         }
@@ -59,7 +55,7 @@ namespace Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            FrmUsuarioPerfil frmPerfil = new FrmUsuarioPerfil();
             OleDbDataReader reader = claseConexion.Leer("Select * from Usuario where Id = " + dgvMatriculas.CurrentRow.Cells["UsuId"].Value.ToString() + " ;");
             
             if (reader.HasRows)
@@ -81,6 +77,42 @@ namespace Presentacion
             }
             else { MessageBox.Show("NOP"); }
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Tabla.Clear();
+            Tabla.Load(claseConexion.Leer("SELECT Usuario.Id, Usuario.Usuario_Nombre, Usuario.Usuario_Apellido, Usuario.Usuario_DNI, Usuario.Usuario_Alias, Permisos.Permiso_Categoria " +
+                "FROM Usuario INNER JOIN Permisos ON Usuario.Usuario_Permisos = Permisos.Id  where Usuario.Usuario_Baja = false;"));
+            dgvMatriculas.DataSource = Tabla;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Tabla.Clear();
+            Tabla.Load(claseConexion.Leer("SELECT Usuario.Id, Usuario.Usuario_Nombre, Usuario.Usuario_Apellido, Usuario.Usuario_DNI, Usuario.Usuario_Alias, Permisos.Permiso_Categoria " +
+                "FROM Usuario INNER JOIN Permisos ON Usuario.Usuario_Permisos = Permisos.Id  where Usuario.Usuario_Baja = true;"));
+            dgvMatriculas.DataSource = Tabla;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            Tabla.Clear();
+            Tabla.Load(claseConexion.Leer("SELECT Usuario.Id, Usuario.Usuario_Nombre, Usuario.Usuario_Apellido, Usuario.Usuario_DNI, Usuario.Usuario_Alias, Permisos.Permiso_Categoria " +
+                "FROM Usuario INNER JOIN Permisos ON Usuario.Usuario_Permisos = Permisos.Id ;"));
+            dgvMatriculas.DataSource = Tabla;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("SE DARA DE BAJA AL USUARIO : \n " +
+                                dgvMatriculas.CurrentRow.Cells["UsuApellido"].Value.ToString() + " " + 
+                                dgvMatriculas.CurrentRow.Cells["UsuNombre"].Value.ToString() +
+                                " \n\n Desea Continuar ? \n ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                claseConexion.ABM("UPDATE Usuario SET Usuario_Baja = true WHERE Id = " + dgvMatriculas.CurrentRow.Cells["UsuId"].Value.ToString() + ";");
+                MessageBox.Show("Usuario dado de baja");
+            } 
         }
     }
 }

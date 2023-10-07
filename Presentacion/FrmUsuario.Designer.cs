@@ -175,6 +175,7 @@
             this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // radioButton1
             // 
@@ -187,6 +188,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Usuarios activos";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -198,6 +200,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Usuarios Eliminados";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -209,6 +212,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Todos los Usuarios";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // dgvMatriculas
             // 
@@ -231,7 +235,6 @@
             this.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMatriculas.Size = new System.Drawing.Size(505, 302);
             this.dgvMatriculas.TabIndex = 21;
-            this.dgvMatriculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatriculas_CellContentClick);
             // 
             // UsuId
             // 
