@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Logica;
 
 namespace Presentacion
 {
@@ -30,6 +31,17 @@ namespace Presentacion
             else { grupOtraEscuela.Enabled = true;
             }
 
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Alumno alumno = new Alumno();
+
+            if(alumno.guarda()){
+                MessageBox.Show("Sep");
+            }else{
+                MessageBox.Show("none");
+            }
         }
 
 
