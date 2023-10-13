@@ -70,7 +70,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(992, 27);
+            this.panel1.Size = new System.Drawing.Size(1327, 27);
             this.panel1.TabIndex = 1;
             // 
             // picMinimizar
@@ -78,7 +78,7 @@
             this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
-            this.picMinimizar.Location = new System.Drawing.Point(908, 7);
+            this.picMinimizar.Location = new System.Drawing.Point(1243, 7);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(20, 20);
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -90,7 +90,7 @@
             this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("picMaximizar.Image")));
-            this.picMaximizar.Location = new System.Drawing.Point(934, 3);
+            this.picMaximizar.Location = new System.Drawing.Point(1269, 3);
             this.picMaximizar.Name = "picMaximizar";
             this.picMaximizar.Size = new System.Drawing.Size(20, 20);
             this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,7 +102,7 @@
             this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
-            this.picCerrar.Location = new System.Drawing.Point(960, 3);
+            this.picCerrar.Location = new System.Drawing.Point(1295, 3);
             this.picCerrar.Name = "picCerrar";
             this.picCerrar.Size = new System.Drawing.Size(20, 20);
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,7 +116,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(21, 614);
+            this.panel2.Size = new System.Drawing.Size(21, 687);
             this.panel2.TabIndex = 8;
             // 
             // pnlMenu
@@ -136,7 +136,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(21, 27);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(258, 614);
+            this.pnlMenu.Size = new System.Drawing.Size(281, 687);
             this.pnlMenu.TabIndex = 9;
             // 
             // pictureBox1
@@ -193,7 +193,7 @@
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(145, 580);
+            this.btnSalir.Location = new System.Drawing.Point(145, 653);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(92, 31);
             this.btnSalir.TabIndex = 6;
@@ -216,7 +216,7 @@
             this.btnUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuario.Location = new System.Drawing.Point(23, 476);
+            this.btnUsuario.Location = new System.Drawing.Point(23, 549);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(214, 50);
             this.btnUsuario.TabIndex = 5;
@@ -327,7 +327,7 @@
             this.shapeContainer2.Name = "shapeContainer2";
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape2});
-            this.shapeContainer2.Size = new System.Drawing.Size(258, 614);
+            this.shapeContainer2.Size = new System.Drawing.Size(281, 687);
             this.shapeContainer2.TabIndex = 0;
             this.shapeContainer2.TabStop = false;
             // 
@@ -348,19 +348,19 @@
             this.shapeContainer3.Name = "shapeContainer3";
             this.shapeContainer3.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer3.Size = new System.Drawing.Size(622, 614);
+            this.shapeContainer3.Size = new System.Drawing.Size(934, 687);
             this.shapeContainer3.TabIndex = 8;
             this.shapeContainer3.TabStop = false;
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = 18;
-            this.lineShape1.X2 = 520;
+            this.lineShape1.X2 = 832;
             this.lineShape1.Y1 = 96;
             this.lineShape1.Y2 = 96;
             // 
@@ -371,7 +371,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(309, 60);
+            this.label3.Location = new System.Drawing.Point(465, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 24);
             this.label3.TabIndex = 6;
@@ -384,7 +384,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(267, 14);
+            this.label2.Location = new System.Drawing.Point(423, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(210, 46);
             this.label2.TabIndex = 7;
@@ -397,10 +397,10 @@
             this.pnlContenedor.Controls.Add(this.label3);
             this.pnlContenedor.Controls.Add(this.shapeContainer3);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(279, 27);
+            this.pnlContenedor.Location = new System.Drawing.Point(302, 27);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Padding = new System.Windows.Forms.Padding(68, 0, 23, 0);
-            this.pnlContenedor.Size = new System.Drawing.Size(713, 614);
+            this.pnlContenedor.Size = new System.Drawing.Size(1025, 687);
             this.pnlContenedor.TabIndex = 11;
             // 
             // MenuPrincipal
@@ -410,7 +410,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(184)))), ((int)(((byte)(146)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(992, 641);
+            this.ClientSize = new System.Drawing.Size(1327, 714);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.panel2);

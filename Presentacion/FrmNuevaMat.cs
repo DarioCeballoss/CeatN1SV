@@ -35,13 +35,13 @@ namespace Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Alumno alumno = new Alumno();
+            //Alumno alumno = new Alumno();
 
-            if(alumno.guarda()){
-                MessageBox.Show("Sep");
-            }else{
-                MessageBox.Show("none");
-            }
+            //if(alumno.guarda()){
+            //    MessageBox.Show("Sep");
+            //}else{
+            //    MessageBox.Show("none");
+            //}
         }
 
 
