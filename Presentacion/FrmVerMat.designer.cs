@@ -44,7 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbSeccion = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -95,15 +95,15 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 88;
-            this.lineShape1.X2 = 946;
-            this.lineShape1.Y1 = 86;
-            this.lineShape1.Y2 = 86;
+            this.lineShape1.X1 = 19;
+            this.lineShape1.X2 = 1018;
+            this.lineShape1.Y1 = 89;
+            this.lineShape1.Y2 = 94;
             // 
             // shapeContainer1
             // 
@@ -120,10 +120,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(102, 113);
+            this.tabControl1.Location = new System.Drawing.Point(19, 113);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(828, 517);
+            this.tabControl1.Size = new System.Drawing.Size(954, 517);
             this.tabControl1.TabIndex = 11;
             // 
             // tabPage1
@@ -138,13 +138,13 @@
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.comboBox3);
             this.tabPage1.Controls.Add(this.comboBox2);
-            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.cmbSeccion);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.btnBuscar);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(820, 491);
+            this.tabPage1.Size = new System.Drawing.Size(946, 491);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "MATRICULAS";
             // 
@@ -153,11 +153,11 @@
             this.dgvMatriculas.AllowDrop = true;
             this.dgvMatriculas.BackgroundColor = System.Drawing.Color.White;
             this.dgvMatriculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMatriculas.Location = new System.Drawing.Point(103, 122);
+            this.dgvMatriculas.Location = new System.Drawing.Point(17, 122);
             this.dgvMatriculas.Name = "dgvMatriculas";
             this.dgvMatriculas.RowHeadersVisible = false;
             this.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMatriculas.Size = new System.Drawing.Size(491, 302);
+            this.dgvMatriculas.Size = new System.Drawing.Size(743, 302);
             this.dgvMatriculas.TabIndex = 40;
             // 
             // label8
@@ -180,7 +180,7 @@
             // 
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(629, 201);
+            this.groupBox1.Location = new System.Drawing.Point(777, 208);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(148, 91);
             this.groupBox1.TabIndex = 37;
@@ -249,18 +249,19 @@
             this.comboBox2.Size = new System.Drawing.Size(152, 21);
             this.comboBox2.TabIndex = 32;
             // 
-            // comboBox1
+            // cmbSeccion
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbSeccion.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.cmbSeccion.FormattingEnabled = true;
+            this.cmbSeccion.Items.AddRange(new object[] {
             "Lactante",
             "Deambulante",
             "De 2 a 3 años"});
-            this.comboBox1.Location = new System.Drawing.Point(100, 76);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 21);
-            this.comboBox1.TabIndex = 31;
+            this.cmbSeccion.Location = new System.Drawing.Point(100, 76);
+            this.cmbSeccion.Name = "cmbSeccion";
+            this.cmbSeccion.Size = new System.Drawing.Size(152, 21);
+            this.cmbSeccion.TabIndex = 31;
+            this.cmbSeccion.TextChanged += new System.EventHandler(this.cmbSeccion_TextChanged);
             // 
             // label1
             // 
@@ -276,7 +277,7 @@
             this.btnBuscar.AllowDrop = true;
             this.btnBuscar.BackColor = System.Drawing.SystemColors.Menu;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(629, 352);
+            this.btnBuscar.Location = new System.Drawing.Point(777, 359);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(148, 38);
             this.btnBuscar.TabIndex = 24;
@@ -293,7 +294,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(820, 491);
+            this.tabPage2.Size = new System.Drawing.Size(946, 491);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ESTADISTICA";
             // 
@@ -301,10 +302,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("DFPOP1-W9", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label10.Location = new System.Drawing.Point(525, 44);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(240, 16);
+            this.label10.Size = new System.Drawing.Size(235, 20);
             this.label10.TabIndex = 3;
             this.label10.Text = "Alumno segun regimen de turno";
             // 
@@ -312,10 +313,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("DFPOP1-W9", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label9.Location = new System.Drawing.Point(123, 44);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(168, 16);
+            this.label9.Size = new System.Drawing.Size(165, 20);
             this.label9.TabIndex = 2;
             this.label9.Text = "Alumnos matriculados";
             // 
@@ -424,7 +425,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSeccion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox groupBox1;
