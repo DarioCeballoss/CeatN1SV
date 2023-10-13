@@ -22,6 +22,7 @@ namespace Presentacion
         string consulta;
         private void FrmVerMat_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             string consultaSql = @"
                 SELECT
                     Alumno_Nombres as nombre,
@@ -66,6 +67,11 @@ namespace Presentacion
             //"INNER JOIN Caracterizacion ON Alumno.Alumno_Caracterizacion = Caracterizacion.Id INNER JOIN Nacionalidad ON Alumno.Alumno_Nacionalidad = Nacionalidad.Id  WHERE Categoria.Categoria_Nombre LIKE '%" + 
             //busqueda + "%' OR Usuario_Apellido LIKE '%" + busqueda + "%' OR Usuario_DNI LIKE '%" + busqueda + "%' ORDER BY Usuario_Apellido;"));
             //dgvMatriculas.DataSource = Tabla;
+=======
+            Tabla.Clear();
+            Tabla.Load(claseConexion.Leer("SELECT Alumno.Alumno_Nombres, Alumno.Alumno_Apellidos, Alumno.Alumno_Nacimiento, Alumno.Alumno_Dni, Tutor.Tutor_Nombres, Tutor.Tutor_Apellidos, Tutor.Tutor_Nacionalidad, Caracterizacion.Caracterizacion_Nombre FROM Tutor INNER JOIN (Caracterizacion INNER JOIN Alumno ON Caracterizacion.[Id] = Alumno.[Alumno_Caracterizacion]) ON Tutor.[Id] = Alumno.[Alumno_Tutor];"));
+            dgvMatriculas.DataSource = Tabla;
+>>>>>>> 2dc7637cdf5e89a554be6951e31a7b41478a15d6
         }
 
          
