@@ -36,14 +36,14 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvMatriculas = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAñoIngreso = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblConteo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CmbCaracterizacion = new System.Windows.Forms.ComboBox();
+            this.CmbSexo = new System.Windows.Forms.ComboBox();
             this.cmbSeccion = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -131,13 +131,13 @@
             this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.dgvMatriculas);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtAñoIngreso);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.comboBox3);
-            this.tabPage1.Controls.Add(this.comboBox2);
+            this.tabPage1.Controls.Add(this.CmbCaracterizacion);
+            this.tabPage1.Controls.Add(this.CmbSexo);
             this.tabPage1.Controls.Add(this.cmbSeccion);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.btnBuscar);
@@ -151,13 +151,14 @@
             // dgvMatriculas
             // 
             this.dgvMatriculas.AllowDrop = true;
+            this.dgvMatriculas.AllowUserToAddRows = false;
             this.dgvMatriculas.BackgroundColor = System.Drawing.Color.White;
             this.dgvMatriculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMatriculas.Location = new System.Drawing.Point(17, 122);
             this.dgvMatriculas.Name = "dgvMatriculas";
             this.dgvMatriculas.RowHeadersVisible = false;
             this.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMatriculas.Size = new System.Drawing.Size(743, 302);
+            this.dgvMatriculas.Size = new System.Drawing.Size(908, 302);
             this.dgvMatriculas.TabIndex = 40;
             // 
             // label8
@@ -169,42 +170,43 @@
             this.label8.TabIndex = 39;
             this.label8.Text = "Año de ingreso :";
             // 
-            // textBox1
+            // txtAñoIngreso
             // 
-            this.textBox1.Location = new System.Drawing.Point(629, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 38;
+            this.txtAñoIngreso.Location = new System.Drawing.Point(629, 76);
+            this.txtAñoIngreso.Name = "txtAñoIngreso";
+            this.txtAñoIngreso.Size = new System.Drawing.Size(131, 20);
+            this.txtAñoIngreso.TabIndex = 38;
+            this.txtAñoIngreso.TextChanged += new System.EventHandler(this.txtAñoIngreso_TextChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.lblConteo);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(777, 208);
+            this.groupBox1.Location = new System.Drawing.Point(777, 26);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(148, 91);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TOTAL  :";
             // 
-            // label7
+            // lblConteo
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Swis721 BlkCn BT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(36, 33);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 45);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "888";
+            this.lblConteo.AutoSize = true;
+            this.lblConteo.Font = new System.Drawing.Font("Swis721 BlkCn BT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConteo.Location = new System.Drawing.Point(34, 25);
+            this.lblConteo.Name = "lblConteo";
+            this.lblConteo.Size = new System.Drawing.Size(80, 45);
+            this.lblConteo.TabIndex = 0;
+            this.lblConteo.Text = "888";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(439, 57);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.Size = new System.Drawing.Size(86, 13);
             this.label6.TabIndex = 36;
-            this.label6.Text = "Categoria :";
+            this.label6.Text = "Caracterizacion :";
             // 
             // label5
             // 
@@ -224,39 +226,34 @@
             this.label4.TabIndex = 34;
             this.label4.Text = "Grado :";
             // 
-            // comboBox3
+            // CmbCaracterizacion
             // 
-            this.comboBox3.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Ceguera",
-            "Sordera",
-            "TEA"});
-            this.comboBox3.Location = new System.Drawing.Point(442, 76);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(152, 21);
-            this.comboBox3.TabIndex = 33;
+            this.CmbCaracterizacion.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.CmbCaracterizacion.FormattingEnabled = true;
+            this.CmbCaracterizacion.Location = new System.Drawing.Point(442, 76);
+            this.CmbCaracterizacion.Name = "CmbCaracterizacion";
+            this.CmbCaracterizacion.Size = new System.Drawing.Size(152, 21);
+            this.CmbCaracterizacion.TabIndex = 33;
+            this.CmbCaracterizacion.TextChanged += new System.EventHandler(this.CmbCaracterizacion_TextChanged);
             // 
-            // comboBox2
+            // CmbSexo
             // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Msculino",
-            "Femenino"});
-            this.comboBox2.Location = new System.Drawing.Point(267, 76);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(152, 21);
-            this.comboBox2.TabIndex = 32;
+            this.CmbSexo.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.CmbSexo.FormattingEnabled = true;
+            this.CmbSexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "Todos"});
+            this.CmbSexo.Location = new System.Drawing.Point(267, 76);
+            this.CmbSexo.Name = "CmbSexo";
+            this.CmbSexo.Size = new System.Drawing.Size(152, 21);
+            this.CmbSexo.TabIndex = 32;
+            this.CmbSexo.TextChanged += new System.EventHandler(this.CmbSexo_TextChanged);
             // 
             // cmbSeccion
             // 
             this.cmbSeccion.BackColor = System.Drawing.SystemColors.HighlightText;
             this.cmbSeccion.FormattingEnabled = true;
-            this.cmbSeccion.Items.AddRange(new object[] {
-            "Lactante",
-            "Deambulante",
-            "De 2 a 3 años"});
             this.cmbSeccion.Location = new System.Drawing.Point(100, 76);
             this.cmbSeccion.Name = "cmbSeccion";
             this.cmbSeccion.Size = new System.Drawing.Size(152, 21);
@@ -429,16 +426,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblConteo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox CmbCaracterizacion;
+        private System.Windows.Forms.ComboBox CmbSexo;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAñoIngreso;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dgvMatriculas;
