@@ -69,7 +69,7 @@ namespace Presentacion
             if (txtUsuario.Text != "Usuario" || txtContra.Text != "Contraseña") 
             {
                 if (usu.TraeDatos(txtUsuario.Text, txtContra.Text))
-                {
+                { 
                     MenuPrincipal menu = new MenuPrincipal();
                     menu.Show();
                     menu.FormClosed += Logout; // Carga el metodo logot en el form menu

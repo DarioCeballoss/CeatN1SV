@@ -12,12 +12,21 @@ namespace Presentacion
 {
     public partial class MenuPrincipal : Form
     {
+        string path = "C:\\CeatN1SV\\img\\";
+
         public MenuPrincipal()
         {
             InitializeComponent();
         }
        
-        string path = "C:\\CeatN1SV\\img\\";
+        
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            lblNombre.Text = UsuarioCache.Nombre;
+            lblApellido.Text = UsuarioCache.Apellido;
+            lblPermisos.Text = UsuarioCache.Permisos;
+            
+        }
         
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -177,6 +186,8 @@ namespace Presentacion
             formHijo.BringToFront();
             formHijo.Show();
         }
+
+
 
 
 
