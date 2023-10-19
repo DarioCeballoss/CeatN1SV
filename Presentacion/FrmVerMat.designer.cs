@@ -50,21 +50,21 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.turnos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nivel_inicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvAlumPorTurno = new System.Windows.Forms.DataGridView();
+            this.dgvAlumMatric = new System.Windows.Forms.DataGridView();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.varon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mujer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.turnos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nivel_inicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatriculas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumPorTurno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumMatric)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -164,7 +164,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(626, 57);
+            this.label8.Location = new System.Drawing.Point(628, 57);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 13);
             this.label8.TabIndex = 39;
@@ -172,7 +172,7 @@
             // 
             // txtAñoIngreso
             // 
-            this.txtAñoIngreso.Location = new System.Drawing.Point(629, 76);
+            this.txtAñoIngreso.Location = new System.Drawing.Point(631, 76);
             this.txtAñoIngreso.Name = "txtAñoIngreso";
             this.txtAñoIngreso.Size = new System.Drawing.Size(131, 20);
             this.txtAñoIngreso.TabIndex = 38;
@@ -202,7 +202,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(439, 57);
+            this.label6.Location = new System.Drawing.Point(361, 57);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 13);
             this.label6.TabIndex = 36;
@@ -211,7 +211,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(264, 57);
+            this.label5.Location = new System.Drawing.Point(215, 57);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 35;
@@ -220,7 +220,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(100, 57);
+            this.label4.Location = new System.Drawing.Point(36, 57);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 34;
@@ -230,9 +230,9 @@
             // 
             this.CmbCaracterizacion.BackColor = System.Drawing.SystemColors.HighlightText;
             this.CmbCaracterizacion.FormattingEnabled = true;
-            this.CmbCaracterizacion.Location = new System.Drawing.Point(442, 76);
+            this.CmbCaracterizacion.Location = new System.Drawing.Point(364, 76);
             this.CmbCaracterizacion.Name = "CmbCaracterizacion";
-            this.CmbCaracterizacion.Size = new System.Drawing.Size(152, 21);
+            this.CmbCaracterizacion.Size = new System.Drawing.Size(239, 21);
             this.CmbCaracterizacion.TabIndex = 33;
             this.CmbCaracterizacion.TextChanged += new System.EventHandler(this.CmbCaracterizacion_TextChanged);
             // 
@@ -244,9 +244,9 @@
             "Masculino",
             "Femenino",
             "Todos"});
-            this.CmbSexo.Location = new System.Drawing.Point(267, 76);
+            this.CmbSexo.Location = new System.Drawing.Point(218, 76);
             this.CmbSexo.Name = "CmbSexo";
-            this.CmbSexo.Size = new System.Drawing.Size(152, 21);
+            this.CmbSexo.Size = new System.Drawing.Size(116, 21);
             this.CmbSexo.TabIndex = 32;
             this.CmbSexo.TextChanged += new System.EventHandler(this.CmbSexo_TextChanged);
             // 
@@ -254,7 +254,7 @@
             // 
             this.cmbSeccion.BackColor = System.Drawing.SystemColors.HighlightText;
             this.cmbSeccion.FormattingEnabled = true;
-            this.cmbSeccion.Location = new System.Drawing.Point(100, 76);
+            this.cmbSeccion.Location = new System.Drawing.Point(36, 76);
             this.cmbSeccion.Name = "cmbSeccion";
             this.cmbSeccion.Size = new System.Drawing.Size(152, 21);
             this.cmbSeccion.TabIndex = 31;
@@ -263,7 +263,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(99, 26);
+            this.label1.Location = new System.Drawing.Point(15, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 13);
             this.label1.TabIndex = 30;
@@ -286,8 +286,8 @@
             this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.dataGridView3);
-            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.dgvAlumPorTurno);
+            this.tabPage2.Controls.Add(this.dgvAlumMatric);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -317,71 +317,85 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "Alumnos matriculados";
             // 
-            // dataGridView3
+            // dgvAlumPorTurno
             // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.PowderBlue;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAlumPorTurno.AllowUserToAddRows = false;
+            this.dgvAlumPorTurno.AllowUserToDeleteRows = false;
+            this.dgvAlumPorTurno.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAlumPorTurno.BackgroundColor = System.Drawing.Color.PowderBlue;
+            this.dgvAlumPorTurno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumPorTurno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.turnos,
             this.nivel_inicial});
-            this.dataGridView3.Location = new System.Drawing.Point(562, 77);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.Size = new System.Drawing.Size(154, 345);
-            this.dataGridView3.TabIndex = 1;
+            this.dgvAlumPorTurno.Location = new System.Drawing.Point(562, 77);
+            this.dgvAlumPorTurno.Name = "dgvAlumPorTurno";
+            this.dgvAlumPorTurno.ReadOnly = true;
+            this.dgvAlumPorTurno.RowHeadersVisible = false;
+            this.dgvAlumPorTurno.Size = new System.Drawing.Size(258, 345);
+            this.dgvAlumPorTurno.TabIndex = 1;
             // 
-            // turnos
+            // dgvAlumMatric
             // 
-            this.turnos.HeaderText = "Turnos";
-            this.turnos.Name = "turnos";
-            this.turnos.Width = 65;
-            // 
-            // nivel_inicial
-            // 
-            this.nivel_inicial.HeaderText = "Nivel inicial";
-            this.nivel_inicial.Name = "nivel_inicial";
-            this.nivel_inicial.Width = 85;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.PowderBlue;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAlumMatric.AllowUserToAddRows = false;
+            this.dgvAlumMatric.AllowUserToDeleteRows = false;
+            this.dgvAlumMatric.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAlumMatric.BackgroundColor = System.Drawing.Color.PowderBlue;
+            this.dgvAlumMatric.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumMatric.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.categoria,
             this.varon,
             this.mujer,
             this.total});
-            this.dataGridView2.Location = new System.Drawing.Point(35, 77);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(325, 345);
-            this.dataGridView2.TabIndex = 0;
+            this.dgvAlumMatric.Location = new System.Drawing.Point(35, 77);
+            this.dgvAlumMatric.Name = "dgvAlumMatric";
+            this.dgvAlumMatric.ReadOnly = true;
+            this.dgvAlumMatric.RowHeadersVisible = false;
+            this.dgvAlumMatric.Size = new System.Drawing.Size(445, 345);
+            this.dgvAlumMatric.TabIndex = 0;
             // 
             // categoria
             // 
+            this.categoria.DataPropertyName = "Caracterizacion_Nombre";
             this.categoria.HeaderText = "Discapacidad/Trastorno";
             this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
             this.categoria.Width = 147;
             // 
             // varon
             // 
             this.varon.HeaderText = "Varon";
             this.varon.Name = "varon";
+            this.varon.ReadOnly = true;
             this.varon.Width = 60;
             // 
             // mujer
             // 
             this.mujer.HeaderText = "Mujer";
             this.mujer.Name = "mujer";
+            this.mujer.ReadOnly = true;
             this.mujer.Width = 58;
             // 
             // total
             // 
             this.total.HeaderText = "Total";
             this.total.Name = "total";
+            this.total.ReadOnly = true;
             this.total.Width = 56;
+            // 
+            // turnos
+            // 
+            this.turnos.DataPropertyName = "Categoria_Nombre";
+            this.turnos.HeaderText = "Turnos";
+            this.turnos.Name = "turnos";
+            this.turnos.ReadOnly = true;
+            this.turnos.Width = 65;
+            // 
+            // nivel_inicial
+            // 
+            this.nivel_inicial.HeaderText = "Nivel inicial";
+            this.nivel_inicial.Name = "nivel_inicial";
+            this.nivel_inicial.ReadOnly = true;
+            this.nivel_inicial.Width = 85;
             // 
             // FrmVerMat
             // 
@@ -406,8 +420,8 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumPorTurno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumMatric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,8 +446,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CmbCaracterizacion;
         private System.Windows.Forms.ComboBox CmbSexo;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvAlumPorTurno;
+        private System.Windows.Forms.DataGridView dgvAlumMatric;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtAñoIngreso;
         private System.Windows.Forms.Label label10;

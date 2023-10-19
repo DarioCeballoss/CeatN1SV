@@ -6,8 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Datos;
 using System.Data.OleDb;
+using Datos;
+using Logica;
+
 
 namespace Presentacion
 {
@@ -15,6 +17,7 @@ namespace Presentacion
     {
         Conexion claseConexion = new Conexion();
         DataTable Tabla = new DataTable();
+        
         
 
         public FrmVerMat()
@@ -37,11 +40,11 @@ namespace Presentacion
 
 
 
-            OleDbDataReader reader1 = claseConexion.Leer("SELECT Categoria_Nombre FROM Caracterizacion");
+            OleDbDataReader reader1 = claseConexion.Leer("SELECT Caracterizacion_Nombre FROM Caracterizacion");
 
             while (reader1.Read())
             {
-                CmbCaracterizacion.Items.Add(reader1["Categoria_Nombre"].ToString());
+                CmbCaracterizacion.Items.Add(reader1["Caracterizacion_Nombre"].ToString());
             }
 
             reader1.Close();
@@ -57,7 +60,7 @@ namespace Presentacion
                     Alumno_Nacimiento as F_Nacimiento,
                     s.Sexo_Categoria as sexo,
                     n.Nacionalidad_Categoria as Nacionalidad,
-                    Caracterizacion.Categoria_Nombre as Caracterizacion,
+                    Caracterizacion.Caracterizacion_Nombre as Caracterizacion,
                     Alumno_AñoAdmision as fechaDeIngreso,
                     Categoria.Categoria_Nombre as Grado
 
@@ -79,6 +82,11 @@ namespace Presentacion
                 MessageBox.Show("Error: " + ex.Message);
             }
             lblConteo.Text = Convert.ToString(dgvMatriculas.RowCount);
+
+            // DARIO estadistica
+            Estadistica Datos = new Estadistica();
+            dgvAlumMatric.DataSource = Datos.AlumnosMatriculados();
+            dgvAlumPorTurno.DataSource = Datos.AlumnosMatriculados();
         }
         
         string[] var  = new string[4];
@@ -109,7 +117,7 @@ namespace Presentacion
                     Alumno_Nacimiento as F_Nacimiento,
                     s.Sexo_Categoria as sexo,
                     n.Nacionalidad_Categoria as Nacionalidad,
-                    Caracterizacion.Categoria_Nombre as Caracterizacion,
+                    Caracterizacion.Caracterizacion_Nombre as Caracterizacion,
                     Alumno_AñoAdmision as fechaDeIngreso,
                     Categoria.Categoria_Nombre as Grado
 
@@ -119,7 +127,7 @@ namespace Presentacion
                 INNER JOIN Nacionalidad n ON a.Alumno_Nacionalidad = n.Id)
                 INNER JOIN Categoria ON a.Alumno_Categoria = Categoria.Id )  
                 WHERE Categoria.Categoria_Nombre LIKE '%" +
-                var[0] + "%' AND s.Sexo_Categoria LIKE '%" + var[1] + "%' AND  Caracterizacion.Categoria_Nombre LIKE '%" + var[2] + "%' AND  Alumno_AñoAdmision LIKE '%" + var[3] + "%' ORDER BY Alumno_Apellidos;";
+                var[0] + "%' AND s.Sexo_Categoria LIKE '%" + var[1] + "%' AND  Caracterizacion.Caracterizacion_Nombre LIKE '%" + var[2] + "%' AND  Alumno_AñoAdmision LIKE '%" + var[3] + "%' ORDER BY Alumno_Apellidos;";
 
 
 
