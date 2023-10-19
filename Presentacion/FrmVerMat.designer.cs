@@ -53,7 +53,7 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.turnos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nivel_inicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvAlumnoMatriculados = new System.Windows.Forms.DataGridView();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.varon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mujer = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +64,7 @@
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnoMatriculados)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -287,13 +287,14 @@
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.dataGridView3);
-            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.dgvAlumnoMatriculados);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(946, 491);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ESTADISTICA";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label10
             // 
@@ -343,21 +344,21 @@
             this.nivel_inicial.Name = "nivel_inicial";
             this.nivel_inicial.Width = 85;
             // 
-            // dataGridView2
+            // dgvAlumnoMatriculados
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.PowderBlue;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAlumnoMatriculados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAlumnoMatriculados.BackgroundColor = System.Drawing.Color.PowderBlue;
+            this.dgvAlumnoMatriculados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumnoMatriculados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.categoria,
             this.varon,
             this.mujer,
             this.total});
-            this.dataGridView2.Location = new System.Drawing.Point(35, 77);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(325, 345);
-            this.dataGridView2.TabIndex = 0;
+            this.dgvAlumnoMatriculados.Location = new System.Drawing.Point(35, 77);
+            this.dgvAlumnoMatriculados.Name = "dgvAlumnoMatriculados";
+            this.dgvAlumnoMatriculados.RowHeadersVisible = false;
+            this.dgvAlumnoMatriculados.Size = new System.Drawing.Size(325, 345);
+            this.dgvAlumnoMatriculados.TabIndex = 0;
             // 
             // categoria
             // 
@@ -407,7 +408,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnoMatriculados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,7 +434,7 @@
         private System.Windows.Forms.ComboBox CmbCaracterizacion;
         private System.Windows.Forms.ComboBox CmbSexo;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvAlumnoMatriculados;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtAñoIngreso;
         private System.Windows.Forms.Label label10;
