@@ -496,13 +496,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CmbCaracterizacion;
         private System.Windows.Forms.ComboBox CmbSexo;
-<<<<<<< HEAD
+//<<<<<<< HEAD
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dgvAlumnoMatriculados;
-=======
+//=======
         private System.Windows.Forms.DataGridView dgvAlumPorTurno;
         private System.Windows.Forms.DataGridView dgvAlumMatric;
->>>>>>> 49de2cae76102c0c358e786a7e409aa60f9bf1f8
+//>>>>>>> 49de2cae76102c0c358e786a7e409aa60f9bf1f8
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtAñoIngreso;
         private System.Windows.Forms.Label label10;
