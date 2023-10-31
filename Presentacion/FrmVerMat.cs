@@ -178,7 +178,11 @@ namespace Presentacion
             CargaDeTablas();
         }
 
+<<<<<<< HEAD
         private void dgvAlumMatric_CellContentClick(object sender, DataGridViewCellEventArgs e)
+=======
+        private void tabPage2_Click(object sender, EventArgs e)
+>>>>>>> 0ca24ca7744b549f6df3b13acd44e49abc1d9e89
         {
 
         }
