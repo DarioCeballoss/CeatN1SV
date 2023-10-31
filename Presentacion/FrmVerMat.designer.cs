@@ -56,8 +56,6 @@
             this.varon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mujer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.turnos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nivel_inicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatriculas)).BeginInit();
@@ -300,7 +298,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.Location = new System.Drawing.Point(525, 44);
+            this.label10.Location = new System.Drawing.Point(635, 44);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(235, 20);
             this.label10.TabIndex = 3;
@@ -311,7 +309,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label9.Location = new System.Drawing.Point(123, 44);
+            this.label9.Location = new System.Drawing.Point(31, 44);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(165, 20);
             this.label9.TabIndex = 2;
@@ -322,16 +320,13 @@
             this.dgvAlumPorTurno.AllowUserToAddRows = false;
             this.dgvAlumPorTurno.AllowUserToDeleteRows = false;
             this.dgvAlumPorTurno.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvAlumPorTurno.BackgroundColor = System.Drawing.Color.PowderBlue;
+            this.dgvAlumPorTurno.BackgroundColor = System.Drawing.Color.White;
             this.dgvAlumPorTurno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlumPorTurno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.turnos,
-            this.nivel_inicial});
-            this.dgvAlumPorTurno.Location = new System.Drawing.Point(562, 77);
+            this.dgvAlumPorTurno.Location = new System.Drawing.Point(639, 77);
             this.dgvAlumPorTurno.Name = "dgvAlumPorTurno";
             this.dgvAlumPorTurno.ReadOnly = true;
             this.dgvAlumPorTurno.RowHeadersVisible = false;
-            this.dgvAlumPorTurno.Size = new System.Drawing.Size(258, 345);
+            this.dgvAlumPorTurno.Size = new System.Drawing.Size(156, 227);
             this.dgvAlumPorTurno.TabIndex = 1;
             // 
             // dgvAlumMatric
@@ -339,7 +334,7 @@
             this.dgvAlumMatric.AllowUserToAddRows = false;
             this.dgvAlumMatric.AllowUserToDeleteRows = false;
             this.dgvAlumMatric.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvAlumMatric.BackgroundColor = System.Drawing.Color.PowderBlue;
+            this.dgvAlumMatric.BackgroundColor = System.Drawing.Color.White;
             this.dgvAlumMatric.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlumMatric.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.categoria,
@@ -350,8 +345,9 @@
             this.dgvAlumMatric.Name = "dgvAlumMatric";
             this.dgvAlumMatric.ReadOnly = true;
             this.dgvAlumMatric.RowHeadersVisible = false;
-            this.dgvAlumMatric.Size = new System.Drawing.Size(445, 345);
+            this.dgvAlumMatric.Size = new System.Drawing.Size(483, 227);
             this.dgvAlumMatric.TabIndex = 0;
+            this.dgvAlumMatric.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumMatric_CellContentClick);
             // 
             // categoria
             // 
@@ -363,39 +359,27 @@
             // 
             // varon
             // 
-            this.varon.HeaderText = "Varon";
+            this.varon.DataPropertyName = "Masculino";
+            this.varon.HeaderText = "Masculino";
             this.varon.Name = "varon";
             this.varon.ReadOnly = true;
-            this.varon.Width = 60;
+            this.varon.Width = 80;
             // 
             // mujer
             // 
-            this.mujer.HeaderText = "Mujer";
+            this.mujer.DataPropertyName = "Femenino";
+            this.mujer.HeaderText = "Femenino";
             this.mujer.Name = "mujer";
             this.mujer.ReadOnly = true;
-            this.mujer.Width = 58;
+            this.mujer.Width = 78;
             // 
             // total
             // 
+            this.total.DataPropertyName = "Total";
             this.total.HeaderText = "Total";
             this.total.Name = "total";
             this.total.ReadOnly = true;
             this.total.Width = 56;
-            // 
-            // turnos
-            // 
-            this.turnos.DataPropertyName = "Categoria_Nombre";
-            this.turnos.HeaderText = "Turnos";
-            this.turnos.Name = "turnos";
-            this.turnos.ReadOnly = true;
-            this.turnos.Width = 65;
-            // 
-            // nivel_inicial
-            // 
-            this.nivel_inicial.HeaderText = "Nivel inicial";
-            this.nivel_inicial.Name = "nivel_inicial";
-            this.nivel_inicial.ReadOnly = true;
-            this.nivel_inicial.Width = 85;
             // 
             // FrmVerMat
             // 
@@ -457,7 +441,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn varon;
         private System.Windows.Forms.DataGridViewTextBoxColumn mujer;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn turnos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nivel_inicial;
     }
 }

@@ -86,7 +86,7 @@ namespace Presentacion
             // DARIO estadistica
             Estadistica Datos = new Estadistica();
             dgvAlumMatric.DataSource = Datos.AlumnosMatriculados();
-            dgvAlumPorTurno.DataSource = Datos.AlumnosMatriculados();
+            dgvAlumPorTurno.DataSource = Datos.AlumnosPorTurno();
         }
         
         string[] var  = new string[4];
@@ -176,6 +176,11 @@ namespace Presentacion
             var[3] = txtAñoIngreso.Text;
 
             CargaDeTablas();
+        }
+
+        private void dgvAlumMatric_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
        
