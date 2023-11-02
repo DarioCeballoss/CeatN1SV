@@ -84,9 +84,9 @@ namespace Presentacion
             lblConteo.Text = Convert.ToString(dgvMatriculas.RowCount);
 
             // DARIO estadistica
-            Estadistica Datos = new Estadistica();
-            dgvAlumMatric.DataSource = Datos.AlumnosMatriculados();
-            dgvAlumPorTurno.DataSource = Datos.AlumnosPorTurno();
+            //Estadistica Datos = new Estadistica();
+            //dgvAlumMatric.DataSource = Datos.AlumnosMatriculados();
+            //dgvAlumPorTurno.DataSource = Datos.AlumnosPorTurno();
         }
         
         string[] var  = new string[4];

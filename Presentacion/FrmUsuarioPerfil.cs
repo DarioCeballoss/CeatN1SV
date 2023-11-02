@@ -65,6 +65,7 @@ namespace Presentacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(Convert.ToString(cmbPermisos.SelectedValue));
             if (MessageBox.Show("Decea ancelar la carga ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 this.Close();
