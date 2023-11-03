@@ -18,6 +18,11 @@ namespace Presentacion
             InitializeComponent();
             
         }
+ 
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+            
+        }
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
@@ -66,39 +71,9 @@ namespace Presentacion
         Usuario usu = new Usuario();
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text != "Usuario" || txtContra.Text != "Contraseña") 
-            {
-                if (usu.TraeDatos(txtUsuario.Text, txtContra.Text))
-                { 
-                    MenuPrincipal menu = new MenuPrincipal();
-                    menu.Show();
-                    menu.FormClosed += Logout; // Carga el metodo logot en el form menu
-                    this.Hide();
-
-                    //MessageBox.Show("abierto");
-                }
-                else
-                {
-                    msjError("Verifique los datos ingresados");
-                    txtUsuario.Focus();
-                }
-
-            } else {
-                msjError("Por favor ingrese los datos");
-                txtUsuario.Focus();
-            }
-
+            ingresar();
         }
 
-        private void msjError(string msj) {
-            lblErrorLogin.Text = "    " + msj;
-            lblErrorLogin.Visible = true;
-        }
-
-        private void LogIn_Load(object sender, EventArgs e)
-        {
-            
-        }
 
         private void Logout(object sender, FormClosedEventArgs e) {
             txtContra.Text = "Contraseña";
@@ -111,6 +86,51 @@ namespace Presentacion
             this.Show();
         }
 
+        private void txtContra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                ingresar();
+            }
+        }
+
+        /****************************
+         * **** METODOS ************
+         * *************************/
+
+        private void ingresar()
+        {
+            if (txtUsuario.Text != "Usuario" || txtContra.Text != "Contraseña")
+            {
+                if (usu.TraeDatos(txtUsuario.Text, txtContra.Text))
+                {
+                    MenuPrincipal menu = new MenuPrincipal();
+                    menu.Show(); 
+                    menu.FormClosed += Logout; // Carga el metodo logot en el form menu
+                    this.Hide();
+
+                    //MessageBox.Show("abierto");
+                }
+                else
+                {
+                    msjError("Verifique los datos ingresados");
+                    txtUsuario.Focus();
+                }
+
+            }
+            else
+            {
+                msjError("Por favor ingrese los datos");
+                txtUsuario.Focus();
+            }
+
+        }
+
+        private void msjError(string msj)
+        {
+            lblErrorLogin.Text = "    " + msj;
+            lblErrorLogin.Visible = true;
+        }
 
 
     }

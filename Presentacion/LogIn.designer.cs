@@ -102,6 +102,7 @@
             this.txtContra.TabIndex = 2;
             this.txtContra.Text = "Contraseña";
             this.txtContra.Enter += new System.EventHandler(this.txtContra_Enter);
+            this.txtContra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContra_KeyPress);
             this.txtContra.Leave += new System.EventHandler(this.txtContra_Leave);
             // 
             // label1
