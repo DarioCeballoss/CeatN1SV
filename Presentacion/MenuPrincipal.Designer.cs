@@ -424,6 +424,7 @@
             this.TransparencyKey = System.Drawing.Color.MintCream;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuPrincipal_Paint);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
