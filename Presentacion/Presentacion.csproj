@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAlumnoBorrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlumnoBorrar.designer.cs">
+      <DependentUpon>FrmAlumnoBorrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEditarMat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAlumnoBorrar.resx">
+      <DependentUpon>FrmAlumnoBorrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarMat.resx">
       <DependentUpon>FrmEditarMat.cs</DependentUpon>
     </EmbeddedResource>

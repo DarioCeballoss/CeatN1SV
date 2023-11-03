@@ -36,3 +36,4 @@ C:\CeatN1SV222\Presentacion\obj\x86\Debug\Presentacion.LogIn.resources
 C:\CeatN1SV222\Presentacion\obj\x86\Debug\Presentacion.MenuPrincipal.resources
 C:\CeatN1SV222\Presentacion\obj\x86\Debug\Presentacion.Properties.Resources.resources
 C:\CeatN1SV222\Presentacion\obj\x86\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\CeatN1SV\Presentacion\obj\x86\Debug\Presentacion.FrmAlumnoBorrar.resources

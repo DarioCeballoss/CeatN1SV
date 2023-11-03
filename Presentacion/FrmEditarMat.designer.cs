@@ -34,7 +34,6 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lblElegir = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -96,9 +95,10 @@
             // 
             this.lblElegir.AllowDrop = true;
             this.lblElegir.AutoSize = true;
-            this.lblElegir.Location = new System.Drawing.Point(216, 139);
+            this.lblElegir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElegir.Location = new System.Drawing.Point(55, 140);
             this.lblElegir.Name = "lblElegir";
-            this.lblElegir.Size = new System.Drawing.Size(85, 13);
+            this.lblElegir.Size = new System.Drawing.Size(117, 18);
             this.lblElegir.TabIndex = 11;
             this.lblElegir.Text = "Elegir Matricula :";
             // 
@@ -106,22 +106,10 @@
             // 
             this.textBox1.AllowDrop = true;
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBox1.Location = new System.Drawing.Point(301, 139);
+            this.textBox1.Location = new System.Drawing.Point(178, 140);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 20);
+            this.textBox1.Size = new System.Drawing.Size(638, 20);
             this.textBox1.TabIndex = 12;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.AllowDrop = true;
-            this.btnBuscar.BackColor = System.Drawing.Color.Silver;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(630, 139);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(94, 20);
-            this.btnBuscar.TabIndex = 14;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // btnEditar
             // 
@@ -130,9 +118,9 @@
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnEditar.Location = new System.Drawing.Point(751, 328);
+            this.btnEditar.Location = new System.Drawing.Point(426, 530);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(94, 33);
+            this.btnEditar.Size = new System.Drawing.Size(118, 33);
             this.btnEditar.TabIndex = 16;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -140,7 +128,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(548, 183);
+            this.radioButton3.Location = new System.Drawing.Point(694, 183);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(122, 17);
             this.radioButton3.TabIndex = 23;
@@ -151,7 +139,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(400, 183);
+            this.radioButton2.Location = new System.Drawing.Point(424, 183);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(120, 17);
             this.radioButton2.TabIndex = 22;
@@ -163,7 +151,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(259, 183);
+            this.radioButton1.Location = new System.Drawing.Point(178, 183);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(110, 17);
             this.radioButton1.TabIndex = 21;
@@ -176,11 +164,11 @@
             this.dgvMatriculas.AllowDrop = true;
             this.dgvMatriculas.BackgroundColor = System.Drawing.Color.White;
             this.dgvMatriculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMatriculas.Location = new System.Drawing.Point(204, 206);
+            this.dgvMatriculas.Location = new System.Drawing.Point(12, 206);
             this.dgvMatriculas.Name = "dgvMatriculas";
             this.dgvMatriculas.RowHeadersVisible = false;
             this.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMatriculas.Size = new System.Drawing.Size(520, 302);
+            this.dgvMatriculas.Size = new System.Drawing.Size(915, 302);
             this.dgvMatriculas.TabIndex = 24;
             this.dgvMatriculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatriculas_CellContentClick);
             // 
@@ -195,7 +183,6 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblElegir);
             this.Controls.Add(this.label2);
@@ -220,7 +207,6 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private System.Windows.Forms.Label lblElegir;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
