@@ -33,7 +33,7 @@
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lblElegir = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMatriculas = new System.Windows.Forms.TextBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -70,8 +70,8 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
@@ -102,14 +102,15 @@
             this.lblElegir.TabIndex = 11;
             this.lblElegir.Text = "Elegir Matricula :";
             // 
-            // textBox1
+            // txtMatriculas
             // 
-            this.textBox1.AllowDrop = true;
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBox1.Location = new System.Drawing.Point(178, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(638, 20);
-            this.textBox1.TabIndex = 12;
+            this.txtMatriculas.AllowDrop = true;
+            this.txtMatriculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtMatriculas.Location = new System.Drawing.Point(178, 140);
+            this.txtMatriculas.Name = "txtMatriculas";
+            this.txtMatriculas.Size = new System.Drawing.Size(638, 20);
+            this.txtMatriculas.TabIndex = 12;
+            this.txtMatriculas.TextChanged += new System.EventHandler(this.txtMatriculas_TextChanged);
             // 
             // btnEditar
             // 
@@ -183,7 +184,7 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMatriculas);
             this.Controls.Add(this.lblElegir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -206,7 +207,7 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private System.Windows.Forms.Label lblElegir;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMatriculas;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;

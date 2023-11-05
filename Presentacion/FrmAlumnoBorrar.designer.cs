@@ -38,7 +38,7 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.btnGuardarBaja = new System.Windows.Forms.Button();
             this.txtBajaCausa = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FBAJA = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,7 @@
             this.button1.TabIndex = 49;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -135,6 +136,7 @@
             this.btnGuardarBaja.TabIndex = 52;
             this.btnGuardarBaja.Text = "Dar de Baja";
             this.btnGuardarBaja.UseVisualStyleBackColor = false;
+            this.btnGuardarBaja.Click += new System.EventHandler(this.btnGuardarBaja_Click);
             // 
             // txtBajaCausa
             // 
@@ -144,12 +146,12 @@
             this.txtBajaCausa.Size = new System.Drawing.Size(297, 99);
             this.txtBajaCausa.TabIndex = 51;
             // 
-            // dateTimePicker1
+            // FBAJA
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(33, 190);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 50;
+            this.FBAJA.Location = new System.Drawing.Point(33, 190);
+            this.FBAJA.Name = "FBAJA";
+            this.FBAJA.Size = new System.Drawing.Size(200, 20);
+            this.FBAJA.TabIndex = 50;
             // 
             // FrmAlumnoBorrar
             // 
@@ -160,12 +162,14 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnGuardarBaja);
             this.Controls.Add(this.txtBajaCausa);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FBAJA);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAlumnoBorrar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAlumnoBorrar";
+            this.Load += new System.EventHandler(this.FrmAlumnoBorrar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -185,6 +189,6 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Button btnGuardarBaja;
         private System.Windows.Forms.TextBox txtBajaCausa;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FBAJA;
     }
 }

@@ -191,13 +191,22 @@ namespace Presentacion
         private void MenuPrincipal_Paint(object sender, PaintEventArgs e)
         {
             Graphics mgraphics = e.Graphics;
-            Pen pen = new Pen(Color.FromArgb(96, 155, 173), 1);
-
+            Pen pen = new Pen(Color.FromArgb(19, 80, 88), 1); // Color #135058 (10%)
             Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
-            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(96, 155, 173), Color.FromArgb(245, 255, 173), LinearGradientMode.Vertical);
+
+            Color color2 = Color.FromArgb(241, 242, 181); // Color #F1F2B5 (90%)
+            Color color1 = Color.FromArgb(19, 80, 88);   // Color #135058 (10%)
+
+            LinearGradientBrush lgb = new LinearGradientBrush(area, color1, color2, LinearGradientMode.Vertical);
+
             mgraphics.FillRectangle(lgb, area);
             mgraphics.DrawRectangle(pen, area);
+
+
+
         }
+
+      
 
 
 

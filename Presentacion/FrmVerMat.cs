@@ -54,7 +54,7 @@ namespace Presentacion
 
             string consultaSql = @"
                 SELECT
-                    Alumno_Nombres as nombre,
+                    Alumno_Nombres as Nombre,
                     Alumno_Apellidos as Apellido,
                     Alumno_Dni as DNI,
                     Alumno_Nacimiento as F_Nacimiento,

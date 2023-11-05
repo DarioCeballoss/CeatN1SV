@@ -20,54 +20,64 @@ namespace Presentacion
             InitializeComponent();
         }
 
+        string Query = @"
+                SELECT
+                    a.Id as Matricula,
+                    Alumno_Nombres as Nombre,
+                    Alumno_Apellidos as Apellido,
+                    Alumno_Dni as DNI,
+                    Alumno_Nacimiento as F_Nacimiento,
+                    s.Sexo_Categoria as sexo,
+                    n.Nacionalidad_Categoria as Nacionalidad,
+                    Caracterizacion.Caracterizacion_Nombre as Caracterizacion,
+                    Alumno_AñoAdmision as fechaDeIngreso,
+                    Categoria.Categoria_Nombre as Grado
 
+                FROM ((((Alumno a
+                INNER JOIN Sexo s ON a.Alumno_Sexo = s.Id)  
+                INNER JOIN Caracterizacion ON a.Alumno_Caracterizacion = Caracterizacion.Id)
+                INNER JOIN Nacionalidad n ON a.Alumno_Nacionalidad = n.Id)
+                INNER JOIN Categoria ON a.Alumno_Categoria = Categoria.Id )";
 
         private void FrmBajaMat_Load(object sender, EventArgs e)
         {
             Tabla.Clear();
-            Tabla.Load(claseConexion.Leer("SELECT * FROM Alumno"));
+            Tabla.Load(claseConexion.Leer(Query));
             dgvMatriculas.DataSource = Tabla;
         }
 
-        private void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-         if (dgvMatriculas.SelectedRows.Count > 0)
-            {
-                //lblNombre.Text = "Nombre : " + dgvMatriculas.CurrentRow.Cells["Alumno_Nombres"].Value.ToString();
-                //lblApellido.Text = "Apellido : " + dgvMatriculas.CurrentRow.Cells["Alumno_Apellidos"].Value.ToString();
-                //lblDNI.Text = "DNI : " + dgvMatriculas.CurrentRow.Cells["Alumno_Dni"].Value.ToString();
-                //lblGrado.Text = "Grado : Deambulante";
-
-            }
-            else
-                MessageBox.Show("seleccione una fila por favor");
-        }
+        
 
         private void dgvMatriculas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            FrmAlumnoBorrar EliminarAlumno = new FrmAlumnoBorrar();
-            EliminarAlumno.Show();
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewCell cell = dgvMatriculas.Rows[e.RowIndex].Cells[0];
+
+                // Obtenemos el valor de la celda
+                object cellValue = cell.Value;
+                FrmAlumnoBorrar EliminarAlumno = new FrmAlumnoBorrar(cellValue);
+                EliminarAlumno.Show();
+
+               
+            }
+          
         }
 
-        private void btnGuardarBaja_Click(object sender, EventArgs e)
-        {
-            //if (MessageBox.Show("Se dará de baja a : \n" + lblNombre.Text + "\n" + lblApellido.Text + "\n" + lblDNI.Text, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            //{
-            //   // aca  llama al metodo que graba en la base de datos
-            //    lblNombre.Text = "Nombre :";
-            //    lblApellido.Text = "Apellido : ";
-            //    lblDNI.Text = "DNI : " ;
-            //    lblGrado.Text = "Grado :";
-            //    txtBajaCausa.Text = "";
-            //}
-        }
+        
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //string busqueda = txtBuscar.Text;
-            //Tabla.Clear();
-            //Tabla.Load(claseConexion.Leer("SELECT * FROM Alumno WHERE Alumno_Nombres LIKE '%" + busqueda + "%' OR Alumno_Apellidos LIKE '%" + busqueda + "%' OR Alumno_Dni LIKE '%" + busqueda + "%' ORDER BY Alumno_Apellidos;"));
-            //dgvMatriculas.DataSource = Tabla;
+            string where = "WHERE a.Id LIKE '%" + txtBajaMatricula.Text + "%' " +
+             "or a.Alumno_Nombres LIKE '%" + txtBajaMatricula.Text + "%' " +
+             "or a.Alumno_Apellidos LIKE '%" + txtBajaMatricula.Text + "%' " +
+             "or a.Alumno_Dni LIKE '%" + txtBajaMatricula.Text + "%'";
+
+            Tabla.Clear();
+
+
+            Tabla.Load(claseConexion.Leer(Query + where));
+            dgvMatriculas.DataSource = Tabla;
         }
 
 

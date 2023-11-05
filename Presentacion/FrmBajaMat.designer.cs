@@ -33,8 +33,7 @@
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.dgvMatriculas = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBajaMatricula = new System.Windows.Forms.TextBox();
             this.lblElegir = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatriculas)).BeginInit();
             this.SuspendLayout();
@@ -67,8 +66,8 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
@@ -98,32 +97,19 @@
             this.dgvMatriculas.ReadOnly = true;
             this.dgvMatriculas.RowHeadersVisible = false;
             this.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMatriculas.Size = new System.Drawing.Size(889, 344);
+            this.dgvMatriculas.Size = new System.Drawing.Size(889, 399);
             this.dgvMatriculas.TabIndex = 13;
             this.dgvMatriculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatriculas_CellContentClick);
             // 
-            // btnSeleccionar
+            // txtBajaMatricula
             // 
-            this.btnSeleccionar.AllowDrop = true;
-            this.btnSeleccionar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSeleccionar.Location = new System.Drawing.Point(409, 549);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(135, 34);
-            this.btnSeleccionar.TabIndex = 23;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = false;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.AllowDrop = true;
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBox1.Location = new System.Drawing.Point(251, 131);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(638, 20);
-            this.textBox1.TabIndex = 25;
+            this.txtBajaMatricula.AllowDrop = true;
+            this.txtBajaMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtBajaMatricula.Location = new System.Drawing.Point(251, 131);
+            this.txtBajaMatricula.Name = "txtBajaMatricula";
+            this.txtBajaMatricula.Size = new System.Drawing.Size(638, 20);
+            this.txtBajaMatricula.TabIndex = 25;
+            this.txtBajaMatricula.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblElegir
             // 
@@ -142,9 +128,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(955, 608);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBajaMatricula);
             this.Controls.Add(this.lblElegir);
-            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvMatriculas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -167,8 +152,7 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private System.Windows.Forms.DataGridView dgvMatriculas;
-        private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBajaMatricula;
         private System.Windows.Forms.Label lblElegir;
     }
 }
