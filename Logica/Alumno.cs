@@ -88,7 +88,7 @@ namespace Logica
         }
 
         //Guardar alumno
-        public bool guarda(string alumNombre,
+        public bool guardaAlumno(string alumNombre,
                           string alumApellido,
                           int alumDNI,
                           string fechaNacim,
@@ -103,6 +103,21 @@ namespace Logica
                                                    " VALUES ('" + alumNombre + "', '" + alumApellido + "', '" + alumDNI + "', '" + fechaNacim + "', '" + alumSexo + "', '" + alumNacionalidad + "', '" + alumCaracterizacion + "', '" + alumCategoria + "', '" + alumTurno+ "') ");
             return guardado;
         }
+        //Guarda Tutor
+        public bool guardaTutor(string tutorNombre,
+                          string tutorApellido,
+                          int tutorDNI,
+                          int tutorNacionalidad,
+                          int tutorProfesion,
+                          int tutorLocalidad,
+                          string tutorDireccion,
+                          int tutorTelefono)
+        {
+            bool guardado = conexion.ABM("INSERT INTO Alumno (Tutor_Nombres, Tutor_Apellidos, Tutor_Dni, Tutor_Nacionalidad, Tutor_Profesion, Tutor_Localidad, Tutor_Direccion,  Tutor_Telefono )" +
+                                                   " VALUES ('" + tutorNombre + "', '" + tutorApellido + "', " + tutorDNI + ", " + tutorNacionalidad + ", " + tutorProfesion + ", " + tutorLocalidad + ", " + tutorDireccion + ", " + tutorTelefono + ") ");
+            return guardado;
+        }
+
 
     }
 }

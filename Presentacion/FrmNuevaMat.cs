@@ -71,6 +71,7 @@ namespace Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+                        //*****ALUMNO******
             string alumNombre = txtAlumNombre.Text;
             string alumApellido = txtAlumApellido.Text;
             int alumDNI = 33333333;
@@ -80,20 +81,30 @@ namespace Presentacion
             int alumCaracterizacion = Convert.ToInt32(cmbAlumCaracteriz.SelectedValue);
             int alumCategoria = Convert.ToInt32(cmbAlumCategoria.SelectedValue);
             int alumTurno = Convert.ToInt32(cmbAlumTurno.SelectedValue);
+            
+            //*****TUTOR******
+            string tutorNombre=txtTutorNombre.Text;
+            string tutorApellido=txtAlumApellido.Text;
+            int tutorDNI = Convert.ToInt32(txtTutorDNI.Text);
+            int tutorNacionalidad = Convert.ToInt32(cmbTutorNac.SelectedValue);
+            int tutorProfesion = Convert.ToInt32(cmbTurorProfesion.SelectedValue);
+            int tutorLocalidad = Convert.ToInt32(cmbPartido.SelectedValue);
+            string tutorDireccion= txtTutorDomicilio.Text;
+            int tutorTelefono = Convert.ToInt32(txtTutorTelefono.Text);
+                          
 
-            //MessageBox.Show("INSERT INTO Alumno (Alumno_Nombres, Alumno_Apellidos, Alumno_Dni, Alumno_Nacimiento, Alumno_Sexo, Alumno_Nacionalidad, Alumno_Caracterizacion, Alumno_Categoria, Alumno_turno )" +
-             //                                      " VALUES ('" + alumNombre + "', '" + alumApellido + "', '" + alumDNI + "', '" + fechaNacim + "', '" + alumSexo + "', '" + alumNacionalidad + "', '" + alumCaracterizacion + "', '" + alumCategoria + "', '" + alumTurno + "') ");                 
-            bool alumnoGuardado = alumno.guarda(alumNombre, alumApellido, alumDNI, fechaNacim, alumSexo, alumNacionalidad, alumCaracterizacion, alumCategoria, alumTurno);
-            if (alumnoGuardado)
-            {
-                MessageBox.Show("sep");
-            }
-            else
-            {
-                MessageBox.Show("none");
-            }
+
+            //GUARDA ALUMNO          
+            bool alumnoGuardado = alumno.guardaAlumno(alumNombre, alumApellido, alumDNI, fechaNacim, alumSexo, alumNacionalidad, alumCaracterizacion, alumCategoria, alumTurno);
+            if (alumnoGuardado) { MessageBox.Show("sep"); } else { MessageBox.Show("none"); }
+            //GUARDATUTOR
+            bool tutorGuardado = alumno.guardaTutor(tutorNombre, tutorApellido, tutorDNI, tutorNacionalidad, tutorProfesion, tutorLocalidad, tutorDireccion, tutorTelefono);
+            if (tutorGuardado) { MessageBox.Show("sep"); } else { MessageBox.Show("none"); }
+
 
         }
+
+        
 
         private void cmbProvincia_SelectedValueChanged(object sender, EventArgs e)
         {

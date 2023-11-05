@@ -52,21 +52,24 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtTutorTelefono = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.cmbProvincia = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.cmbPartido = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtTutorDomicilio = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.cmbTurorProfesion = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtTutorApellido = new System.Windows.Forms.TextBox();
             this.cmbTutorNac = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtTutorDNI = new System.Windows.Forms.TextBox();
+            this.txtTutorNombre = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label26 = new System.Windows.Forms.Label();
             this.cmbAlumCategoria = new System.Windows.Forms.ComboBox();
@@ -91,7 +94,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.cmbProvincia = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.grupOtraEscuela.SuspendLayout();
@@ -341,28 +343,54 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.txtTutorTelefono);
+            this.groupBox4.Controls.Add(this.label27);
             this.groupBox4.Controls.Add(this.cmbProvincia);
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Controls.Add(this.cmbPartido);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.textBox12);
+            this.groupBox4.Controls.Add(this.txtTutorDomicilio);
             this.groupBox4.Controls.Add(this.label19);
             this.groupBox4.Controls.Add(this.cmbTurorProfesion);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.textBox10);
+            this.groupBox4.Controls.Add(this.txtTutorApellido);
             this.groupBox4.Controls.Add(this.cmbTutorNac);
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.label21);
-            this.groupBox4.Controls.Add(this.textBox11);
-            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.txtTutorDNI);
+            this.groupBox4.Controls.Add(this.txtTutorNombre);
             this.groupBox4.Location = new System.Drawing.Point(45, 354);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(440, 210);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "PADRES, TUTORES O ENCARGADOS";
+            // 
+            // txtTutorTelefono
+            // 
+            this.txtTutorTelefono.Location = new System.Drawing.Point(20, 185);
+            this.txtTutorTelefono.Name = "txtTutorTelefono";
+            this.txtTutorTelefono.Size = new System.Drawing.Size(186, 20);
+            this.txtTutorTelefono.TabIndex = 41;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(17, 169);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(55, 13);
+            this.label27.TabIndex = 40;
+            this.label27.Text = "Telefono :";
+            // 
+            // cmbProvincia
+            // 
+            this.cmbProvincia.FormattingEnabled = true;
+            this.cmbProvincia.Location = new System.Drawing.Point(238, 71);
+            this.cmbProvincia.Name = "cmbProvincia";
+            this.cmbProvincia.Size = new System.Drawing.Size(185, 21);
+            this.cmbProvincia.TabIndex = 38;
             // 
             // label23
             // 
@@ -399,12 +427,12 @@
             this.label20.TabIndex = 33;
             this.label20.Text = "Domicilio :";
             // 
-            // textBox12
+            // txtTutorDomicilio
             // 
-            this.textBox12.Location = new System.Drawing.Point(238, 147);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(186, 20);
-            this.textBox12.TabIndex = 31;
+            this.txtTutorDomicilio.Location = new System.Drawing.Point(238, 147);
+            this.txtTutorDomicilio.Name = "txtTutorDomicilio";
+            this.txtTutorDomicilio.Size = new System.Drawing.Size(186, 20);
+            this.txtTutorDomicilio.TabIndex = 31;
             // 
             // label19
             // 
@@ -441,12 +469,12 @@
             this.label16.TabIndex = 26;
             this.label16.Text = "Nacionalidad :";
             // 
-            // textBox10
+            // txtTutorApellido
             // 
-            this.textBox10.Location = new System.Drawing.Point(19, 34);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(187, 20);
-            this.textBox10.TabIndex = 20;
+            this.txtTutorApellido.Location = new System.Drawing.Point(19, 34);
+            this.txtTutorApellido.Name = "txtTutorApellido";
+            this.txtTutorApellido.Size = new System.Drawing.Size(187, 20);
+            this.txtTutorApellido.TabIndex = 20;
             // 
             // cmbTutorNac
             // 
@@ -477,19 +505,19 @@
             this.label21.Text = "DNI :";
             this.label21.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // textBox11
+            // txtTutorDNI
             // 
-            this.textBox11.Location = new System.Drawing.Point(19, 109);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(187, 20);
-            this.textBox11.TabIndex = 22;
+            this.txtTutorDNI.Location = new System.Drawing.Point(19, 109);
+            this.txtTutorDNI.Name = "txtTutorDNI";
+            this.txtTutorDNI.Size = new System.Drawing.Size(187, 20);
+            this.txtTutorDNI.TabIndex = 22;
             // 
-            // textBox8
+            // txtTutorNombre
             // 
-            this.textBox8.Location = new System.Drawing.Point(19, 72);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(187, 20);
-            this.textBox8.TabIndex = 23;
+            this.txtTutorNombre.Location = new System.Drawing.Point(19, 72);
+            this.txtTutorNombre.Name = "txtTutorNombre";
+            this.txtTutorNombre.Size = new System.Drawing.Size(187, 20);
+            this.txtTutorNombre.TabIndex = 23;
             // 
             // groupBox1
             // 
@@ -717,15 +745,6 @@
             this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker3.TabIndex = 0;
             // 
-            // cmbProvincia
-            // 
-            this.cmbProvincia.FormattingEnabled = true;
-            this.cmbProvincia.Location = new System.Drawing.Point(238, 71);
-            this.cmbProvincia.Name = "cmbProvincia";
-            this.cmbProvincia.Size = new System.Drawing.Size(185, 21);
-            this.cmbProvincia.TabIndex = 38;
-            this.cmbProvincia.SelectedValueChanged += new System.EventHandler(this.cmbProvincia_SelectedValueChanged);
-            // 
             // FrmNuevaMat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -786,15 +805,15 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtTutorDomicilio;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox cmbTurorProfesion;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtTutorApellido;
         private System.Windows.Forms.ComboBox cmbTutorNac;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtTutorNombre;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label10;
@@ -812,7 +831,7 @@
         private System.Windows.Forms.ComboBox cmbPartido;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtTutorDNI;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.GroupBox groupBox9;
@@ -829,5 +848,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbAlumTurno;
         private System.Windows.Forms.ComboBox cmbProvincia;
+        private System.Windows.Forms.TextBox txtTutorTelefono;
+        private System.Windows.Forms.Label label27;
     }
 }
