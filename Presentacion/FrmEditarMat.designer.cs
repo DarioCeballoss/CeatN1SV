@@ -136,17 +136,19 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Todas las Matriculas";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(424, 183);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(120, 17);
+            this.radioButton2.Size = new System.Drawing.Size(118, 17);
             this.radioButton2.TabIndex = 22;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Matriculas con retiro";
+            this.radioButton2.Text = "Matriculas inactivas";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -159,14 +161,18 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Matriculas activas";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // dgvMatriculas
             // 
             this.dgvMatriculas.AllowDrop = true;
+            this.dgvMatriculas.AllowUserToAddRows = false;
+            this.dgvMatriculas.AllowUserToDeleteRows = false;
             this.dgvMatriculas.BackgroundColor = System.Drawing.Color.White;
             this.dgvMatriculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMatriculas.Location = new System.Drawing.Point(12, 206);
             this.dgvMatriculas.Name = "dgvMatriculas";
+            this.dgvMatriculas.ReadOnly = true;
             this.dgvMatriculas.RowHeadersVisible = false;
             this.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMatriculas.Size = new System.Drawing.Size(915, 302);

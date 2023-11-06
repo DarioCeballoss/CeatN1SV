@@ -31,8 +31,8 @@ namespace Presentacion
                     n.Nacionalidad_Categoria as Nacionalidad,
                     Caracterizacion.Caracterizacion_Nombre as Caracterizacion,
                     Alumno_AñoAdmision as fechaDeIngreso,
-                    Categoria.Categoria_Nombre as Grado,
-                    b.Baja_Activa
+                    Categoria.Categoria_Nombre as Grado
+                   
 
                 FROM (((((Alumno a
                 INNER JOIN Sexo s ON a.Alumno_Sexo = s.Id)  
@@ -40,7 +40,7 @@ namespace Presentacion
                 INNER JOIN Nacionalidad n ON a.Alumno_Nacionalidad = n.Id)
                 INNER JOIN Categoria ON a.Alumno_Categoria = Categoria.Id )
                 LEFT JOIN Baja b ON a.Id = b.Baja_Alumno )
-                WHERE (b.Baja_Activa IS  NULL or b.Baja_Activa = 0)";
+                WHERE (b.Baja_Alumno IS NULL OR b.Baja_Activa = 0) ";
 
 
         public void actualizarTabla() 
