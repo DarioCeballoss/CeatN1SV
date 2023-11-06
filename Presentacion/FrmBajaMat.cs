@@ -31,19 +31,28 @@ namespace Presentacion
                     n.Nacionalidad_Categoria as Nacionalidad,
                     Caracterizacion.Caracterizacion_Nombre as Caracterizacion,
                     Alumno_AñoAdmision as fechaDeIngreso,
-                    Categoria.Categoria_Nombre as Grado
+                    Categoria.Categoria_Nombre as Grado,
+                    b.Baja_Activa
 
-                FROM ((((Alumno a
+                FROM (((((Alumno a
                 INNER JOIN Sexo s ON a.Alumno_Sexo = s.Id)  
                 INNER JOIN Caracterizacion ON a.Alumno_Caracterizacion = Caracterizacion.Id)
                 INNER JOIN Nacionalidad n ON a.Alumno_Nacionalidad = n.Id)
-                INNER JOIN Categoria ON a.Alumno_Categoria = Categoria.Id )";
+                INNER JOIN Categoria ON a.Alumno_Categoria = Categoria.Id )
+                LEFT JOIN Baja b ON a.Id = b.Baja_Alumno )
+                WHERE (b.Baja_Activa IS  NULL or b.Baja_Activa = 0)";
 
-        private void FrmBajaMat_Load(object sender, EventArgs e)
+
+        public void actualizarTabla() 
         {
             Tabla.Clear();
             Tabla.Load(claseConexion.Leer(Query));
             dgvMatriculas.DataSource = Tabla;
+        }
+
+        private void FrmBajaMat_Load(object sender, EventArgs e)
+        {
+            actualizarTabla();
         }
 
         
@@ -56,7 +65,7 @@ namespace Presentacion
 
                 // Obtenemos el valor de la celda
                 object cellValue = cell.Value;
-                FrmAlumnoBorrar EliminarAlumno = new FrmAlumnoBorrar(cellValue);
+                FrmAlumnoBorrar EliminarAlumno = new FrmAlumnoBorrar(cellValue ,this);
                 EliminarAlumno.Show();
 
                
@@ -68,10 +77,10 @@ namespace Presentacion
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string where = "WHERE a.Id LIKE '%" + txtBajaMatricula.Text + "%' " +
+            string where = "and (a.Id LIKE '%" + txtBajaMatricula.Text + "%' " +
              "or a.Alumno_Nombres LIKE '%" + txtBajaMatricula.Text + "%' " +
              "or a.Alumno_Apellidos LIKE '%" + txtBajaMatricula.Text + "%' " +
-             "or a.Alumno_Dni LIKE '%" + txtBajaMatricula.Text + "%'";
+             "or a.Alumno_Dni LIKE '%" + txtBajaMatricula.Text + "%')";
 
             Tabla.Clear();
 

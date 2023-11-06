@@ -13,6 +13,7 @@ namespace Presentacion
 {
     public partial class FrmAlumnoBorrar : Form
     {
+        private FrmBajaMat formularioPadre;
         int matr;
         Conexion conecta = new Conexion();
         string Query = @"
@@ -27,10 +28,11 @@ namespace Presentacion
                 INNER JOIN Categoria ON a.Alumno_Categoria = Categoria.Id ";
 
 
-        public FrmAlumnoBorrar(object matricula)
+        public FrmAlumnoBorrar(object matricula ,FrmBajaMat padre)
         {
             InitializeComponent();
             matr = Convert.ToInt32(matricula);
+            formularioPadre = padre;
 
         }
 
@@ -72,7 +74,7 @@ namespace Presentacion
                                " \n\n Desea Continuar ? \n ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
 
-                string QUERY2 = "INSERT INTO Baja (Baja_Fecha, Baja_Causa, Baja_Activa) VALUES ('" + FBAJA.Value.ToString("yyyy-MM-dd") + "', '" + txtBajaCausa.Text + "', 1);";
+                string QUERY2 = "INSERT INTO Baja (Baja_Fecha, Baja_Causa, Baja_Activa,Baja_Alumno) VALUES ('" + FBAJA.Value.ToString("yyyy-MM-dd") + "', '" + txtBajaCausa.Text + "', 1, '"+ matr+ "');";
 
 
 
@@ -81,24 +83,20 @@ namespace Presentacion
 
                 if (ELIMINADO == true)
                 {
-                    int ultimoID = 0;
-                    string selectQuery = "SELECT COUNT(*) FROM Baja";
-                    OleDbDataReader reader2 = conecta.Leer(selectQuery);
 
-                    if (reader2.HasRows)
-                    {
-                        reader2.Read();
-                        ultimoID = reader2.GetInt32(0);
-                        reader2.Close();
+                    DialogResult result = MessageBox.Show("Alumno inactivo", "Confirmar", MessageBoxButtons.OK);
 
-                        conecta.ABM("INSERT INTO ListaBajas (IdAlumno, IdBaja) VALUES (" + matr + ", " + ultimoID + ");");
-                        MessageBox.Show("Usuario dado de baja");
-                    }
-                    else
+                    // Si el botón "OK" se presiona, cierra el formulario actual
+                    if (result == DialogResult.OK)
                     {
-                        MessageBox.Show("ERROR");
+                        formularioPadre.actualizarTabla();   
+                        this.Close();
+                        
                     }
                 }
+             
+
+                
             }
 
 
