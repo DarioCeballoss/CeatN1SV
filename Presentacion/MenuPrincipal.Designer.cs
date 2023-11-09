@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -52,6 +54,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.dgvAlertasAlumnos = new System.Windows.Forms.DataGridView();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -59,6 +70,8 @@
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlertasAlumnos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -394,6 +407,9 @@
             // pnlContenedor
             // 
             this.pnlContenedor.BackColor = System.Drawing.Color.Transparent;
+            this.pnlContenedor.Controls.Add(this.dgvAlertasAlumnos);
+            this.pnlContenedor.Controls.Add(this.label1);
+            this.pnlContenedor.Controls.Add(this.pictureBox2);
             this.pnlContenedor.Controls.Add(this.label2);
             this.pnlContenedor.Controls.Add(this.label3);
             this.pnlContenedor.Controls.Add(this.shapeContainer3);
@@ -404,6 +420,107 @@
             this.pnlContenedor.Size = new System.Drawing.Size(1025, 687);
             this.pnlContenedor.TabIndex = 11;
             this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenedor_Paint);
+            // 
+            // dgvAlertasAlumnos
+            // 
+            this.dgvAlertasAlumnos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvAlertasAlumnos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAlertasAlumnos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAlertasAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAlertasAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlertasAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.apellido,
+            this.nombre,
+            this.dni,
+            this.nacimiento,
+            this.categoria,
+            this.edad});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAlertasAlumnos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAlertasAlumnos.EnableHeadersVisualStyles = false;
+            this.dgvAlertasAlumnos.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvAlertasAlumnos.Location = new System.Drawing.Point(190, 539);
+            this.dgvAlertasAlumnos.Name = "dgvAlertasAlumnos";
+            this.dgvAlertasAlumnos.RowHeadersVisible = false;
+            this.dgvAlertasAlumnos.Size = new System.Drawing.Size(700, 133);
+            this.dgvAlertasAlumnos.TabIndex = 17;
+            // 
+            // apellido
+            // 
+            this.apellido.DataPropertyName = "Alumno_Apellidos";
+            this.apellido.HeaderText = "APELLIDO";
+            this.apellido.Name = "apellido";
+            this.apellido.Width = 150;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "Alumno_Nombres";
+            this.nombre.HeaderText = "NOMBRE";
+            this.nombre.Name = "nombre";
+            this.nombre.Width = 150;
+            // 
+            // dni
+            // 
+            this.dni.DataPropertyName = "Alumno_Dni";
+            this.dni.HeaderText = "DNI";
+            this.dni.Name = "dni";
+            // 
+            // nacimiento
+            // 
+            this.nacimiento.DataPropertyName = "Alumno_Nacimiento";
+            this.nacimiento.HeaderText = "NACIMIENTO";
+            this.nacimiento.Name = "nacimiento";
+            // 
+            // categoria
+            // 
+            this.categoria.DataPropertyName = "Categoria_Nombre";
+            this.categoria.HeaderText = "CATEGORIA";
+            this.categoria.Name = "categoria";
+            this.categoria.Width = 150;
+            // 
+            // edad
+            // 
+            this.edad.DataPropertyName = "edad";
+            this.edad.HeaderText = "EDAD";
+            this.edad.Name = "edad";
+            this.edad.Width = 50;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Geometr415 Blk BT", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(263, 498);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(535, 25);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "ALUMNOS EN ESTADO DE ASCENSO DE CATEGORIA";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(268, 114);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(519, 320);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
             // 
             // MenuPrincipal
             // 
@@ -436,6 +553,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlContenedor.ResumeLayout(false);
             this.pnlContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlertasAlumnos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -465,5 +584,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlContenedor;
+        private System.Windows.Forms.DataGridView dgvAlertasAlumnos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn edad;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
