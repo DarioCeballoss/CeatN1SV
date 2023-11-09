@@ -89,11 +89,6 @@
             this.txtAlumDNI = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAlumApellido = new System.Windows.Forms.TextBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label28 = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
@@ -110,7 +105,6 @@
             this.grupOtraEscuela.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -337,7 +331,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(514, 592);
+            this.btnAceptar.Location = new System.Drawing.Point(499, 662);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 16;
@@ -347,7 +341,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(410, 592);
+            this.btnCancelar.Location = new System.Drawing.Point(395, 662);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 17;
@@ -712,52 +706,6 @@
             this.txtAlumApellido.Size = new System.Drawing.Size(187, 20);
             this.txtAlumApellido.TabIndex = 1;
             // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.label11);
-            this.groupBox9.Controls.Add(this.label24);
-            this.groupBox9.Controls.Add(this.textBox9);
-            this.groupBox9.Controls.Add(this.dateTimePicker3);
-            this.groupBox9.Location = new System.Drawing.Point(344, 636);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(410, 140);
-            this.groupBox9.TabIndex = 38;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "RETIRO";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(16, 32);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 13);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Fecha :";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(31, 67);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(43, 13);
-            this.label24.TabIndex = 13;
-            this.label24.Text = "Causa :";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(21, 77);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(368, 48);
-            this.textBox9.TabIndex = 12;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(102, 29);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 0;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label28);
@@ -772,7 +720,7 @@
             this.groupBox3.Controls.Add(this.chkObsLengua);
             this.groupBox3.Location = new System.Drawing.Point(514, 412);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(410, 226);
+            this.groupBox3.Size = new System.Drawing.Size(410, 217);
             this.groupBox3.TabIndex = 39;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "OBSERVACIONES";
@@ -881,7 +829,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(955, 706);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancelar);
@@ -905,8 +852,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -965,11 +910,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtTutorDNI;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.DateTimePicker dtTimeIngreso;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label26;

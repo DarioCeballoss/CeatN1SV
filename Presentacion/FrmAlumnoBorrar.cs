@@ -33,11 +33,12 @@ namespace Presentacion
             InitializeComponent();
             matr = Convert.ToInt32(matricula);
             formularioPadre = padre;
-
+           
         }
 
         private void FrmAlumnoBorrar_Load(object sender, EventArgs e)
         {
+           
             bool trae = false;
             OleDbDataReader reader = conecta.Leer(Query + "WHERE a.Id =" + matr);
 

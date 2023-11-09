@@ -47,12 +47,17 @@ namespace Presentacion
                     Alumno_Medicacion,
                     Alumno_Vulneracion,
                     Alumno_ComplicacionesParto,
-                    Alumno_Observaciones
+                    Alumno_Observaciones,
+                    Admision.Admision_fecha
+                  
+                 
+                    
                     
                     
 
-                FROM (((((( (((Alumno a
-               
+                FROM (((((((((((Alumno a
+                INNER JOIN Admision on a.Id = Admision.Admision_Alumno)
+                
                 INNER JOIN Tutor on a.Alumno_Tutores = Tutor.Id )
                 INNER JOIN Localidades l on Tutor.Tutor_Localidad = l.Id)
                 INNER JOIN Turno t ON a.Alumno_turno = t.Id)
@@ -60,6 +65,7 @@ namespace Presentacion
                 INNER JOIN Sexo s ON a.Alumno_Sexo = s.Id)  
                 INNER JOIN Caracterizacion ON a.Alumno_Caracterizacion = Caracterizacion.Id)
                 INNER JOIN Nacionalidad n ON a.Alumno_Nacionalidad = n.Id)
+                INNER JOIN Categoria c2 ON Admision.Escuela_Categoria = c2.Id )
                 INNER JOIN Nacionalidad n2 ON Tutor.Tutor_Nacionalidad = n2.Id)
                 INNER JOIN Profesion ON Tutor.Tutor_Profesion = Profesion.Id)";
            
@@ -134,10 +140,10 @@ namespace Presentacion
                     txtTutorNombre.Text = reader.GetString(11);
                     txtTutorDNI.Text = Convert.ToString(reader.GetInt32(12));
                     cmbTurorProfesion.Text = reader.GetString(13);
-                    //if (!reader.IsDBNull(14))
-                    //{
-                    //  txtTutorTelefono.Text = reader.GetInt32(14).ToString();
-                    //}
+                    if (!reader.IsDBNull(14))
+                    {
+                        txtTutorTelefono.Text =Convert.ToString( reader.GetDouble(14));
+                    }
                
                     cmbTutorNac.Text = reader.GetString(15);
                     cmbPartido.Text = reader.GetString(16);
@@ -155,7 +161,14 @@ namespace Presentacion
                         txtObservaciones.Text = reader.GetString(26);
                     }
 
+                    dateTimePicker1.Value = reader.GetDateTime(27);
+                    //if (!reader.IsDBNull(28))
+                    //{
+                    //    txtGrado.Text = reader.GetString(28);
+                    //}
 
+                    
+                    
                     
                  
                    

@@ -47,11 +47,11 @@
             this.txtAlumDNI = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAlumApellido = new System.Windows.Forms.TextBox();
-            this.gbAdmision = new System.Windows.Forms.GroupBox();
             this.dgvBajas = new System.Windows.Forms.DataGridView();
+            this.gbAdmision = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtGrado = new System.Windows.Forms.TextBox();
             this.grupOtraEscuela = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
@@ -108,8 +108,8 @@
             this.btnEditarAdmi = new System.Windows.Forms.Button();
             this.btnEditarBajas = new System.Windows.Forms.Button();
             this.gbAlumno.SuspendLayout();
-            this.gbAdmision.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBajas)).BeginInit();
+            this.gbAdmision.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.grupOtraEscuela.SuspendLayout();
             this.gbTutores.SuspendLayout();
@@ -315,6 +315,14 @@
             this.txtAlumApellido.Size = new System.Drawing.Size(268, 22);
             this.txtAlumApellido.TabIndex = 1;
             // 
+            // dgvBajas
+            // 
+            this.dgvBajas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBajas.Location = new System.Drawing.Point(-3, 39);
+            this.dgvBajas.Name = "dgvBajas";
+            this.dgvBajas.Size = new System.Drawing.Size(673, 398);
+            this.dgvBajas.TabIndex = 43;
+            // 
             // gbAdmision
             // 
             this.gbAdmision.Controls.Add(this.groupBox6);
@@ -327,18 +335,10 @@
             this.gbAdmision.TabStop = false;
             this.gbAdmision.Text = "ADMISION";
             // 
-            // dgvBajas
-            // 
-            this.dgvBajas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBajas.Location = new System.Drawing.Point(-3, 39);
-            this.dgvBajas.Name = "dgvBajas";
-            this.dgvBajas.Size = new System.Drawing.Size(673, 398);
-            this.dgvBajas.TabIndex = 43;
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Controls.Add(this.textBox7);
+            this.groupBox6.Controls.Add(this.txtGrado);
             this.groupBox6.Controls.Add(this.grupOtraEscuela);
             this.groupBox6.Controls.Add(this.chkProcedencia);
             this.groupBox6.Location = new System.Drawing.Point(28, 59);
@@ -357,12 +357,12 @@
             this.label12.TabIndex = 13;
             this.label12.Text = "Sección/grado :";
             // 
-            // textBox7
+            // txtGrado
             // 
-            this.textBox7.Location = new System.Drawing.Point(122, 20);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(210, 20);
-            this.textBox7.TabIndex = 12;
+            this.txtGrado.Location = new System.Drawing.Point(122, 20);
+            this.txtGrado.Name = "txtGrado";
+            this.txtGrado.Size = new System.Drawing.Size(210, 20);
+            this.txtGrado.TabIndex = 12;
             // 
             // grupOtraEscuela
             // 
@@ -978,8 +978,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1004, 587);
-            this.Controls.Add(this.gbTutores);
-            this.Controls.Add(this.gbAlumno);
             this.Controls.Add(this.btnEditarBajas);
             this.Controls.Add(this.btnEditarAdmi);
             this.Controls.Add(this.btnEditarObs);
@@ -990,8 +988,10 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.gbObservacion);
             this.Controls.Add(this.gbAdmision);
+            this.Controls.Add(this.gbTutores);
+            this.Controls.Add(this.gbAlumno);
+            this.Controls.Add(this.gbObservacion);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditTutor";
@@ -1000,9 +1000,9 @@
             this.Load += new System.EventHandler(this.EditAlumno_Load);
             this.gbAlumno.ResumeLayout(false);
             this.gbAlumno.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBajas)).EndInit();
             this.gbAdmision.ResumeLayout(false);
             this.gbAdmision.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBajas)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.grupOtraEscuela.ResumeLayout(false);
@@ -1042,7 +1042,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtGrado;
         private System.Windows.Forms.GroupBox grupOtraEscuela;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox13;

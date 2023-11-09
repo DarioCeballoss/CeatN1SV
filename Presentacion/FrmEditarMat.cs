@@ -77,6 +77,7 @@ namespace Presentacion
         public FrmEditarMat()
         {
             InitializeComponent();
+           
         }
        
       
