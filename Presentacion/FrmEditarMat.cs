@@ -59,6 +59,21 @@ namespace Presentacion
         string where;
         string where2;
 
+        private Form formActivo = null;
+        private void FormHijo(Form formHijo)
+        {
+            if (formActivo != null) formActivo.Close();
+            formActivo = formHijo;
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            //pnlContenedor.Controls.Add(formHijo);
+            //pnlContenedor.Tag = formHijo;
+            formHijo.BringToFront();
+            formHijo.Show();
+        }
+
+
         public FrmEditarMat()
         {
             InitializeComponent();
@@ -67,7 +82,17 @@ namespace Presentacion
       
         private void dgvMatriculas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewCell cell = dgvMatriculas.Rows[e.RowIndex].Cells[0];
 
+                // Obtenemos el valor de la celda
+                object cellValue = cell.Value;
+                EditTutor EditarAlumno = new EditTutor(cellValue, this);
+                EditarAlumno.Show();
+
+
+            }
         }
 
         private void FrmEditarMat_Load(object sender, EventArgs e)
@@ -126,6 +151,7 @@ namespace Presentacion
 	            }
                         
         }
+
         }
 
         

@@ -72,6 +72,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1327, 27);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // picMinimizar
             // 
@@ -402,7 +403,7 @@
             this.pnlContenedor.Padding = new System.Windows.Forms.Padding(68, 0, 23, 0);
             this.pnlContenedor.Size = new System.Drawing.Size(1025, 687);
             this.pnlContenedor.TabIndex = 11;
-           
+            this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenedor_Paint);
             // 
             // MenuPrincipal
             // 

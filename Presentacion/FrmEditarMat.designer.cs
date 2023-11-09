@@ -34,7 +34,6 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lblElegir = new System.Windows.Forms.Label();
             this.txtMatriculas = new System.Windows.Forms.TextBox();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -112,20 +111,6 @@
             this.txtMatriculas.TabIndex = 12;
             this.txtMatriculas.TextChanged += new System.EventHandler(this.txtMatriculas_TextChanged);
             // 
-            // btnEditar
-            // 
-            this.btnEditar.AllowDrop = true;
-            this.btnEditar.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnEditar.Location = new System.Drawing.Point(426, 530);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(118, 33);
-            this.btnEditar.TabIndex = 16;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
@@ -175,7 +160,7 @@
             this.dgvMatriculas.ReadOnly = true;
             this.dgvMatriculas.RowHeadersVisible = false;
             this.dgvMatriculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMatriculas.Size = new System.Drawing.Size(915, 302);
+            this.dgvMatriculas.Size = new System.Drawing.Size(915, 357);
             this.dgvMatriculas.TabIndex = 24;
             this.dgvMatriculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatriculas_CellContentClick);
             // 
@@ -189,7 +174,6 @@
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtMatriculas);
             this.Controls.Add(this.lblElegir);
             this.Controls.Add(this.label2);
@@ -214,7 +198,6 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private System.Windows.Forms.Label lblElegir;
         private System.Windows.Forms.TextBox txtMatriculas;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;

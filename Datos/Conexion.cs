@@ -10,60 +10,73 @@ namespace Datos
     public class Conexion
     {
 
-            //public int suma(int a, int b){return a + b;}
+        //public int suma(int a, int b){return a + b;}
 
-            //para conectar
-            static private OleDbConnection Conecta;
-            static private OleDbCommand Orden;
-            static string strConexion = "Provider=Microsoft.Jet.OLEDB.4.0; " +
-            "Data Source = CeatDB.mdb;";
+        //para conectar
+        static private OleDbConnection Conecta;
+        static private OleDbCommand Orden;
+        static string strConexion = "Provider=Microsoft.Jet.OLEDB.4.0; " +
+        "Data Source = CeatDB.mdb;";
 
-            //lee
-            public OleDbDataReader Leer(string Consulta)
+        //lee
+        public OleDbDataReader Leer(string Consulta)
+        {
+            Conecta = new OleDbConnection(strConexion);
+            Orden = new OleDbCommand(Consulta, Conecta);
+
+            try
             {
-                Conecta = new OleDbConnection(strConexion);
-                Orden = new OleDbCommand(Consulta, Conecta);
+                Conecta.Open();
+                return Orden.ExecuteReader();
+            }
+            catch
+            {
+                OleDbDataReader error = null;
+                return error;
+            }
+        }
+        //lee ULTIMO Id
+        public int LeerUltimoId(string tabla)
+        {
+            string Consulta = "select MAX(Id) AS LASTID from " + tabla;
+            Conecta = new OleDbConnection(strConexion);
+            Orden = new OleDbCommand(Consulta, Conecta);
 
-                try
-                {
-                    Conecta.Open();
-                    return Orden.ExecuteReader();
-                }
-                catch
-                {
-                    OleDbDataReader error = null;
-                    return error;
-                }
+            Conecta.Open();
+            int lastId = Convert.ToInt32(Orden.ExecuteScalar());
+            return lastId;
+
+
+        }
+
+        //cierra
+        public void Desconectar()
+        {
+            if (Conecta.State == ConnectionState.Open)
+                Conecta.Close();
+        }
+
+        //Agrega Baja Modifica
+        public bool ABM(string Consulta)
+        {
+            bool Resultado = false;
+            Conecta = new OleDbConnection(strConexion);
+            Orden = new OleDbCommand(Consulta, Conecta);
+            try
+            {
+                Conecta.Open();
+                Orden.ExecuteNonQuery();
+                Resultado = true;
+            }
+            catch
+            {
+                Resultado = false;
             }
 
-            //cierra
-            public void Desconectar()
-            {
-                if (Conecta.State == ConnectionState.Open)
-                    Conecta.Close();
-            }
+            Desconectar();
 
-            //Agrega Baja Modifica
-            public bool ABM(string Consulta)
-            {
-                bool Resultado = false;
-                Conecta = new OleDbConnection(strConexion);
-                Orden = new OleDbCommand(Consulta, Conecta);
-                try
-                {
-                    Conecta.Open();
-                    Orden.ExecuteNonQuery();
-                    Resultado = true;
-                }
-                catch
-                {
-                    Resultado = false;
-                }
-
-                Desconectar();
-
-                return Resultado;
-            }
+            return Resultado;
+        }
     }
 
 }

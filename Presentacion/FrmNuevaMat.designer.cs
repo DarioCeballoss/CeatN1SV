@@ -34,20 +34,20 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtTimeIngreso = new System.Windows.Forms.DateTimePicker();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.cmbAdmiCategoria = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.grupOtraEscuela = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtEscNumero = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbPrivada = new System.Windows.Forms.RadioButton();
+            this.rbNacion = new System.Windows.Forms.RadioButton();
+            this.rbProvincia = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbDistritoEsc = new System.Windows.Forms.ComboBox();
             this.chkProcedencia = new System.Windows.Forms.CheckBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -94,12 +94,24 @@
             this.label24 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
+            this.chkObsMedicacion = new System.Windows.Forms.CheckBox();
+            this.chkObsDerechos = new System.Windows.Forms.CheckBox();
+            this.chkObsParto = new System.Windows.Forms.CheckBox();
+            this.chkObsCUD = new System.Windows.Forms.CheckBox();
+            this.chkObsEncierro = new System.Windows.Forms.CheckBox();
+            this.chkObsOriginario = new System.Windows.Forms.CheckBox();
+            this.chkObsBeneficio = new System.Windows.Forms.CheckBox();
+            this.chkObsLengua = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.grupOtraEscuela.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -130,8 +142,8 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
@@ -154,7 +166,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dtTimeIngreso);
             this.groupBox2.Controls.Add(this.groupBox6);
             this.groupBox2.Location = new System.Drawing.Point(514, 107);
             this.groupBox2.Name = "groupBox2";
@@ -172,17 +184,17 @@
             this.label13.TabIndex = 14;
             this.label13.Text = "Fecha de admision :";
             // 
-            // dateTimePicker1
+            // dtTimeIngreso
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(102, 36);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 14;
+            this.dtTimeIngreso.Location = new System.Drawing.Point(102, 36);
+            this.dtTimeIngreso.Name = "dtTimeIngreso";
+            this.dtTimeIngreso.Size = new System.Drawing.Size(200, 20);
+            this.dtTimeIngreso.TabIndex = 14;
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.cmbAdmiCategoria);
             this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Controls.Add(this.textBox7);
             this.groupBox6.Controls.Add(this.grupOtraEscuela);
             this.groupBox6.Controls.Add(this.chkProcedencia);
             this.groupBox6.Location = new System.Drawing.Point(19, 74);
@@ -191,6 +203,14 @@
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Procedencia del alumno";
+            // 
+            // cmbAdmiCategoria
+            // 
+            this.cmbAdmiCategoria.FormattingEnabled = true;
+            this.cmbAdmiCategoria.Location = new System.Drawing.Point(105, 27);
+            this.cmbAdmiCategoria.Name = "cmbAdmiCategoria";
+            this.cmbAdmiCategoria.Size = new System.Drawing.Size(110, 21);
+            this.cmbAdmiCategoria.TabIndex = 28;
             // 
             // label12
             // 
@@ -201,24 +221,17 @@
             this.label12.TabIndex = 13;
             this.label12.Text = "Sección/grado :";
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(105, 28);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(83, 20);
-            this.textBox7.TabIndex = 12;
-            // 
             // grupOtraEscuela
             // 
             this.grupOtraEscuela.Controls.Add(this.label22);
-            this.grupOtraEscuela.Controls.Add(this.textBox13);
+            this.grupOtraEscuela.Controls.Add(this.txtEscNumero);
             this.grupOtraEscuela.Controls.Add(this.label4);
             this.grupOtraEscuela.Controls.Add(this.textBox2);
-            this.grupOtraEscuela.Controls.Add(this.radioButton3);
-            this.grupOtraEscuela.Controls.Add(this.radioButton2);
-            this.grupOtraEscuela.Controls.Add(this.radioButton1);
+            this.grupOtraEscuela.Controls.Add(this.rbPrivada);
+            this.grupOtraEscuela.Controls.Add(this.rbNacion);
+            this.grupOtraEscuela.Controls.Add(this.rbProvincia);
             this.grupOtraEscuela.Controls.Add(this.label1);
-            this.grupOtraEscuela.Controls.Add(this.comboBox1);
+            this.grupOtraEscuela.Controls.Add(this.cmbDistritoEsc);
             this.grupOtraEscuela.Enabled = false;
             this.grupOtraEscuela.Location = new System.Drawing.Point(13, 63);
             this.grupOtraEscuela.Name = "grupOtraEscuela";
@@ -236,12 +249,12 @@
             this.label22.TabIndex = 9;
             this.label22.Text = "Distrito :";
             // 
-            // textBox13
+            // txtEscNumero
             // 
-            this.textBox13.Location = new System.Drawing.Point(73, 68);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(83, 20);
-            this.textBox13.TabIndex = 8;
+            this.txtEscNumero.Location = new System.Drawing.Point(73, 68);
+            this.txtEscNumero.Name = "txtEscNumero";
+            this.txtEscNumero.Size = new System.Drawing.Size(83, 20);
+            this.txtEscNumero.TabIndex = 8;
             // 
             // label4
             // 
@@ -259,38 +272,38 @@
             this.textBox2.Size = new System.Drawing.Size(83, 20);
             this.textBox2.TabIndex = 6;
             // 
-            // radioButton3
+            // rbPrivada
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(223, 95);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(61, 17);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Privada";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbPrivada.AutoSize = true;
+            this.rbPrivada.Location = new System.Drawing.Point(223, 95);
+            this.rbPrivada.Name = "rbPrivada";
+            this.rbPrivada.Size = new System.Drawing.Size(61, 17);
+            this.rbPrivada.TabIndex = 5;
+            this.rbPrivada.TabStop = true;
+            this.rbPrivada.Text = "Privada";
+            this.rbPrivada.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbNacion
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(223, 68);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 17);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nacion";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbNacion.AutoSize = true;
+            this.rbNacion.Location = new System.Drawing.Point(223, 68);
+            this.rbNacion.Name = "rbNacion";
+            this.rbNacion.Size = new System.Drawing.Size(59, 17);
+            this.rbNacion.TabIndex = 4;
+            this.rbNacion.TabStop = true;
+            this.rbNacion.Text = "Nacion";
+            this.rbNacion.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbProvincia
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(223, 41);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(69, 17);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Provincia";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbProvincia.AutoSize = true;
+            this.rbProvincia.Location = new System.Drawing.Point(223, 41);
+            this.rbProvincia.Name = "rbProvincia";
+            this.rbProvincia.Size = new System.Drawing.Size(69, 17);
+            this.rbProvincia.TabIndex = 3;
+            this.rbProvincia.TabStop = true;
+            this.rbProvincia.Text = "Provincia";
+            this.rbProvincia.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -301,13 +314,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Numero :";
             // 
-            // comboBox1
+            // cmbDistritoEsc
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cmbDistritoEsc.FormattingEnabled = true;
+            this.cmbDistritoEsc.Location = new System.Drawing.Point(17, 41);
+            this.cmbDistritoEsc.Name = "cmbDistritoEsc";
+            this.cmbDistritoEsc.Size = new System.Drawing.Size(139, 21);
+            this.cmbDistritoEsc.TabIndex = 0;
             // 
             // chkProcedencia
             // 
@@ -705,7 +718,7 @@
             this.groupBox9.Controls.Add(this.label24);
             this.groupBox9.Controls.Add(this.textBox9);
             this.groupBox9.Controls.Add(this.dateTimePicker3);
-            this.groupBox9.Location = new System.Drawing.Point(514, 424);
+            this.groupBox9.Location = new System.Drawing.Point(344, 636);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(410, 140);
             this.groupBox9.TabIndex = 38;
@@ -745,12 +758,129 @@
             this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker3.TabIndex = 0;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label28);
+            this.groupBox3.Controls.Add(this.txtObservaciones);
+            this.groupBox3.Controls.Add(this.chkObsMedicacion);
+            this.groupBox3.Controls.Add(this.chkObsDerechos);
+            this.groupBox3.Controls.Add(this.chkObsParto);
+            this.groupBox3.Controls.Add(this.chkObsCUD);
+            this.groupBox3.Controls.Add(this.chkObsEncierro);
+            this.groupBox3.Controls.Add(this.chkObsOriginario);
+            this.groupBox3.Controls.Add(this.chkObsBeneficio);
+            this.groupBox3.Controls.Add(this.chkObsLengua);
+            this.groupBox3.Location = new System.Drawing.Point(514, 412);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(410, 226);
+            this.groupBox3.TabIndex = 39;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "OBSERVACIONES";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(25, 122);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(111, 13);
+            this.label28.TabIndex = 10;
+            this.label28.Text = "Comentario adicional :";
+            // 
+            // txtObservaciones
+            // 
+            this.txtObservaciones.Location = new System.Drawing.Point(19, 133);
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(370, 72);
+            this.txtObservaciones.TabIndex = 41;
+            // 
+            // chkObsMedicacion
+            // 
+            this.chkObsMedicacion.AutoSize = true;
+            this.chkObsMedicacion.Location = new System.Drawing.Point(219, 47);
+            this.chkObsMedicacion.Name = "chkObsMedicacion";
+            this.chkObsMedicacion.Size = new System.Drawing.Size(102, 17);
+            this.chkObsMedicacion.TabIndex = 35;
+            this.chkObsMedicacion.Text = "Usa medicacion";
+            this.chkObsMedicacion.UseVisualStyleBackColor = true;
+            // 
+            // chkObsDerechos
+            // 
+            this.chkObsDerechos.AutoSize = true;
+            this.chkObsDerechos.Location = new System.Drawing.Point(219, 70);
+            this.chkObsDerechos.Name = "chkObsDerechos";
+            this.chkObsDerechos.Size = new System.Drawing.Size(144, 17);
+            this.chkObsDerechos.TabIndex = 34;
+            this.chkObsDerechos.Text = "Vulneración de derechos";
+            this.chkObsDerechos.UseVisualStyleBackColor = true;
+            // 
+            // chkObsParto
+            // 
+            this.chkObsParto.AutoSize = true;
+            this.chkObsParto.Location = new System.Drawing.Point(219, 93);
+            this.chkObsParto.Name = "chkObsParto";
+            this.chkObsParto.Size = new System.Drawing.Size(153, 17);
+            this.chkObsParto.TabIndex = 33;
+            this.chkObsParto.Text = "Complicaciones en el parto";
+            this.chkObsParto.UseVisualStyleBackColor = true;
+            // 
+            // chkObsCUD
+            // 
+            this.chkObsCUD.AutoSize = true;
+            this.chkObsCUD.Location = new System.Drawing.Point(219, 23);
+            this.chkObsCUD.Name = "chkObsCUD";
+            this.chkObsCUD.Size = new System.Drawing.Size(190, 17);
+            this.chkObsCUD.TabIndex = 32;
+            this.chkObsCUD.Text = "Certificado Unico de Discapacidad";
+            this.chkObsCUD.UseVisualStyleBackColor = true;
+            // 
+            // chkObsEncierro
+            // 
+            this.chkObsEncierro.AutoSize = true;
+            this.chkObsEncierro.Location = new System.Drawing.Point(38, 47);
+            this.chkObsEncierro.Name = "chkObsEncierro";
+            this.chkObsEncierro.Size = new System.Drawing.Size(124, 17);
+            this.chkObsEncierro.TabIndex = 31;
+            this.chkObsEncierro.Text = "Contexto de encierro";
+            this.chkObsEncierro.UseVisualStyleBackColor = true;
+            // 
+            // chkObsOriginario
+            // 
+            this.chkObsOriginario.AutoSize = true;
+            this.chkObsOriginario.Location = new System.Drawing.Point(38, 70);
+            this.chkObsOriginario.Name = "chkObsOriginario";
+            this.chkObsOriginario.Size = new System.Drawing.Size(116, 17);
+            this.chkObsOriginario.TabIndex = 30;
+            this.chkObsOriginario.Text = "Pueblos Originarios";
+            this.chkObsOriginario.UseVisualStyleBackColor = true;
+            // 
+            // chkObsBeneficio
+            // 
+            this.chkObsBeneficio.AutoSize = true;
+            this.chkObsBeneficio.Location = new System.Drawing.Point(38, 93);
+            this.chkObsBeneficio.Name = "chkObsBeneficio";
+            this.chkObsBeneficio.Size = new System.Drawing.Size(138, 17);
+            this.chkObsBeneficio.TabIndex = 29;
+            this.chkObsBeneficio.Text = "Percibe beneficio social";
+            this.chkObsBeneficio.UseVisualStyleBackColor = true;
+            // 
+            // chkObsLengua
+            // 
+            this.chkObsLengua.AutoSize = true;
+            this.chkObsLengua.Location = new System.Drawing.Point(38, 23);
+            this.chkObsLengua.Name = "chkObsLengua";
+            this.chkObsLengua.Size = new System.Drawing.Size(111, 17);
+            this.chkObsLengua.TabIndex = 28;
+            this.chkObsLengua.Text = "Lengua extranjera";
+            this.chkObsLengua.UseVisualStyleBackColor = true;
+            // 
             // FrmNuevaMat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(955, 706);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
@@ -777,6 +907,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -794,13 +926,13 @@
         private System.Windows.Forms.GroupBox grupOtraEscuela;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbPrivada;
+        private System.Windows.Forms.RadioButton rbNacion;
+        private System.Windows.Forms.RadioButton rbProvincia;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbDistritoEsc;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtEscNumero;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -833,13 +965,12 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtTutorDNI;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtTimeIngreso;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ComboBox cmbAlumCategoria;
@@ -850,5 +981,17 @@
         private System.Windows.Forms.ComboBox cmbProvincia;
         private System.Windows.Forms.TextBox txtTutorTelefono;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txtObservaciones;
+        private System.Windows.Forms.CheckBox chkObsMedicacion;
+        private System.Windows.Forms.CheckBox chkObsDerechos;
+        private System.Windows.Forms.CheckBox chkObsParto;
+        private System.Windows.Forms.CheckBox chkObsCUD;
+        private System.Windows.Forms.CheckBox chkObsEncierro;
+        private System.Windows.Forms.CheckBox chkObsOriginario;
+        private System.Windows.Forms.CheckBox chkObsBeneficio;
+        private System.Windows.Forms.CheckBox chkObsLengua;
+        private System.Windows.Forms.ComboBox cmbAdmiCategoria;
     }
 }

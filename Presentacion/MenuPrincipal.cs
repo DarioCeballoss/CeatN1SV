@@ -26,6 +26,7 @@ namespace Presentacion
             lblNombre.Text = UsuarioCache.Nombre;
             lblApellido.Text = UsuarioCache.Apellido;
             lblPermisos.Text = UsuarioCache.Permisos;
+          
             
         }
         
@@ -203,6 +204,16 @@ namespace Presentacion
             mgraphics.DrawRectangle(pen, area);
 
 
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
