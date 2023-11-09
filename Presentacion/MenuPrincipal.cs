@@ -197,8 +197,8 @@ namespace Presentacion
             Pen pen = new Pen(Color.FromArgb(19, 80, 88), 1); // Color #135058 (10%)
             Rectangle area = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
 
-            Color color2 = Color.FromArgb(241, 242, 181); // Color #F1F2B5 (90%)
-            Color color1 = Color.FromArgb(19, 80, 88);   // Color #135058 (10%)
+            Color color2 = Color.FromArgb(87, 187, 144); // Color #F1F2B5 (90%)87, 187, 144
+            Color color1 = Color.FromArgb(117, 202, 212);   // Color #135058 (10%)
 
             LinearGradientBrush lgb = new LinearGradientBrush(area, color1, color2, LinearGradientMode.Vertical);
 

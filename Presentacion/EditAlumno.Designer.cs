@@ -51,17 +51,16 @@
             this.gbAdmision = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtGrado = new System.Windows.Forms.TextBox();
             this.grupOtraEscuela = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtEscuelanum = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.txtGrado2 = new System.Windows.Forms.TextBox();
+            this.rbPrivada = new System.Windows.Forms.RadioButton();
+            this.rbNacion = new System.Windows.Forms.RadioButton();
+            this.rbProvincia = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbDistrito = new System.Windows.Forms.ComboBox();
             this.chkProcedencia = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -107,6 +106,8 @@
             this.btnEditarObs = new System.Windows.Forms.Button();
             this.btnEditarAdmi = new System.Windows.Forms.Button();
             this.btnEditarBajas = new System.Windows.Forms.Button();
+            this.cmbAdmiCategoria = new System.Windows.Forms.ComboBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.gbAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBajas)).BeginInit();
             this.gbAdmision.SuspendLayout();
@@ -325,6 +326,7 @@
             // 
             // gbAdmision
             // 
+            this.gbAdmision.Controls.Add(this.btnGuardar);
             this.gbAdmision.Controls.Add(this.groupBox6);
             this.gbAdmision.Controls.Add(this.label13);
             this.gbAdmision.Controls.Add(this.dateTimePicker1);
@@ -337,8 +339,8 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.cmbAdmiCategoria);
             this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Controls.Add(this.txtGrado);
             this.groupBox6.Controls.Add(this.grupOtraEscuela);
             this.groupBox6.Controls.Add(this.chkProcedencia);
             this.groupBox6.Location = new System.Drawing.Point(28, 59);
@@ -357,24 +359,17 @@
             this.label12.TabIndex = 13;
             this.label12.Text = "Sección/grado :";
             // 
-            // txtGrado
-            // 
-            this.txtGrado.Location = new System.Drawing.Point(122, 20);
-            this.txtGrado.Name = "txtGrado";
-            this.txtGrado.Size = new System.Drawing.Size(210, 20);
-            this.txtGrado.TabIndex = 12;
-            // 
             // grupOtraEscuela
             // 
             this.grupOtraEscuela.Controls.Add(this.label22);
-            this.grupOtraEscuela.Controls.Add(this.textBox13);
+            this.grupOtraEscuela.Controls.Add(this.txtEscuelanum);
             this.grupOtraEscuela.Controls.Add(this.label4);
-            this.grupOtraEscuela.Controls.Add(this.textBox2);
-            this.grupOtraEscuela.Controls.Add(this.radioButton3);
-            this.grupOtraEscuela.Controls.Add(this.radioButton2);
-            this.grupOtraEscuela.Controls.Add(this.radioButton1);
+            this.grupOtraEscuela.Controls.Add(this.txtGrado2);
+            this.grupOtraEscuela.Controls.Add(this.rbPrivada);
+            this.grupOtraEscuela.Controls.Add(this.rbNacion);
+            this.grupOtraEscuela.Controls.Add(this.rbProvincia);
             this.grupOtraEscuela.Controls.Add(this.label1);
-            this.grupOtraEscuela.Controls.Add(this.comboBox1);
+            this.grupOtraEscuela.Controls.Add(this.cmbDistrito);
             this.grupOtraEscuela.Enabled = false;
             this.grupOtraEscuela.Location = new System.Drawing.Point(26, 74);
             this.grupOtraEscuela.Name = "grupOtraEscuela";
@@ -392,12 +387,12 @@
             this.label22.TabIndex = 9;
             this.label22.Text = "Distrito :";
             // 
-            // textBox13
+            // txtEscuelanum
             // 
-            this.textBox13.Location = new System.Drawing.Point(73, 68);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(233, 20);
-            this.textBox13.TabIndex = 8;
+            this.txtEscuelanum.Location = new System.Drawing.Point(73, 68);
+            this.txtEscuelanum.Name = "txtEscuelanum";
+            this.txtEscuelanum.Size = new System.Drawing.Size(233, 20);
+            this.txtEscuelanum.TabIndex = 8;
             // 
             // label4
             // 
@@ -408,45 +403,45 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Grado :";
             // 
-            // textBox2
+            // txtGrado2
             // 
-            this.textBox2.Location = new System.Drawing.Point(73, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtGrado2.Location = new System.Drawing.Point(73, 94);
+            this.txtGrado2.Name = "txtGrado2";
+            this.txtGrado2.Size = new System.Drawing.Size(233, 20);
+            this.txtGrado2.TabIndex = 6;
             // 
-            // radioButton3
+            // rbPrivada
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(416, 89);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(61, 17);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Privada";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbPrivada.AutoSize = true;
+            this.rbPrivada.Location = new System.Drawing.Point(416, 89);
+            this.rbPrivada.Name = "rbPrivada";
+            this.rbPrivada.Size = new System.Drawing.Size(61, 17);
+            this.rbPrivada.TabIndex = 5;
+            this.rbPrivada.TabStop = true;
+            this.rbPrivada.Text = "Privada";
+            this.rbPrivada.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbNacion
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(416, 62);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 17);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nacion";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbNacion.AutoSize = true;
+            this.rbNacion.Location = new System.Drawing.Point(416, 62);
+            this.rbNacion.Name = "rbNacion";
+            this.rbNacion.Size = new System.Drawing.Size(59, 17);
+            this.rbNacion.TabIndex = 4;
+            this.rbNacion.TabStop = true;
+            this.rbNacion.Text = "Nacion";
+            this.rbNacion.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbProvincia
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(416, 35);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(69, 17);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Provincia";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbProvincia.AutoSize = true;
+            this.rbProvincia.Location = new System.Drawing.Point(416, 35);
+            this.rbProvincia.Name = "rbProvincia";
+            this.rbProvincia.Size = new System.Drawing.Size(69, 17);
+            this.rbProvincia.TabIndex = 3;
+            this.rbProvincia.TabStop = true;
+            this.rbProvincia.Text = "Provincia";
+            this.rbProvincia.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -457,13 +452,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Numero :";
             // 
-            // comboBox1
+            // cmbDistrito
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(289, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cmbDistrito.FormattingEnabled = true;
+            this.cmbDistrito.Location = new System.Drawing.Point(17, 41);
+            this.cmbDistrito.Name = "cmbDistrito";
+            this.cmbDistrito.Size = new System.Drawing.Size(289, 21);
+            this.cmbDistrito.TabIndex = 0;
             // 
             // chkProcedencia
             // 
@@ -972,6 +967,28 @@
             this.btnEditarBajas.UseVisualStyleBackColor = false;
             this.btnEditarBajas.Click += new System.EventHandler(this.btnEditarBajas_Click);
             // 
+            // cmbAdmiCategoria
+            // 
+            this.cmbAdmiCategoria.FormattingEnabled = true;
+            this.cmbAdmiCategoria.Location = new System.Drawing.Point(106, 15);
+            this.cmbAdmiCategoria.Name = "cmbAdmiCategoria";
+            this.cmbAdmiCategoria.Size = new System.Drawing.Size(297, 21);
+            this.cmbAdmiCategoria.TabIndex = 29;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(80)))), ((int)(((byte)(88)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(181)))));
+            this.btnGuardar.Location = new System.Drawing.Point(241, 368);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(114, 46);
+            this.btnGuardar.TabIndex = 27;
+            this.btnGuardar.Text = "Guardar Cambios";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // EditTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1042,17 +1059,16 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtGrado;
         private System.Windows.Forms.GroupBox grupOtraEscuela;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtEscuelanum;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox txtGrado2;
+        private System.Windows.Forms.RadioButton rbPrivada;
+        private System.Windows.Forms.RadioButton rbNacion;
+        private System.Windows.Forms.RadioButton rbProvincia;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbDistrito;
         private System.Windows.Forms.CheckBox chkProcedencia;
         private System.Windows.Forms.GroupBox gbTutores;
         private System.Windows.Forms.TextBox txtTutorTelefono;
@@ -1097,5 +1113,7 @@
         private System.Windows.Forms.Button btnEditarObs;
         private System.Windows.Forms.Button btnEditarAdmi;
         private System.Windows.Forms.Button btnEditarBajas;
+        private System.Windows.Forms.ComboBox cmbAdmiCategoria;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
