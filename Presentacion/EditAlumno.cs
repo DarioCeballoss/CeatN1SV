@@ -48,15 +48,26 @@ namespace Presentacion
                     Alumno_Vulneracion,
                     Alumno_ComplicacionesParto,
                     Alumno_Observaciones,
-                    Admision.Admision_fecha
+                    Admision.Admision_fecha,
+                    c2.Categoria_Nombre  as cat,
+                    Escuela_Numero,
+                    l2.Localidad_Nombre,
+                    c3.Categoria_Nombre as cat2,
+                    Escuela_Provincia,
+                    Escuela_Nacion,
+                    Escuela_Privada
+                   
                   
                  
                     
                     
                     
 
-                FROM (((((((((((Alumno a
+                FROM ((((((((((((((Alumno a
                 INNER JOIN Admision on a.Id = Admision.Admision_Alumno)
+                INNER JOIN Categoria c3 ON  Admision.Escuela_Categoria = c3.Id)
+                INNER JOIN Escuela on Admision.OtraEscuela= Escuela.Id)
+                INNER JOIN Localidades l2 ON Escuela.Escuela_Distrito = l2.Id)
                 
                 INNER JOIN Tutor on a.Alumno_Tutores = Tutor.Id )
                 INNER JOIN Localidades l on Tutor.Tutor_Localidad = l.Id)
@@ -162,12 +173,18 @@ namespace Presentacion
                     }
 
                     dateTimePicker1.Value = reader.GetDateTime(27);
-                    //if (!reader.IsDBNull(28))
-                    //{
-                    //    txtGrado.Text = reader.GetString(28);
-                    //}
+                    if (!reader.IsDBNull(28))
+                    {
+                        cmbAdmiCategoria.Text = reader.GetString(28);
+                    }
 
-                    
+                    txtEscuelanum.Text = Convert.ToString(reader.GetInt32(29));
+
+                    cmbDistrito.Text = reader.GetString(30);
+                    txtGrado2.Text = reader.GetString(31);
+                    rbProvincia.Checked = reader.GetBoolean(32);
+                    rbNacion.Checked = reader.GetBoolean(33);
+                    //rbPrivada.Checked = reader.GetBoolean(34);
                     
                     
                  
@@ -315,6 +332,35 @@ namespace Presentacion
             gbAdmision.Hide();
             gbObservacion.Hide();
             dgvBajas.Show();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+//            string Query = @"
+//                             UPDATE Alumno
+//                             SET
+//                             Alumno_Apellidos = " + txtAlumApellido.Text + ", Alumno_Nombres = "+  txtAlumNombre.Text +
+//                               ", Alumno_Dni= "  txtAlumDNI.Text + ",  Alumno_Nacimiento= "+dtTimeNacimiento.Value+ 
+//                                   ", Alumno_Nacimiento ="+
+    
+//                                " FROM Alumno a INNER JOIN Admision ON a.Id = Admision.Admision_Alumno "+
+//                                "INNER JOIN Categoria c3 ON Admision.Escuela_Categoria = c3.Id" +
+//                               " INNER JOIN Escuela ON Admision.OtraEscuela = Escuela.Id " +
+//                                "INNER JOIN Localidades l2 ON Escuela.Escuela_Distrito = l2.Id" +
+//                               " INNER JOIN Tutor ON a.Alumno_Tutores = Tutor.Id"
+//                               " INNER JOIN Localidades l ON Tutor.Tutor_Localidad = l.Id"+
+//                               " INNER JOIN Turno t ON a.Alumno_turno = t.Id" +
+//                              "  INNER JOIN Categoria ON a.Alumno_Categoria = Categoria.Id" +
+//                               " INNER JOIN Sexo s ON a.Alumno_Sexo = s.Id" +
+//                               " INNER JOIN Caracterizacion ON a.Alumno_Caracterizacion = Caracterizacion.Id"+
+//                              "  INNER JOIN Nacionalidad n ON a.Alumno_Nacionalidad = n.Id"+
+//                               " INNER JOIN Categoria c2 ON Admision.Escuela_Categoria = c2.Id"+
+//                               " INNER JOIN Nacionalidad n2 ON Tutor.Tutor_Nacionalidad = n2.Id"+
+//                               " INNER JOIN Profesion ON Tutor.Tutor_Profesion = Profesion.Id"+
+//                                WHERE
+//                                    -- Condición para identificar los registros a actualizar (por ejemplo, por el Id)
+//                                    a.Id = 1;
+
         }
     }
 }
