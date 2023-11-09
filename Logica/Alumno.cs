@@ -155,6 +155,20 @@ namespace Logica
                                                    " VALUES (" + ultimoId("Alumno") + ", " + admisionEscCat + ", '" + admisionFecha + "', " + Convert.ToInt32(admisionMismaEsc) + ", " + admisionOtraEsc + ")");
             return guardado;
         }
+
+        //ALERTA ALUMNOS 
+        public DataTable AlumnosAlertaEdad()
+        {   //
+            DataTable tabla = new DataTable();
+            Conexion conexion = new Conexion();
+            tabla.Load(conexion.Leer(@"SELECT Alumno.Alumno_Apellidos, Alumno.Alumno_Nombres, Alumno.Alumno_Dni, Alumno.Alumno_Nacimiento, Categoria.Categoria_Nombre, Int((Date()-[Alumno]![Alumno_Nacimiento])/365.25) AS edad
+                                        FROM Categoria INNER JOIN Alumno ON Categoria.Id = Alumno.Alumno_Categoria
+                                        WHERE (Categoria.Categoria_Nombre = 'Deambulante' AND int((Date()-[Alumno]![Alumno_Nacimiento])/365.25) >1) 
+                                        OR 
+                                        (Categoria.Categoria_Nombre = 'Lactante' AND int((Date()-[Alumno]![Alumno_Nacimiento])/365.25) >0);
+                                        "));
+            return tabla;
+        }
     }
 }
 

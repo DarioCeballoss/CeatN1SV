@@ -41,8 +41,6 @@
             this.grupOtraEscuela = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtEscNumero = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.rbPrivada = new System.Windows.Forms.RadioButton();
             this.rbNacion = new System.Windows.Forms.RadioButton();
             this.rbProvincia = new System.Windows.Forms.RadioButton();
@@ -71,6 +69,7 @@
             this.txtTutorDNI = new System.Windows.Forms.TextBox();
             this.txtTutorNombre = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAlumDNI = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.cmbAlumCategoria = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -86,11 +85,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtAlumNombre = new System.Windows.Forms.TextBox();
-            this.txtAlumDNI = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAlumApellido = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label28 = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.chkObsMedicacion = new System.Windows.Forms.CheckBox();
             this.chkObsDerechos = new System.Windows.Forms.CheckBox();
@@ -105,7 +103,7 @@
             this.grupOtraEscuela.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -136,8 +134,8 @@
             // 
             // lineShape1
             // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.BorderColor = System.Drawing.Color.DimGray;
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
@@ -153,7 +151,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(955, 706);
+            this.shapeContainer1.Size = new System.Drawing.Size(955, 671);
             this.shapeContainer1.TabIndex = 10;
             this.shapeContainer1.TabStop = false;
             // 
@@ -164,7 +162,7 @@
             this.groupBox2.Controls.Add(this.groupBox6);
             this.groupBox2.Location = new System.Drawing.Point(514, 107);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(410, 299);
+            this.groupBox2.Size = new System.Drawing.Size(410, 225);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ADMISION";
@@ -172,7 +170,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(155, 16);
+            this.label13.Location = new System.Drawing.Point(155, 11);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 13);
             this.label13.TabIndex = 14;
@@ -180,7 +178,7 @@
             // 
             // dtTimeIngreso
             // 
-            this.dtTimeIngreso.Location = new System.Drawing.Point(102, 36);
+            this.dtTimeIngreso.Location = new System.Drawing.Point(102, 27);
             this.dtTimeIngreso.Name = "dtTimeIngreso";
             this.dtTimeIngreso.Size = new System.Drawing.Size(200, 20);
             this.dtTimeIngreso.TabIndex = 14;
@@ -191,9 +189,9 @@
             this.groupBox6.Controls.Add(this.label12);
             this.groupBox6.Controls.Add(this.grupOtraEscuela);
             this.groupBox6.Controls.Add(this.chkProcedencia);
-            this.groupBox6.Location = new System.Drawing.Point(19, 74);
+            this.groupBox6.Location = new System.Drawing.Point(19, 51);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(370, 212);
+            this.groupBox6.Size = new System.Drawing.Size(370, 161);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Procedencia del alumno";
@@ -201,15 +199,15 @@
             // cmbAdmiCategoria
             // 
             this.cmbAdmiCategoria.FormattingEnabled = true;
-            this.cmbAdmiCategoria.Location = new System.Drawing.Point(105, 27);
+            this.cmbAdmiCategoria.Location = new System.Drawing.Point(98, 20);
             this.cmbAdmiCategoria.Name = "cmbAdmiCategoria";
             this.cmbAdmiCategoria.Size = new System.Drawing.Size(110, 21);
-            this.cmbAdmiCategoria.TabIndex = 28;
+            this.cmbAdmiCategoria.TabIndex = 27;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 31);
+            this.label12.Location = new System.Drawing.Point(15, 22);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(84, 13);
             this.label12.TabIndex = 13;
@@ -219,17 +217,15 @@
             // 
             this.grupOtraEscuela.Controls.Add(this.label22);
             this.grupOtraEscuela.Controls.Add(this.txtEscNumero);
-            this.grupOtraEscuela.Controls.Add(this.label4);
-            this.grupOtraEscuela.Controls.Add(this.textBox2);
             this.grupOtraEscuela.Controls.Add(this.rbPrivada);
             this.grupOtraEscuela.Controls.Add(this.rbNacion);
             this.grupOtraEscuela.Controls.Add(this.rbProvincia);
             this.grupOtraEscuela.Controls.Add(this.label1);
             this.grupOtraEscuela.Controls.Add(this.cmbDistritoEsc);
             this.grupOtraEscuela.Enabled = false;
-            this.grupOtraEscuela.Location = new System.Drawing.Point(13, 63);
+            this.grupOtraEscuela.Location = new System.Drawing.Point(13, 47);
             this.grupOtraEscuela.Name = "grupOtraEscuela";
-            this.grupOtraEscuela.Size = new System.Drawing.Size(335, 131);
+            this.grupOtraEscuela.Size = new System.Drawing.Size(335, 107);
             this.grupOtraEscuela.TabIndex = 1;
             this.grupOtraEscuela.TabStop = false;
             this.grupOtraEscuela.Text = "De Otra Escuela";
@@ -250,26 +246,10 @@
             this.txtEscNumero.Size = new System.Drawing.Size(83, 20);
             this.txtEscNumero.TabIndex = 8;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 97);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Grado :";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(73, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(83, 20);
-            this.textBox2.TabIndex = 6;
-            // 
             // rbPrivada
             // 
             this.rbPrivada.AutoSize = true;
-            this.rbPrivada.Location = new System.Drawing.Point(223, 95);
+            this.rbPrivada.Location = new System.Drawing.Point(222, 78);
             this.rbPrivada.Name = "rbPrivada";
             this.rbPrivada.Size = new System.Drawing.Size(61, 17);
             this.rbPrivada.TabIndex = 5;
@@ -280,7 +260,7 @@
             // rbNacion
             // 
             this.rbNacion.AutoSize = true;
-            this.rbNacion.Location = new System.Drawing.Point(223, 68);
+            this.rbNacion.Location = new System.Drawing.Point(222, 30);
             this.rbNacion.Name = "rbNacion";
             this.rbNacion.Size = new System.Drawing.Size(59, 17);
             this.rbNacion.TabIndex = 4;
@@ -291,7 +271,7 @@
             // rbProvincia
             // 
             this.rbProvincia.AutoSize = true;
-            this.rbProvincia.Location = new System.Drawing.Point(223, 41);
+            this.rbProvincia.Location = new System.Drawing.Point(222, 55);
             this.rbProvincia.Name = "rbProvincia";
             this.rbProvincia.Size = new System.Drawing.Size(69, 17);
             this.rbProvincia.TabIndex = 3;
@@ -321,7 +301,7 @@
             this.chkProcedencia.AutoSize = true;
             this.chkProcedencia.Checked = true;
             this.chkProcedencia.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkProcedencia.Location = new System.Drawing.Point(233, 31);
+            this.chkProcedencia.Location = new System.Drawing.Point(233, 22);
             this.chkProcedencia.Name = "chkProcedencia";
             this.chkProcedencia.Size = new System.Drawing.Size(123, 17);
             this.chkProcedencia.TabIndex = 0;
@@ -331,7 +311,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(499, 662);
+            this.btnAceptar.Location = new System.Drawing.Point(514, 609);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 16;
@@ -341,7 +321,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(395, 662);
+            this.btnCancelar.Location = new System.Drawing.Point(410, 609);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 17;
@@ -368,9 +348,9 @@
             this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.txtTutorDNI);
             this.groupBox4.Controls.Add(this.txtTutorNombre);
-            this.groupBox4.Location = new System.Drawing.Point(45, 354);
+            this.groupBox4.Location = new System.Drawing.Point(45, 338);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(440, 210);
+            this.groupBox4.Size = new System.Drawing.Size(440, 226);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "PADRES, TUTORES O ENCARGADOS";
@@ -380,7 +360,7 @@
             this.txtTutorTelefono.Location = new System.Drawing.Point(20, 185);
             this.txtTutorTelefono.Name = "txtTutorTelefono";
             this.txtTutorTelefono.Size = new System.Drawing.Size(186, 20);
-            this.txtTutorTelefono.TabIndex = 41;
+            this.txtTutorTelefono.TabIndex = 14;
             // 
             // label27
             // 
@@ -393,11 +373,15 @@
             // 
             // cmbProvincia
             // 
+            this.cmbProvincia.DisplayMember = "1";
             this.cmbProvincia.FormattingEnabled = true;
             this.cmbProvincia.Location = new System.Drawing.Point(238, 71);
             this.cmbProvincia.Name = "cmbProvincia";
             this.cmbProvincia.Size = new System.Drawing.Size(185, 21);
-            this.cmbProvincia.TabIndex = 38;
+            this.cmbProvincia.TabIndex = 16;
+            this.cmbProvincia.ValueMember = "1";
+            this.cmbProvincia.SelectedIndexChanged += new System.EventHandler(this.cmbProvincia_SelectedIndexChanged);
+            this.cmbProvincia.SelectedValueChanged += new System.EventHandler(this.cmbProvincia_SelectedValueChanged);
             // 
             // label23
             // 
@@ -414,7 +398,7 @@
             this.cmbPartido.Location = new System.Drawing.Point(238, 108);
             this.cmbPartido.Name = "cmbPartido";
             this.cmbPartido.Size = new System.Drawing.Size(186, 21);
-            this.cmbPartido.TabIndex = 36;
+            this.cmbPartido.TabIndex = 17;
             // 
             // label17
             // 
@@ -439,7 +423,7 @@
             this.txtTutorDomicilio.Location = new System.Drawing.Point(238, 147);
             this.txtTutorDomicilio.Name = "txtTutorDomicilio";
             this.txtTutorDomicilio.Size = new System.Drawing.Size(186, 20);
-            this.txtTutorDomicilio.TabIndex = 31;
+            this.txtTutorDomicilio.TabIndex = 18;
             // 
             // label19
             // 
@@ -456,7 +440,7 @@
             this.cmbTurorProfesion.Location = new System.Drawing.Point(19, 147);
             this.cmbTurorProfesion.Name = "cmbTurorProfesion";
             this.cmbTurorProfesion.Size = new System.Drawing.Size(187, 21);
-            this.cmbTurorProfesion.TabIndex = 28;
+            this.cmbTurorProfesion.TabIndex = 13;
             // 
             // label15
             // 
@@ -481,7 +465,7 @@
             this.txtTutorApellido.Location = new System.Drawing.Point(19, 34);
             this.txtTutorApellido.Name = "txtTutorApellido";
             this.txtTutorApellido.Size = new System.Drawing.Size(187, 20);
-            this.txtTutorApellido.TabIndex = 20;
+            this.txtTutorApellido.TabIndex = 10;
             // 
             // cmbTutorNac
             // 
@@ -489,7 +473,7 @@
             this.cmbTutorNac.Location = new System.Drawing.Point(238, 34);
             this.cmbTutorNac.Name = "cmbTutorNac";
             this.cmbTutorNac.Size = new System.Drawing.Size(186, 21);
-            this.cmbTutorNac.TabIndex = 25;
+            this.cmbTutorNac.TabIndex = 15;
             // 
             // label18
             // 
@@ -517,17 +501,18 @@
             this.txtTutorDNI.Location = new System.Drawing.Point(19, 109);
             this.txtTutorDNI.Name = "txtTutorDNI";
             this.txtTutorDNI.Size = new System.Drawing.Size(187, 20);
-            this.txtTutorDNI.TabIndex = 22;
+            this.txtTutorDNI.TabIndex = 12;
             // 
             // txtTutorNombre
             // 
             this.txtTutorNombre.Location = new System.Drawing.Point(19, 72);
             this.txtTutorNombre.Name = "txtTutorNombre";
             this.txtTutorNombre.Size = new System.Drawing.Size(187, 20);
-            this.txtTutorNombre.TabIndex = 23;
+            this.txtTutorNombre.TabIndex = 11;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtAlumDNI);
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.cmbAlumCategoria);
             this.groupBox1.Controls.Add(this.label25);
@@ -543,7 +528,6 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtAlumNombre);
-            this.groupBox1.Controls.Add(this.txtAlumDNI);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtAlumApellido);
             this.groupBox1.Location = new System.Drawing.Point(45, 107);
@@ -552,6 +536,13 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ALUMNO";
+            // 
+            // txtAlumDNI
+            // 
+            this.txtAlumDNI.Location = new System.Drawing.Point(19, 111);
+            this.txtAlumDNI.Name = "txtAlumDNI";
+            this.txtAlumDNI.Size = new System.Drawing.Size(187, 20);
+            this.txtAlumDNI.TabIndex = 3;
             // 
             // label26
             // 
@@ -568,7 +559,7 @@
             this.cmbAlumCategoria.Location = new System.Drawing.Point(238, 150);
             this.cmbAlumCategoria.Name = "cmbAlumCategoria";
             this.cmbAlumCategoria.Size = new System.Drawing.Size(185, 21);
-            this.cmbAlumCategoria.TabIndex = 24;
+            this.cmbAlumCategoria.TabIndex = 9;
             // 
             // label25
             // 
@@ -585,7 +576,7 @@
             this.cmbAlumCaracteriz.Location = new System.Drawing.Point(239, 73);
             this.cmbAlumCaracteriz.Name = "cmbAlumCaracteriz";
             this.cmbAlumCaracteriz.Size = new System.Drawing.Size(185, 21);
-            this.cmbAlumCaracteriz.TabIndex = 22;
+            this.cmbAlumCaracteriz.TabIndex = 7;
             // 
             // label14
             // 
@@ -602,7 +593,7 @@
             this.cmbAlumTurno.Location = new System.Drawing.Point(238, 111);
             this.cmbAlumTurno.Name = "cmbAlumTurno";
             this.cmbAlumTurno.Size = new System.Drawing.Size(185, 21);
-            this.cmbAlumTurno.TabIndex = 20;
+            this.cmbAlumTurno.TabIndex = 8;
             // 
             // label6
             // 
@@ -628,7 +619,7 @@
             this.cmbAlumNac.Location = new System.Drawing.Point(19, 184);
             this.cmbAlumNac.Name = "cmbAlumNac";
             this.cmbAlumNac.Size = new System.Drawing.Size(185, 21);
-            this.cmbAlumNac.TabIndex = 16;
+            this.cmbAlumNac.TabIndex = 5;
             // 
             // label9
             // 
@@ -645,7 +636,7 @@
             this.cmbAlumSexo.Location = new System.Drawing.Point(239, 36);
             this.cmbAlumSexo.Name = "cmbAlumSexo";
             this.cmbAlumSexo.Size = new System.Drawing.Size(185, 21);
-            this.cmbAlumSexo.TabIndex = 8;
+            this.cmbAlumSexo.TabIndex = 6;
             // 
             // dtTimeNacimiento
             // 
@@ -653,7 +644,7 @@
             this.dtTimeNacimiento.Location = new System.Drawing.Point(19, 147);
             this.dtTimeNacimiento.Name = "dtTimeNacimiento";
             this.dtTimeNacimiento.Size = new System.Drawing.Size(185, 20);
-            this.dtTimeNacimiento.TabIndex = 1;
+            this.dtTimeNacimiento.TabIndex = 4;
             // 
             // label7
             // 
@@ -681,14 +672,7 @@
             this.txtAlumNombre.Location = new System.Drawing.Point(19, 74);
             this.txtAlumNombre.Name = "txtAlumNombre";
             this.txtAlumNombre.Size = new System.Drawing.Size(187, 20);
-            this.txtAlumNombre.TabIndex = 11;
-            // 
-            // txtAlumDNI
-            // 
-            this.txtAlumDNI.Location = new System.Drawing.Point(19, 111);
-            this.txtAlumDNI.Name = "txtAlumDNI";
-            this.txtAlumDNI.Size = new System.Drawing.Size(187, 20);
-            this.txtAlumDNI.TabIndex = 9;
+            this.txtAlumNombre.TabIndex = 2;
             // 
             // label5
             // 
@@ -706,33 +690,33 @@
             this.txtAlumApellido.Size = new System.Drawing.Size(187, 20);
             this.txtAlumApellido.TabIndex = 1;
             // 
-            // groupBox3
+            // groupBox9
             // 
-            this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Controls.Add(this.txtObservaciones);
-            this.groupBox3.Controls.Add(this.chkObsMedicacion);
-            this.groupBox3.Controls.Add(this.chkObsDerechos);
-            this.groupBox3.Controls.Add(this.chkObsParto);
-            this.groupBox3.Controls.Add(this.chkObsCUD);
-            this.groupBox3.Controls.Add(this.chkObsEncierro);
-            this.groupBox3.Controls.Add(this.chkObsOriginario);
-            this.groupBox3.Controls.Add(this.chkObsBeneficio);
-            this.groupBox3.Controls.Add(this.chkObsLengua);
-            this.groupBox3.Location = new System.Drawing.Point(514, 412);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(410, 217);
-            this.groupBox3.TabIndex = 39;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "OBSERVACIONES";
+            this.groupBox9.Controls.Add(this.label4);
+            this.groupBox9.Controls.Add(this.txtObservaciones);
+            this.groupBox9.Controls.Add(this.chkObsMedicacion);
+            this.groupBox9.Controls.Add(this.chkObsDerechos);
+            this.groupBox9.Controls.Add(this.chkObsParto);
+            this.groupBox9.Controls.Add(this.chkObsCUD);
+            this.groupBox9.Controls.Add(this.chkObsEncierro);
+            this.groupBox9.Controls.Add(this.chkObsOriginario);
+            this.groupBox9.Controls.Add(this.chkObsBeneficio);
+            this.groupBox9.Controls.Add(this.chkObsLengua);
+            this.groupBox9.Location = new System.Drawing.Point(514, 338);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(410, 226);
+            this.groupBox9.TabIndex = 38;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "OBSERVACIONES";
             // 
-            // label28
+            // label4
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(25, 122);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(111, 13);
-            this.label28.TabIndex = 10;
-            this.label28.Text = "Comentario adicional :";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(25, 122);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Comentario adicional :";
             // 
             // txtObservaciones
             // 
@@ -789,7 +773,7 @@
             this.chkObsEncierro.Name = "chkObsEncierro";
             this.chkObsEncierro.Size = new System.Drawing.Size(124, 17);
             this.chkObsEncierro.TabIndex = 31;
-            this.chkObsEncierro.Text = "Contexto de encierro";
+            this.chkObsEncierro.Text = "Contexte de encierro";
             this.chkObsEncierro.UseVisualStyleBackColor = true;
             // 
             // chkObsOriginario
@@ -827,8 +811,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(955, 706);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(955, 671);
+            this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancelar);
@@ -852,8 +836,8 @@
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -869,8 +853,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox chkProcedencia;
         private System.Windows.Forms.GroupBox grupOtraEscuela;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.RadioButton rbPrivada;
         private System.Windows.Forms.RadioButton rbNacion;
         private System.Windows.Forms.RadioButton rbProvincia;
@@ -901,7 +883,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtAlumNombre;
-        private System.Windows.Forms.TextBox txtAlumDNI;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAlumApellido;
         private System.Windows.Forms.Label label23;
@@ -910,6 +891,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtTutorDNI;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.DateTimePicker dtTimeIngreso;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label26;
@@ -921,8 +903,9 @@
         private System.Windows.Forms.ComboBox cmbProvincia;
         private System.Windows.Forms.TextBox txtTutorTelefono;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txtAlumDNI;
+        private System.Windows.Forms.ComboBox cmbAdmiCategoria;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.CheckBox chkObsMedicacion;
         private System.Windows.Forms.CheckBox chkObsDerechos;
@@ -932,6 +915,5 @@
         private System.Windows.Forms.CheckBox chkObsOriginario;
         private System.Windows.Forms.CheckBox chkObsBeneficio;
         private System.Windows.Forms.CheckBox chkObsLengua;
-        private System.Windows.Forms.ComboBox cmbAdmiCategoria;
     }
 }

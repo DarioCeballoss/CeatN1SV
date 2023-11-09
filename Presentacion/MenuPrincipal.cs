@@ -26,8 +26,10 @@ namespace Presentacion
             lblNombre.Text = UsuarioCache.Nombre;
             lblApellido.Text = UsuarioCache.Apellido;
             lblPermisos.Text = UsuarioCache.Permisos;
-          
-            
+
+            podesUsar();
+            Alumno alumno = new Alumno();
+            dgvAlertasAlumnos.DataSource = alumno.AlumnosAlertaEdad();
         }
         
 
@@ -217,9 +219,19 @@ namespace Presentacion
 
         }
 
-      
 
 
+        public void podesUsar()
+        {
+            //Profesor/a
+            //Director/a
+            if (UsuarioCache.Permisos == "Profesor/a")
+            {
+                btnEdtiarMatriculas.Enabled = false;
+                btnBajaMatricula.Enabled = false;
+                btnUsuario.Visible = false;
+            }
+        }
 
 
 
