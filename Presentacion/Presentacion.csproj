@@ -72,6 +72,12 @@
     <Compile Include="FrmBajaMat.designer.cs">
       <DependentUpon>FrmBajaMat.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNuevaMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevaMat.designer.cs">
+      <DependentUpon>FrmNuevaMat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuarioPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,12 +89,6 @@
     </Compile>
     <Compile Include="FrmVerMat.designer.cs">
       <DependentUpon>FrmVerMat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmNuevaMat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmNuevaMat.designer.cs">
-      <DependentUpon>FrmNuevaMat.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuario.cs">
       <SubType>Form</SubType>
@@ -122,15 +122,15 @@
     <EmbeddedResource Include="FrmBajaMat.resx">
       <DependentUpon>FrmBajaMat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevaMat.resx">
+      <DependentUpon>FrmNuevaMat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarioPerfil.resx">
       <DependentUpon>FrmUsuarioPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVerMat.resx">
       <DependentUpon>FrmVerMat.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmNuevaMat.resx">
-      <DependentUpon>FrmNuevaMat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
