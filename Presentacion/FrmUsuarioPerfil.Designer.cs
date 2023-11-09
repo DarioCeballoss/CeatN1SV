@@ -325,7 +325,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btnAgregar;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.TextBox txtApellido;
         public System.Windows.Forms.TextBox txtAlias;
@@ -334,5 +333,6 @@
         public System.Windows.Forms.TextBox txtDNI;
         public System.Windows.Forms.ComboBox cmbPermisos;
         private System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.Button btnAgregar;
     }
 }

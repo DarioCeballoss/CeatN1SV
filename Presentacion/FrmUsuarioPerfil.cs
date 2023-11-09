@@ -32,7 +32,15 @@ namespace Presentacion
         private void btnAgregar_Click(object sender, EventArgs e)
         {
            // MessageBox.Show(Convert.ToString());
-            GuardarUsu();
+
+            if(btnAgregar.Text == "EDITAR"){
+                EditarUsu();
+            }else{
+                GuardarUsu();
+            }
+            
+            
+            this.Close();
  
         }
 
@@ -60,6 +68,22 @@ namespace Presentacion
             else
             {
                 MessageBox.Show("none");
+            }
+        }
+
+        private void EditarUsu()
+        {
+            bool cone = claseConexion.ABM(@"UPDATE Usuario
+                                            SET Usuario_Nombre = '" + txtNombre.Text + "' , Usuario_Apellido = '" + txtApellido.Text + "' , Usuario_Mail = '" + txtMail.Text + "' , Usuario_Alias = '" + txtAlias.Text + "', Usuario_Permisos = " + cmbPermisos.SelectedValue + ", Usuario_Password = '" + txtContraseña.Text + "', Usuario_DNI = " + Convert.ToInt32(txtDNI.Text) +
+                                            " Where Usuario_DNI = " + Convert.ToInt32(txtDNI.Text) +
+                                            "");
+            if (cone)
+            {
+                MessageBox.Show("sep");
+            }
+            else
+            {
+                MessageBox.Show("none EDITAR");
             }
         }
 

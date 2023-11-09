@@ -28,11 +28,11 @@ namespace Presentacion
         
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
+
             Tabla.Clear();
             Tabla.Load(claseConexion.Leer("SELECT Usuario.Id, Usuario.Usuario_Nombre, Usuario.Usuario_Apellido, Usuario.Usuario_DNI, Usuario.Usuario_Alias, Permisos.Permiso_Categoria " +
                 "FROM Usuario INNER JOIN Permisos ON Usuario.Usuario_Permisos = Permisos.Id  where Usuario.Usuario_Baja = false;"));
             dgvMatriculas.DataSource = Tabla;
-
         }
 
 
@@ -71,12 +71,13 @@ namespace Presentacion
                     frmPerfil.txtContraseña.Text = reader.GetString(6);
                     frmPerfil.txtDNI.Text = Convert.ToString(reader.GetInt32(7));
                     frmPerfil.Show();
+                    frmPerfil.FormClosed += actualizaGrilla;
                 }
                 
 
             }
             else { MessageBox.Show("NOP"); }
-
+            frmPerfil.btnAgregar.Text = "EDITAR";
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -113,6 +114,14 @@ namespace Presentacion
                 claseConexion.ABM("UPDATE Usuario SET Usuario_Baja = true WHERE Id = " + dgvMatriculas.CurrentRow.Cells["UsuId"].Value.ToString() + ";");
                 MessageBox.Show("Usuario dado de baja");
             } 
+        }
+
+        public void actualizaGrilla(object sender, FormClosedEventArgs e)
+        {
+            Tabla.Clear();
+            Tabla.Load(claseConexion.Leer("SELECT Usuario.Id, Usuario.Usuario_Nombre, Usuario.Usuario_Apellido, Usuario.Usuario_DNI, Usuario.Usuario_Alias, Permisos.Permiso_Categoria " +
+                "FROM Usuario INNER JOIN Permisos ON Usuario.Usuario_Permisos = Permisos.Id  where Usuario.Usuario_Baja = false;"));
+            dgvMatriculas.DataSource = Tabla;
         }
     }
 }
